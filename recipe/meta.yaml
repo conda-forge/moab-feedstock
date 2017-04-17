@@ -1,6 +1,6 @@
 {% set name = "moab" %}
-{% set version = "4.9.1" %}
-{% set sha256 = "b26cee46c096157323cafe047ad58616e16ebdb1e06caf6878673817cb4410cf" %}
+{% set version = "4.9.2" %}
+{% set sha256 = "26611b8cc24f6b7df52eb4ecbd31523d61523da0524b5a2d066a7656e2e82ac5" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win]
 
 requirements:
