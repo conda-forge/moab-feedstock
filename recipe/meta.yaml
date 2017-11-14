@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 3
   skip: True  # [win]
 
 requirements:
@@ -22,11 +22,11 @@ requirements:
     - automake
     - libtool
     - mpich
-    - hdf5 1.8.18|1.8.18.*
+    - hdf5 1.10.1
   run:
     - libgfortran  # [osx]
     - mpich
-    - hdf5 1.8.18|1.8.18.*
+    - hdf5 1.10.1
 
 test:
   commands:
