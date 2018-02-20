@@ -25,6 +25,7 @@ requirements:
     - hdf5 1.10.1
     - blas 1.1 {{ variant }}
     - openblas 0.2.20|0.2.20.*
+    - numpy 1.11.*
   run:
     - libgfortran  # [osx]
     - hdf5 1.10.1
