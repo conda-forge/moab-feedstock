@@ -1,6 +1,6 @@
 {% set name = "moab" %}
-{% set version = "4.9.1" %}
-{% set sha256 = "b26cee46c096157323cafe047ad58616e16ebdb1e06caf6878673817cb4410cf" %}
+{% set version = "5.0.0" %}
+{% set sha256 = "df5d5eb8c0d0dbb046de2e60aa611f276cbf007c9226c44a24ed19c570244e64" %}
 
 package:
   name: {{ name|lower }}
@@ -21,11 +21,9 @@ requirements:
     - gcc  # [unix]
     - automake
     - libtool
-    - mpich
     - hdf5 1.10.1
   run:
     - libgfortran  # [osx]
-    - mpich
     - hdf5 1.10.1
 
 test:
