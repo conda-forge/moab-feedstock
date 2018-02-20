@@ -1,6 +1,7 @@
 {% set name = "moab" %}
 {% set version = "5.0.0" %}
 {% set sha256 = "df5d5eb8c0d0dbb046de2e60aa611f276cbf007c9226c44a24ed19c570244e64" %}
+{% set variant = "openblas" %}
 
 package:
   name: {{ name|lower }}
@@ -22,9 +23,13 @@ requirements:
     - automake
     - libtool
     - hdf5 1.10.1
+    - blas 1.1 {{ variant }}
+    - openblas 0.2.20|0.2.20.*
   run:
     - libgfortran  # [osx]
     - hdf5 1.10.1
+    - blas 1.1 {{ variant }}
+    - openblas 0.2.20|0.2.20.*
 
 test:
   commands:
@@ -48,3 +53,4 @@ extra:
   recipe-maintainers:
     - scopatz
     - vijaysm
+    - iulian787
