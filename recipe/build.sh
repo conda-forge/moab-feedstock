@@ -6,7 +6,6 @@ autoreconf -fi
 ./configure --prefix="${PREFIX}" \
   --with-hdf5="${PREFIX}" \
   --enable-shared \
-  --enable-dagmc \
   --enable-tools \
   --enable-pymoab \
   || { cat config.log; exit 1; }
