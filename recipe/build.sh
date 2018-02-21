@@ -5,7 +5,6 @@ set -x
 autoreconf -fi
 ./configure --prefix="${PREFIX}" \
   --with-hdf5="${PREFIX}" \
-  PYTHON=python3 \
   --enable-shared \
   --enable-dagmc \
   --enable-tools \
