@@ -1,6 +1,6 @@
 {% set name = "moab" %}
 {% set version = "5.0.1" %}
-{% set sha256 = "e405031b1bf5e22950c2e5ca4dbbdeecdb59a3bd0db46ec3975d9b39e487185f" %}
+{% set sha256 = "e92b2a84cafce02c105f9861b62596f645932b6e855946066226e6186f259aad" %}
 {% set variant = "openblas" %}
 
 package:
