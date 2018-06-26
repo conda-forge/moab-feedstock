@@ -18,14 +18,16 @@ polyhedra.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/moab-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/moab-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/moab-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/moab-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/moab-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/moab-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/moab-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/moab-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/moab/badges/version.svg)](https://anaconda.org/conda-forge/moab)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/moab/badges/downloads.svg)](https://anaconda.org/conda-forge/moab)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-moab-green.svg)](https://anaconda.org/conda-forge/moab) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/moab.svg)](https://anaconda.org/conda-forge/moab) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/moab.svg)](https://anaconda.org/conda-forge/moab) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/moab.svg)](https://anaconda.org/conda-forge/moab) |
 
 Installing moab
 ===============
