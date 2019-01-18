@@ -1,6 +1,6 @@
 {% set name = "moab" %}
-{% set version = "5.0.2" %}
-{% set sha256 = "257c8640b3f15ad42b4485b5506008dea50e11354597953e333f3bc89d3dfc37" %}
+{% set version = "5.1.0" %}
+{% set sha256 = "0371fc25d2594589e95700739f01614f097b6157fb6023ed8995e582726ca658" %}
 {% set variant = "openblas" %}
 
 package:
@@ -30,6 +30,7 @@ requirements:
     - openblas
     - numpy
     - setuptools
+    - cython
   run:
     - hdf5
     - blas 1.1 {{ variant }}
