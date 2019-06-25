@@ -156,4 +156,5 @@ Feedstock Maintainers
 * [@iulian787](https://github.com/iulian787/)
 * [@scopatz](https://github.com/scopatz/)
 * [@vijaysm](https://github.com/vijaysm/)
+* [@gonuke](https://github.com/gonuke/)
 
