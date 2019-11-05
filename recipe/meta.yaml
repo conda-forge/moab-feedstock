@@ -1,6 +1,15 @@
 {% set name = "moab" %}
 {% set version = "5.1.0" %}
 {% set sha256 = "0371fc25d2594589e95700739f01614f097b6157fb6023ed8995e582726ca658" %}
+{% set build = 5 %}
+
+# ensure mpi is defined (needed for conda-smithy recipe-lint)
+{% set mpi = mpi or 'nompi' %}
+
+{% if mpi == 'nompi' %}
+# prioritize nompi variant via build number
+{% set build = build + 100 %}
+{% endif %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +21,26 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 4
+  number: {{ build }}
+
+  # add build string so packages can depend on
+  # mpi or nompi variants explicitly:
+  # `pkg * mpi_mpich_*` for mpich
+  # `pkg * mpi_*` for any mpi
+  # `pkg * nompi_*` for no mpi
+
+  {% if mpi != 'nompi' %}
+  {% set mpi_prefix = "mpi_" + mpi %}
+  {% else %}
+  {% set mpi_prefix = "nompi" %}
+  {% endif %}
+  string: "{{ mpi_prefix }}_h{{ PKG_HASH }}_{{ build }}"
+
+  {% if mpi != 'nompi' %}
+  run_exports:
+    - {{ name }} * {{ mpi_prefix }}_*
+  {% endif %}
+
   skip: True  # [win]
 
 requirements:
@@ -30,11 +58,13 @@ requirements:
     - numpy
     - setuptools
     - cython
+    - {{ mpi }}  # [mpi != 'nompi']
   run:
     - python
     - hdf5
     - numpy
     - setuptools
+    - {{ mpi }}  # [mpi != 'nompi']
 
 test:
   source_files:

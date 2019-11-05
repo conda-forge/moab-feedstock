@@ -2,8 +2,13 @@
 set -e
 set -x
 
+if [[ ! -z "$mpi" && "$mpi" != "nompi" ]]; then
+  export CONFIGURE_ARGS="--with-mpi=${PREFIX} ${CONFIGURE_ARGS}"
+fi
+
 autoreconf -fi
 ./configure --prefix="${PREFIX}" \
+  ${CONFIGURE_ARGS} \
   --with-hdf5="${PREFIX}" \
   --enable-shared \
   --enable-tools \
