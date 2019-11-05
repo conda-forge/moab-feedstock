@@ -54,14 +54,14 @@ requirements:
     - libblas
     - libcblas
     - python
-    - hdf5
+    - hdf5 * {{ mpi_prefix }}_*
     - numpy
     - setuptools
     - cython
     - {{ mpi }}  # [mpi != 'nompi']
   run:
     - python
-    - hdf5
+    - hdf5 * {{ mpi_prefix }}_*
     - numpy
     - setuptools
     - {{ mpi }}  # [mpi != 'nompi']
