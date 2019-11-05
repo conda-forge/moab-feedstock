@@ -50,6 +50,7 @@ requirements:
     - {{ compiler('fortran') }}
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - openssh  # [mpi == 'openmpi']
   host:
     - libblas
     - libcblas
@@ -65,6 +66,7 @@ requirements:
     - numpy
     - setuptools
     - {{ mpi }}  # [mpi != 'nompi']
+    - openssh  # [mpi == 'openmpi']
 
 test:
   source_files:
