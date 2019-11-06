@@ -3,12 +3,7 @@ set -e
 set -x
 
 if [[ ! -z "$mpi" && "$mpi" != "nompi" ]]; then
-  export CONFIGURE_ARGS="--with-mpi=${PREFIX} ${CONFIGURE_ARGS}"
-  export CC=mpicc
-  export CXX=mpic++
-  export FC=mpif90
-  export F77=mpif77
-  export F90=mpif90
+  export CONFIGURE_ARGS="CC=mpicc CXX=mpic++ F77=mpif77 FC=mpif90 F90=mpif90--with-mpi=${PREFIX} ${CONFIGURE_ARGS}"
 fi
 
 autoreconf -fi
