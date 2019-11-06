@@ -25,9 +25,9 @@ build:
 
   # add build string so packages can depend on
   # mpi or nompi variants explicitly:
-  # `pkg * mpi_mpich_*` for mpich
-  # `pkg * mpi_*` for any mpi
-  # `pkg * nompi_*` for no mpi
+  # `moab * mpi_mpich_*` for mpich
+  # `moab * mpi_*` for any mpi
+  # `moab * nompi_*` for no mpi
 
   {% if mpi != 'nompi' %}
   {% set mpi_prefix = "mpi_" + mpi %}
