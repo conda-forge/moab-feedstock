@@ -248,14 +248,6 @@ It is possible to list all of the versions of `moab` available on your platform 
 conda search moab --channel conda-forge
 ```
 
-You can install parallel (MPI) versions of moab with:
-
-```
-conda install moab=*=mpi_mpich_*
-conda install moab=*=mpi_openmpi_*
-```
-
-depending on which MPI package you prefer.
 
 About conda-forge
 =================
