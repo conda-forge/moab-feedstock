@@ -1,10 +1,13 @@
 {% set name = "moab" %}
 {% set version = "5.1.0" %}
 {% set sha256 = "0371fc25d2594589e95700739f01614f097b6157fb6023ed8995e582726ca658" %}
-{% set build = 5 %}
+{% set build = 6 %}
 
 # ensure mpi is defined (needed for conda-smithy recipe-lint)
 {% set mpi = mpi or 'nompi' %}
+
+# ensure tempest is defined (needed for conda-smithy recipe-lint)
+{% set tempest = tempest or 'notempest' %}
 
 {% if mpi == 'nompi' %}
 # prioritize nompi variant via build number
@@ -24,17 +27,20 @@ build:
   number: {{ build }}
 
   # add build string so packages can depend on
-  # mpi or nompi variants explicitly:
-  # `moab * mpi_mpich_*` for mpich
-  # `moab * mpi_*` for any mpi
-  # `moab * nompi_*` for no mpi
+  # mpi or nompi and tempest or notempest variants explicitly:
+  # `moab * mpi_mpich_tempest_*` for mpich and tempest
+  # `moab * mpi_*_tempest_*` for any mpi and tempest
+  # `moab * nompi_tempest_*` for no mpi and tempest
+  # `moab * mpi_mpich_notempest_*` for mpich and no tempest
+  # `moab * mpi_*_notempest_*` for any mpi and no tempest
+  # `moab * nompi_notempest_*` for no mpi and no tempest
 
   {% if mpi != 'nompi' %}
   {% set mpi_prefix = "mpi_" + mpi %}
   {% else %}
   {% set mpi_prefix = "nompi" %}
   {% endif %}
-  string: "{{ mpi_prefix }}_h{{ PKG_HASH }}_{{ build }}"
+  string: "{{ mpi_prefix }}__{{tempest}}_h{{ PKG_HASH }}_{{ build }}"
 
   {% if mpi != 'nompi' %}
   run_exports:
@@ -51,6 +57,9 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - openssh  # [mpi == 'openmpi']
+    - tempest-remap  # [tempest == 'tempest']
+    - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
+    - eigen  # [tempest == 'tempest']
   host:
     - libblas
     - libcblas
@@ -60,6 +69,8 @@ requirements:
     - setuptools
     - cython
     - {{ mpi }}  # [mpi != 'nompi']
+    - tempest-remap  # [tempest == 'tempest']
+    - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
   run:
     - python
     - hdf5 * {{ mpi_prefix }}_*
@@ -67,6 +78,8 @@ requirements:
     - setuptools
     - {{ mpi }}  # [mpi != 'nompi']
     - openssh  # [mpi == 'openmpi']
+    - tempest-remap  # [tempest == 'tempest']
+    - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
 
 test:
   source_files:
