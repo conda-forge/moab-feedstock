@@ -10,41 +10,77 @@ jobs:
   strategy:
     maxParallel: 8
     matrix:
-      osx_mpimpichpython2.7:
-        CONFIG: osx_mpimpichpython2.7
+      osx_mpimpichpython2.7tempestnotempest:
+        CONFIG: osx_mpimpichpython2.7tempestnotempest
         UPLOAD_PACKAGES: True
-      osx_mpimpichpython3.6:
-        CONFIG: osx_mpimpichpython3.6
+      osx_mpimpichpython2.7tempesttempest:
+        CONFIG: osx_mpimpichpython2.7tempesttempest
         UPLOAD_PACKAGES: True
-      osx_mpimpichpython3.7:
-        CONFIG: osx_mpimpichpython3.7
+      osx_mpimpichpython3.6tempestnotempest:
+        CONFIG: osx_mpimpichpython3.6tempestnotempest
         UPLOAD_PACKAGES: True
-      osx_mpimpichpython3.8:
-        CONFIG: osx_mpimpichpython3.8
+      osx_mpimpichpython3.6tempesttempest:
+        CONFIG: osx_mpimpichpython3.6tempesttempest
         UPLOAD_PACKAGES: True
-      osx_mpinompipython2.7:
-        CONFIG: osx_mpinompipython2.7
+      osx_mpimpichpython3.7tempestnotempest:
+        CONFIG: osx_mpimpichpython3.7tempestnotempest
         UPLOAD_PACKAGES: True
-      osx_mpinompipython3.6:
-        CONFIG: osx_mpinompipython3.6
+      osx_mpimpichpython3.7tempesttempest:
+        CONFIG: osx_mpimpichpython3.7tempesttempest
         UPLOAD_PACKAGES: True
-      osx_mpinompipython3.7:
-        CONFIG: osx_mpinompipython3.7
+      osx_mpimpichpython3.8tempestnotempest:
+        CONFIG: osx_mpimpichpython3.8tempestnotempest
         UPLOAD_PACKAGES: True
-      osx_mpinompipython3.8:
-        CONFIG: osx_mpinompipython3.8
+      osx_mpimpichpython3.8tempesttempest:
+        CONFIG: osx_mpimpichpython3.8tempesttempest
         UPLOAD_PACKAGES: True
-      osx_mpiopenmpipython2.7:
-        CONFIG: osx_mpiopenmpipython2.7
+      osx_mpinompipython2.7tempestnotempest:
+        CONFIG: osx_mpinompipython2.7tempestnotempest
         UPLOAD_PACKAGES: True
-      osx_mpiopenmpipython3.6:
-        CONFIG: osx_mpiopenmpipython3.6
+      osx_mpinompipython2.7tempesttempest:
+        CONFIG: osx_mpinompipython2.7tempesttempest
         UPLOAD_PACKAGES: True
-      osx_mpiopenmpipython3.7:
-        CONFIG: osx_mpiopenmpipython3.7
+      osx_mpinompipython3.6tempestnotempest:
+        CONFIG: osx_mpinompipython3.6tempestnotempest
         UPLOAD_PACKAGES: True
-      osx_mpiopenmpipython3.8:
-        CONFIG: osx_mpiopenmpipython3.8
+      osx_mpinompipython3.6tempesttempest:
+        CONFIG: osx_mpinompipython3.6tempesttempest
+        UPLOAD_PACKAGES: True
+      osx_mpinompipython3.7tempestnotempest:
+        CONFIG: osx_mpinompipython3.7tempestnotempest
+        UPLOAD_PACKAGES: True
+      osx_mpinompipython3.7tempesttempest:
+        CONFIG: osx_mpinompipython3.7tempesttempest
+        UPLOAD_PACKAGES: True
+      osx_mpinompipython3.8tempestnotempest:
+        CONFIG: osx_mpinompipython3.8tempestnotempest
+        UPLOAD_PACKAGES: True
+      osx_mpinompipython3.8tempesttempest:
+        CONFIG: osx_mpinompipython3.8tempesttempest
+        UPLOAD_PACKAGES: True
+      osx_mpiopenmpipython2.7tempestnotempest:
+        CONFIG: osx_mpiopenmpipython2.7tempestnotempest
+        UPLOAD_PACKAGES: True
+      osx_mpiopenmpipython2.7tempesttempest:
+        CONFIG: osx_mpiopenmpipython2.7tempesttempest
+        UPLOAD_PACKAGES: True
+      osx_mpiopenmpipython3.6tempestnotempest:
+        CONFIG: osx_mpiopenmpipython3.6tempestnotempest
+        UPLOAD_PACKAGES: True
+      osx_mpiopenmpipython3.6tempesttempest:
+        CONFIG: osx_mpiopenmpipython3.6tempesttempest
+        UPLOAD_PACKAGES: True
+      osx_mpiopenmpipython3.7tempestnotempest:
+        CONFIG: osx_mpiopenmpipython3.7tempestnotempest
+        UPLOAD_PACKAGES: True
+      osx_mpiopenmpipython3.7tempesttempest:
+        CONFIG: osx_mpiopenmpipython3.7tempesttempest
+        UPLOAD_PACKAGES: True
+      osx_mpiopenmpipython3.8tempestnotempest:
+        CONFIG: osx_mpiopenmpipython3.8tempestnotempest
+        UPLOAD_PACKAGES: True
+      osx_mpiopenmpipython3.8tempesttempest:
+        CONFIG: osx_mpiopenmpipython3.8tempesttempest
         UPLOAD_PACKAGES: True
 
   steps:
