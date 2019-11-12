@@ -22,6 +22,8 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: http://ftp.mcs.anl.gov/pub/fathom/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - 0001-Add-missing-MPI_Finalize-to-imoab_coupler-test.patch
 
 build:
   number: {{ build }}
