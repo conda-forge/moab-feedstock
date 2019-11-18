@@ -42,7 +42,7 @@ build:
   {% else %}
   {% set mpi_prefix = "nompi" %}
   {% endif %}
-  string: "{{ mpi_prefix }}_{{tempest}}_h{{ PKG_HASH }}_{{ build }}"
+  string: "{{ mpi_prefix }}_{{ tempest }}_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ build }}"
 
   {% if mpi != 'nompi' %}
   run_exports:
