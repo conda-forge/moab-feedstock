@@ -1,7 +1,7 @@
 {% set name = "moab" %}
 {% set version = "5.1.0" %}
 {% set sha256 = "0371fc25d2594589e95700739f01614f097b6157fb6023ed8995e582726ca658" %}
-{% set build = 6 %}
+{% set build = 7 %}
 
 # ensure mpi is defined (needed for conda-smithy recipe-lint)
 {% set mpi = mpi or 'nompi' %}
@@ -42,7 +42,7 @@ build:
   {% else %}
   {% set mpi_prefix = "nompi" %}
   {% endif %}
-  string: "{{ mpi_prefix }}__{{tempest}}_h{{ PKG_HASH }}_{{ build }}"
+  string: "{{ mpi_prefix }}_{{ tempest }}_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ build }}"
 
   {% if mpi != 'nompi' %}
   run_exports:
