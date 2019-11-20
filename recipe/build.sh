@@ -7,7 +7,7 @@ if [[ -n "$mpi" && "$mpi" != "nompi" ]]; then
 fi
 
 if [[ -n "$tempest" && "$tempest" != "notempest" ]]; then
-  export CONFIGURE_ARGS="--with-tempestremap=${PREFIX} --with-eigen3=${PREFIX}/include/eigen3 --with-netcdf=${PREFIX} ${CONFIGURE_ARGS}"
+  export CONFIGURE_ARGS="--with-tempestremap=${PREFIX} --with-eigen3=${PREFIX}/include/eigen3 --with-netcdf=${PREFIX} --with-netcdf-cxx=${PREFIX} ${CONFIGURE_ARGS}"
 fi
 
 autoreconf -fi
@@ -24,4 +24,5 @@ if [ "$(uname)" == "Linux" ]; then
   make check \
     || { cat itaps/imesh/test-suite.log; exit 1; }
 fi
+
 make install
