@@ -49,7 +49,7 @@ build:
     - {{ name }} * {{ mpi_prefix }}_*
   {% endif %}
 
-  skip: True  # [win]
+  skip: True  # [win or ((tempest == 'tempest') and (osx or (linux and (mpi == 'nompi'))))]
 
 requirements:
   build:
