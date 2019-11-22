@@ -1,7 +1,7 @@
 {% set name = "moab" %}
 {% set version = "5.1.0" %}
 {% set sha256 = "0371fc25d2594589e95700739f01614f097b6157fb6023ed8995e582726ca658" %}
-{% set build = 7 %}
+{% set build = 8 %}
 
 # ensure mpi is defined (needed for conda-smithy recipe-lint)
 {% set mpi = mpi or 'nompi' %}
@@ -49,7 +49,11 @@ build:
     - {{ name }} * {{ mpi_prefix }}_*
   {% endif %}
 
-  skip: True  # [win]
+  # Since this logic is a little hard to parse, skip if:
+  # * windows
+  # * tempest and OSX (clang isn't happy)
+  # * tempest and MPI and linux (current release doesn't support tempest in serial)
+  skip: True  # [win or ((tempest == 'tempest') and (osx or (linux and (mpi == 'nompi'))))]
 
 requirements:
   build:
@@ -59,9 +63,6 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - openssh  # [mpi == 'openmpi']
-    - tempest-remap  # [tempest == 'tempest']
-    - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
-    - eigen  # [tempest == 'tempest']
   host:
     - libblas
     - libcblas
@@ -71,8 +72,10 @@ requirements:
     - setuptools
     - cython
     - {{ mpi }}  # [mpi != 'nompi']
-    - tempest-remap  # [tempest == 'tempest']
+    - tempest-remap 2.0.2  # [tempest == 'tempest']
     - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
+    - eigen  # [tempest == 'tempest']
+    - netcdf-cxx-legacy  # [tempest == 'tempest']
   run:
     - python
     - hdf5 * {{ mpi_prefix }}_*
@@ -80,8 +83,9 @@ requirements:
     - setuptools
     - {{ mpi }}  # [mpi != 'nompi']
     - openssh  # [mpi == 'openmpi']
-    - tempest-remap  # [tempest == 'tempest']
+    - tempest-remap 2.0.2  # [tempest == 'tempest']
     - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
+    - netcdf-cxx-legacy  # [tempest == 'tempest']
 
 test:
   source_files:
@@ -93,6 +97,7 @@ test:
     - test -f ${PREFIX}/lib/libMOAB.so  # [linux]
     - test -f ${PREFIX}/lib/libMOAB.dylib  # [osx]
     - python examples/python/laplaciansmoother.py MeshFiles/unittest/surfrandomtris-4part.h5m 25
+    - mbtempest --help  # [tempest == 'tempest']
 
 about:
   home: http://press3.mcs.anl.gov/sigma/moab-library/
