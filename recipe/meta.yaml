@@ -1,7 +1,7 @@
 {% set name = "moab" %}
 {% set version = "5.1.0" %}
 {% set sha256 = "0371fc25d2594589e95700739f01614f097b6157fb6023ed8995e582726ca658" %}
-{% set build = 8 %}
+{% set build = 9 %}
 
 # ensure mpi is defined (needed for conda-smithy recipe-lint)
 {% set mpi = mpi or 'nompi' %}
@@ -49,11 +49,7 @@ build:
     - {{ name }} * {{ mpi_prefix }}_*
   {% endif %}
 
-  # Since this logic is a little hard to parse, skip if:
-  # * windows
-  # * tempest and OSX (clang isn't happy)
-  # * tempest and MPI and linux (current release doesn't support tempest in serial)
-  skip: True  # [win or ((tempest == 'tempest') and (osx or (linux and (mpi == 'nompi'))))]
+  skip: True  # [win or (osx and (tempest == 'tempest')) or (linux and  and (tempest == 'tempest') and (mpi == 'nompi'))]
 
 requirements:
   build:
@@ -67,15 +63,20 @@ requirements:
     - libblas
     - libcblas
     - python
+    # need to list hdf5, libnetcdf and netcdf-cxx-legacy twice to get version
+    # pinning from conda_build_config and build pinning from {{ mpi_prefix }}
+    - hdf5
     - hdf5 * {{ mpi_prefix }}_*
     - numpy
     - setuptools
     - cython
     - {{ mpi }}  # [mpi != 'nompi']
-    - tempest-remap 2.0.2  # [tempest == 'tempest']
+    - libnetcdf  # [tempest == 'tempest']
     - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
-    - eigen  # [tempest == 'tempest']
     - netcdf-cxx-legacy  # [tempest == 'tempest']
+    - netcdf-cxx-legacy * {{ mpi_prefix }}_*  # [tempest == 'tempest']
+    - eigen  # [tempest == 'tempest']
+    - tempest-remap 2.0.2 {{ mpi_prefix }}_*  # [tempest == 'tempest']
   run:
     - python
     - hdf5 * {{ mpi_prefix }}_*
@@ -83,9 +84,9 @@ requirements:
     - setuptools
     - {{ mpi }}  # [mpi != 'nompi']
     - openssh  # [mpi == 'openmpi']
-    - tempest-remap 2.0.2  # [tempest == 'tempest']
     - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
-    - netcdf-cxx-legacy  # [tempest == 'tempest']
+    - netcdf-cxx-legacy * {{ mpi_prefix }}_* # [tempest == 'tempest']
+    - tempest-remap 2.0.2 {{ mpi_prefix }}_*  # [tempest == 'tempest']
 
 test:
   source_files:
