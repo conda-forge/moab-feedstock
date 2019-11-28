@@ -85,7 +85,7 @@ requirements:
     - {{ mpi }}  # [mpi != 'nompi']
     - openssh  # [mpi == 'openmpi']
     - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
-    - netcdf-cxx-legacy * {{ mpi_prefix }}_* # [tempest == 'tempest']
+    - netcdf-cxx-legacy * {{ mpi_prefix }}_*  # [tempest == 'tempest']
     - tempest-remap 2.0.2 {{ mpi_prefix }}_*  # [tempest == 'tempest']
 
 test:
