@@ -55,7 +55,6 @@ requirements:
   build:
     - automake
     - libtool
-    - {{ compiler('fortran') }}
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - openssh  # [mpi == 'openmpi']
