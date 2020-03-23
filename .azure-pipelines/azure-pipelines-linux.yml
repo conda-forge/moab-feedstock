@@ -10,100 +10,100 @@ jobs:
   strategy:
     maxParallel: 8
     matrix:
-      linux_mpimpichpython2.7tempestnotempest:
-        CONFIG: linux_mpimpichpython2.7tempestnotempest
+      linux_mpimpichnumpy1.14python3.6.____cpythontempestnotempest:
+        CONFIG: linux_mpimpichnumpy1.14python3.6.____cpythontempestnotempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_mpimpichpython2.7tempesttempest:
-        CONFIG: linux_mpimpichpython2.7tempesttempest
+      linux_mpimpichnumpy1.14python3.6.____cpythontempesttempest:
+        CONFIG: linux_mpimpichnumpy1.14python3.6.____cpythontempesttempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_mpimpichpython3.6tempestnotempest:
-        CONFIG: linux_mpimpichpython3.6tempestnotempest
+      linux_mpimpichnumpy1.14python3.7.____cpythontempestnotempest:
+        CONFIG: linux_mpimpichnumpy1.14python3.7.____cpythontempestnotempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_mpimpichpython3.6tempesttempest:
-        CONFIG: linux_mpimpichpython3.6tempesttempest
+      linux_mpimpichnumpy1.14python3.7.____cpythontempesttempest:
+        CONFIG: linux_mpimpichnumpy1.14python3.7.____cpythontempesttempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_mpimpichpython3.7tempestnotempest:
-        CONFIG: linux_mpimpichpython3.7tempestnotempest
+      linux_mpimpichnumpy1.14python3.8.____cpythontempestnotempest:
+        CONFIG: linux_mpimpichnumpy1.14python3.8.____cpythontempestnotempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_mpimpichpython3.7tempesttempest:
-        CONFIG: linux_mpimpichpython3.7tempesttempest
+      linux_mpimpichnumpy1.14python3.8.____cpythontempesttempest:
+        CONFIG: linux_mpimpichnumpy1.14python3.8.____cpythontempesttempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_mpimpichpython3.8tempestnotempest:
-        CONFIG: linux_mpimpichpython3.8tempestnotempest
+      linux_mpimpichnumpy1.18python3.6.____73_pypytempestnotempest:
+        CONFIG: linux_mpimpichnumpy1.18python3.6.____73_pypytempestnotempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_mpimpichpython3.8tempesttempest:
-        CONFIG: linux_mpimpichpython3.8tempesttempest
+      linux_mpimpichnumpy1.18python3.6.____73_pypytempesttempest:
+        CONFIG: linux_mpimpichnumpy1.18python3.6.____73_pypytempesttempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_mpinompipython2.7tempestnotempest:
-        CONFIG: linux_mpinompipython2.7tempestnotempest
+      linux_mpinompinumpy1.14python3.6.____cpythontempestnotempest:
+        CONFIG: linux_mpinompinumpy1.14python3.6.____cpythontempestnotempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_mpinompipython2.7tempesttempest:
-        CONFIG: linux_mpinompipython2.7tempesttempest
+      linux_mpinompinumpy1.14python3.6.____cpythontempesttempest:
+        CONFIG: linux_mpinompinumpy1.14python3.6.____cpythontempesttempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_mpinompipython3.6tempestnotempest:
-        CONFIG: linux_mpinompipython3.6tempestnotempest
+      linux_mpinompinumpy1.14python3.7.____cpythontempestnotempest:
+        CONFIG: linux_mpinompinumpy1.14python3.7.____cpythontempestnotempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_mpinompipython3.6tempesttempest:
-        CONFIG: linux_mpinompipython3.6tempesttempest
+      linux_mpinompinumpy1.14python3.7.____cpythontempesttempest:
+        CONFIG: linux_mpinompinumpy1.14python3.7.____cpythontempesttempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_mpinompipython3.7tempestnotempest:
-        CONFIG: linux_mpinompipython3.7tempestnotempest
+      linux_mpinompinumpy1.14python3.8.____cpythontempestnotempest:
+        CONFIG: linux_mpinompinumpy1.14python3.8.____cpythontempestnotempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_mpinompipython3.7tempesttempest:
-        CONFIG: linux_mpinompipython3.7tempesttempest
+      linux_mpinompinumpy1.14python3.8.____cpythontempesttempest:
+        CONFIG: linux_mpinompinumpy1.14python3.8.____cpythontempesttempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_mpinompipython3.8tempestnotempest:
-        CONFIG: linux_mpinompipython3.8tempestnotempest
+      linux_mpinompinumpy1.18python3.6.____73_pypytempestnotempest:
+        CONFIG: linux_mpinompinumpy1.18python3.6.____73_pypytempestnotempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_mpinompipython3.8tempesttempest:
-        CONFIG: linux_mpinompipython3.8tempesttempest
+      linux_mpinompinumpy1.18python3.6.____73_pypytempesttempest:
+        CONFIG: linux_mpinompinumpy1.18python3.6.____73_pypytempesttempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_mpiopenmpipython2.7tempestnotempest:
-        CONFIG: linux_mpiopenmpipython2.7tempestnotempest
+      linux_mpiopenmpinumpy1.14python3.6.____cpythontempestnotempest:
+        CONFIG: linux_mpiopenmpinumpy1.14python3.6.____cpythontempestnotempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_mpiopenmpipython2.7tempesttempest:
-        CONFIG: linux_mpiopenmpipython2.7tempesttempest
+      linux_mpiopenmpinumpy1.14python3.6.____cpythontempesttempest:
+        CONFIG: linux_mpiopenmpinumpy1.14python3.6.____cpythontempesttempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_mpiopenmpipython3.6tempestnotempest:
-        CONFIG: linux_mpiopenmpipython3.6tempestnotempest
+      linux_mpiopenmpinumpy1.14python3.7.____cpythontempestnotempest:
+        CONFIG: linux_mpiopenmpinumpy1.14python3.7.____cpythontempestnotempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_mpiopenmpipython3.6tempesttempest:
-        CONFIG: linux_mpiopenmpipython3.6tempesttempest
+      linux_mpiopenmpinumpy1.14python3.7.____cpythontempesttempest:
+        CONFIG: linux_mpiopenmpinumpy1.14python3.7.____cpythontempesttempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_mpiopenmpipython3.7tempestnotempest:
-        CONFIG: linux_mpiopenmpipython3.7tempestnotempest
+      linux_mpiopenmpinumpy1.14python3.8.____cpythontempestnotempest:
+        CONFIG: linux_mpiopenmpinumpy1.14python3.8.____cpythontempestnotempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_mpiopenmpipython3.7tempesttempest:
-        CONFIG: linux_mpiopenmpipython3.7tempesttempest
+      linux_mpiopenmpinumpy1.14python3.8.____cpythontempesttempest:
+        CONFIG: linux_mpiopenmpinumpy1.14python3.8.____cpythontempesttempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_mpiopenmpipython3.8tempestnotempest:
-        CONFIG: linux_mpiopenmpipython3.8tempestnotempest
+      linux_mpiopenmpinumpy1.18python3.6.____73_pypytempestnotempest:
+        CONFIG: linux_mpiopenmpinumpy1.18python3.6.____73_pypytempestnotempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_mpiopenmpipython3.8tempesttempest:
-        CONFIG: linux_mpiopenmpipython3.8tempesttempest
+      linux_mpiopenmpinumpy1.18python3.6.____73_pypytempesttempest:
+        CONFIG: linux_mpiopenmpinumpy1.18python3.6.____73_pypytempesttempest
         UPLOAD_PACKAGES: True
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
   steps:
