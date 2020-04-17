@@ -1,7 +1,7 @@
 {% set name = "moab" %}
 {% set version = "5.1.0" %}
 {% set sha256 = "0371fc25d2594589e95700739f01614f097b6157fb6023ed8995e582726ca658" %}
-{% set build = 10 %}
+{% set build = 11 %}
 
 # ensure mpi is defined (needed for conda-smithy recipe-lint)
 {% set mpi = mpi or 'nompi' %}
