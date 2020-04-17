@@ -5,82 +5,64 @@
 jobs:
 - job: osx
   pool:
-    vmImage: macOS-10.13
+    vmImage: macOS-10.14
   timeoutInMinutes: 360
   strategy:
     maxParallel: 8
     matrix:
-      osx_mpimpichpython2.7tempestnotempest:
-        CONFIG: osx_mpimpichpython2.7tempestnotempest
+      osx_mpimpichpython3.6.____cpythontempestnotempest:
+        CONFIG: osx_mpimpichpython3.6.____cpythontempestnotempest
         UPLOAD_PACKAGES: True
-      osx_mpimpichpython2.7tempesttempest:
-        CONFIG: osx_mpimpichpython2.7tempesttempest
+      osx_mpimpichpython3.6.____cpythontempesttempest:
+        CONFIG: osx_mpimpichpython3.6.____cpythontempesttempest
         UPLOAD_PACKAGES: True
-      osx_mpimpichpython3.6tempestnotempest:
-        CONFIG: osx_mpimpichpython3.6tempestnotempest
+      osx_mpimpichpython3.7.____cpythontempestnotempest:
+        CONFIG: osx_mpimpichpython3.7.____cpythontempestnotempest
         UPLOAD_PACKAGES: True
-      osx_mpimpichpython3.6tempesttempest:
-        CONFIG: osx_mpimpichpython3.6tempesttempest
+      osx_mpimpichpython3.7.____cpythontempesttempest:
+        CONFIG: osx_mpimpichpython3.7.____cpythontempesttempest
         UPLOAD_PACKAGES: True
-      osx_mpimpichpython3.7tempestnotempest:
-        CONFIG: osx_mpimpichpython3.7tempestnotempest
+      osx_mpimpichpython3.8.____cpythontempestnotempest:
+        CONFIG: osx_mpimpichpython3.8.____cpythontempestnotempest
         UPLOAD_PACKAGES: True
-      osx_mpimpichpython3.7tempesttempest:
-        CONFIG: osx_mpimpichpython3.7tempesttempest
+      osx_mpimpichpython3.8.____cpythontempesttempest:
+        CONFIG: osx_mpimpichpython3.8.____cpythontempesttempest
         UPLOAD_PACKAGES: True
-      osx_mpimpichpython3.8tempestnotempest:
-        CONFIG: osx_mpimpichpython3.8tempestnotempest
+      osx_mpinompipython3.6.____cpythontempestnotempest:
+        CONFIG: osx_mpinompipython3.6.____cpythontempestnotempest
         UPLOAD_PACKAGES: True
-      osx_mpimpichpython3.8tempesttempest:
-        CONFIG: osx_mpimpichpython3.8tempesttempest
+      osx_mpinompipython3.6.____cpythontempesttempest:
+        CONFIG: osx_mpinompipython3.6.____cpythontempesttempest
         UPLOAD_PACKAGES: True
-      osx_mpinompipython2.7tempestnotempest:
-        CONFIG: osx_mpinompipython2.7tempestnotempest
+      osx_mpinompipython3.7.____cpythontempestnotempest:
+        CONFIG: osx_mpinompipython3.7.____cpythontempestnotempest
         UPLOAD_PACKAGES: True
-      osx_mpinompipython2.7tempesttempest:
-        CONFIG: osx_mpinompipython2.7tempesttempest
+      osx_mpinompipython3.7.____cpythontempesttempest:
+        CONFIG: osx_mpinompipython3.7.____cpythontempesttempest
         UPLOAD_PACKAGES: True
-      osx_mpinompipython3.6tempestnotempest:
-        CONFIG: osx_mpinompipython3.6tempestnotempest
+      osx_mpinompipython3.8.____cpythontempestnotempest:
+        CONFIG: osx_mpinompipython3.8.____cpythontempestnotempest
         UPLOAD_PACKAGES: True
-      osx_mpinompipython3.6tempesttempest:
-        CONFIG: osx_mpinompipython3.6tempesttempest
+      osx_mpinompipython3.8.____cpythontempesttempest:
+        CONFIG: osx_mpinompipython3.8.____cpythontempesttempest
         UPLOAD_PACKAGES: True
-      osx_mpinompipython3.7tempestnotempest:
-        CONFIG: osx_mpinompipython3.7tempestnotempest
+      osx_mpiopenmpipython3.6.____cpythontempestnotempest:
+        CONFIG: osx_mpiopenmpipython3.6.____cpythontempestnotempest
         UPLOAD_PACKAGES: True
-      osx_mpinompipython3.7tempesttempest:
-        CONFIG: osx_mpinompipython3.7tempesttempest
+      osx_mpiopenmpipython3.6.____cpythontempesttempest:
+        CONFIG: osx_mpiopenmpipython3.6.____cpythontempesttempest
         UPLOAD_PACKAGES: True
-      osx_mpinompipython3.8tempestnotempest:
-        CONFIG: osx_mpinompipython3.8tempestnotempest
+      osx_mpiopenmpipython3.7.____cpythontempestnotempest:
+        CONFIG: osx_mpiopenmpipython3.7.____cpythontempestnotempest
         UPLOAD_PACKAGES: True
-      osx_mpinompipython3.8tempesttempest:
-        CONFIG: osx_mpinompipython3.8tempesttempest
+      osx_mpiopenmpipython3.7.____cpythontempesttempest:
+        CONFIG: osx_mpiopenmpipython3.7.____cpythontempesttempest
         UPLOAD_PACKAGES: True
-      osx_mpiopenmpipython2.7tempestnotempest:
-        CONFIG: osx_mpiopenmpipython2.7tempestnotempest
+      osx_mpiopenmpipython3.8.____cpythontempestnotempest:
+        CONFIG: osx_mpiopenmpipython3.8.____cpythontempestnotempest
         UPLOAD_PACKAGES: True
-      osx_mpiopenmpipython2.7tempesttempest:
-        CONFIG: osx_mpiopenmpipython2.7tempesttempest
-        UPLOAD_PACKAGES: True
-      osx_mpiopenmpipython3.6tempestnotempest:
-        CONFIG: osx_mpiopenmpipython3.6tempestnotempest
-        UPLOAD_PACKAGES: True
-      osx_mpiopenmpipython3.6tempesttempest:
-        CONFIG: osx_mpiopenmpipython3.6tempesttempest
-        UPLOAD_PACKAGES: True
-      osx_mpiopenmpipython3.7tempestnotempest:
-        CONFIG: osx_mpiopenmpipython3.7tempestnotempest
-        UPLOAD_PACKAGES: True
-      osx_mpiopenmpipython3.7tempesttempest:
-        CONFIG: osx_mpiopenmpipython3.7tempesttempest
-        UPLOAD_PACKAGES: True
-      osx_mpiopenmpipython3.8tempestnotempest:
-        CONFIG: osx_mpiopenmpipython3.8tempestnotempest
-        UPLOAD_PACKAGES: True
-      osx_mpiopenmpipython3.8tempesttempest:
-        CONFIG: osx_mpiopenmpipython3.8tempesttempest
+      osx_mpiopenmpipython3.8.____cpythontempesttempest:
+        CONFIG: osx_mpiopenmpipython3.8.____cpythontempesttempest
         UPLOAD_PACKAGES: True
 
   steps:
@@ -111,7 +93,7 @@ jobs:
       source activate base
       echo "Configuring conda."
 
-      setup_conda_rc ./ ./recipe ./.ci_support/${CONFIG}.yaml
+      setup_conda_rc ./ "./recipe" ./.ci_support/${CONFIG}.yaml
       export CI=azure
       source run_conda_forge_build_setup
       conda update --yes --quiet --override-channels -c conda-forge -c defaults --all
@@ -122,24 +104,24 @@ jobs:
 
   - script: |
       source activate base
-      mangle_compiler ./ ./recipe ./.ci_support/${CONFIG}.yaml
+      mangle_compiler ./ "./recipe" ./.ci_support/${CONFIG}.yaml
     displayName: Mangle compiler
 
   - script: |
       source activate base
-      make_build_number ./ ./recipe ./.ci_support/${CONFIG}.yaml
+      make_build_number ./ "./recipe" ./.ci_support/${CONFIG}.yaml
     displayName: Generate build number clobber file
 
   - script: |
       source activate base
-      conda build ./recipe -m ./.ci_support/${CONFIG}.yaml --clobber-file ./.ci_support/clobber_${CONFIG}.yaml
+      conda build "./recipe" -m ./.ci_support/${CONFIG}.yaml --clobber-file ./.ci_support/clobber_${CONFIG}.yaml
     displayName: Build recipe
 
   - script: |
       source activate base
       export GIT_BRANCH=$BUILD_SOURCEBRANCHNAME
-      upload_package ./ ./recipe ./.ci_support/${CONFIG}.yaml
+      upload_package ./ "./recipe" ./.ci_support/${CONFIG}.yaml
     displayName: Upload package
     env:
       BINSTAR_TOKEN: $(BINSTAR_TOKEN)
-    condition: not(eq(variables['UPLOAD_PACKAGES'], 'False'))
+    condition: and(succeeded(), not(eq(variables['UPLOAD_PACKAGES'], 'False')))
