@@ -70,6 +70,9 @@ requirements:
     - eigen
     - tempest-remap 2.0.5  # [tempest == 'tempest']
     - metis
+    - libblas
+    - liblapack
+
   run:
     - python
     - hdf5 * {{ mpi_prefix }}_*
@@ -80,6 +83,8 @@ requirements:
     - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
     - tempest-remap 2.0.5  # [tempest == 'tempest']
     - metis
+    - libblas
+    - liblapack
 
 test:
   source_files:
