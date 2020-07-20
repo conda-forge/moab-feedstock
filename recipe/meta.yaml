@@ -19,9 +19,10 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: http://ftp.mcs.anl.gov/pub/fathom/{{ name }}-{{ version }}.tar.gz
-  sha256: 805ed3546deff39e076be4d1f68aba1cf0dda8c34ce43e1fc179d1aff57c5d5d
-
+  # url: http://ftp.mcs.anl.gov/pub/fathom/{{ name }}-{{ version }}.tar.gz
+  # sha256: 805ed3546deff39e076be4d1f68aba1cf0dda8c34ce43e1fc179d1aff57c5d5d
+  url: http://ftp.mcs.anl.gov/pub/fathom/moab-conda-test.tar.gz
+  sha256: 53ec6efe5e943d7342216068e86869a4f6392e0fc24ab00158c9e4310b2dbe18
 build:
   number: {{ build }}
 
