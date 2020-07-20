@@ -1,7 +1,6 @@
 {% set name = "moab" %}
-{% set version = "5.1.0" %}
-{% set sha256 = "0371fc25d2594589e95700739f01614f097b6157fb6023ed8995e582726ca658" %}
-{% set build = 12 %}
+{% set version = "5.2.0" %}
+{% set build = 0 %}
 
 # ensure mpi is defined (needed for conda-smithy recipe-lint)
 {% set mpi = mpi or 'nompi' %}
@@ -21,9 +20,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: http://ftp.mcs.anl.gov/pub/fathom/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
-  patches:
-    - 0001-Add-missing-MPI_Finalize-to-imoab_coupler-test.patch
+  sha256: 805ed3546deff39e076be4d1f68aba1cf0dda8c34ce43e1fc179d1aff57c5d5d
 
 build:
   number: {{ build }}
@@ -73,7 +70,7 @@ requirements:
     - netcdf-cxx-legacy  # [tempest == 'tempest']
     - netcdf-cxx-legacy * {{ mpi_prefix }}_*  # [tempest == 'tempest']
     - eigen
-    - tempest-remap 2.0.2  # [tempest == 'tempest']
+    - tempest-remap 2.0.5  # [tempest == 'tempest']
   run:
     - python
     - hdf5 * {{ mpi_prefix }}_*
@@ -83,7 +80,7 @@ requirements:
     - openssh  # [mpi == 'openmpi']
     - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
     - netcdf-cxx-legacy * {{ mpi_prefix }}_*  # [tempest == 'tempest']
-    - tempest-remap 2.0.2  # [tempest == 'tempest']
+    - tempest-remap 2.0.5  # [tempest == 'tempest']
 
 test:
   source_files:
