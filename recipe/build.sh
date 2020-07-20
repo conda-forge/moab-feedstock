@@ -16,6 +16,7 @@ autoreconf -fi
 ./configure --prefix="${PREFIX}" \
   ${CONFIGURE_ARGS} \
   --with-hdf5="${PREFIX}" \
+  --with-metis="${PREFIX}" \
   --enable-shared \
   --enable-tools \
   --enable-pymoab \
