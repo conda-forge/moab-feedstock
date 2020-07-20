@@ -69,6 +69,7 @@ requirements:
     - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
     - eigen
     - tempest-remap 2.0.5  # [tempest == 'tempest']
+    - metis
   run:
     - python
     - hdf5 * {{ mpi_prefix }}_*
@@ -78,6 +79,7 @@ requirements:
     - openssh  # [mpi == 'openmpi']
     - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
     - tempest-remap 2.0.5  # [tempest == 'tempest']
+    - metis
 
 test:
   source_files:
