@@ -5,7 +5,7 @@ Home: http://press3.mcs.anl.gov/sigma/moab-library/
 
 Package license: LGPL v2.1
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: The Mesh-Oriented datABase
 
