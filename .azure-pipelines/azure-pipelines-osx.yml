@@ -6,64 +6,64 @@ jobs:
 - job: osx
   pool:
     vmImage: macOS-10.14
-  timeoutInMinutes: 360
   strategy:
-    maxParallel: 8
     matrix:
       osx_mpimpichpython3.6.____cpythontempestnotempest:
         CONFIG: osx_mpimpichpython3.6.____cpythontempestnotempest
-        UPLOAD_PACKAGES: True
+        UPLOAD_PACKAGES: 'True'
       osx_mpimpichpython3.6.____cpythontempesttempest:
         CONFIG: osx_mpimpichpython3.6.____cpythontempesttempest
-        UPLOAD_PACKAGES: True
+        UPLOAD_PACKAGES: 'True'
       osx_mpimpichpython3.7.____cpythontempestnotempest:
         CONFIG: osx_mpimpichpython3.7.____cpythontempestnotempest
-        UPLOAD_PACKAGES: True
+        UPLOAD_PACKAGES: 'True'
       osx_mpimpichpython3.7.____cpythontempesttempest:
         CONFIG: osx_mpimpichpython3.7.____cpythontempesttempest
-        UPLOAD_PACKAGES: True
+        UPLOAD_PACKAGES: 'True'
       osx_mpimpichpython3.8.____cpythontempestnotempest:
         CONFIG: osx_mpimpichpython3.8.____cpythontempestnotempest
-        UPLOAD_PACKAGES: True
+        UPLOAD_PACKAGES: 'True'
       osx_mpimpichpython3.8.____cpythontempesttempest:
         CONFIG: osx_mpimpichpython3.8.____cpythontempesttempest
-        UPLOAD_PACKAGES: True
+        UPLOAD_PACKAGES: 'True'
       osx_mpinompipython3.6.____cpythontempestnotempest:
         CONFIG: osx_mpinompipython3.6.____cpythontempestnotempest
-        UPLOAD_PACKAGES: True
+        UPLOAD_PACKAGES: 'True'
       osx_mpinompipython3.6.____cpythontempesttempest:
         CONFIG: osx_mpinompipython3.6.____cpythontempesttempest
-        UPLOAD_PACKAGES: True
+        UPLOAD_PACKAGES: 'True'
       osx_mpinompipython3.7.____cpythontempestnotempest:
         CONFIG: osx_mpinompipython3.7.____cpythontempestnotempest
-        UPLOAD_PACKAGES: True
+        UPLOAD_PACKAGES: 'True'
       osx_mpinompipython3.7.____cpythontempesttempest:
         CONFIG: osx_mpinompipython3.7.____cpythontempesttempest
-        UPLOAD_PACKAGES: True
+        UPLOAD_PACKAGES: 'True'
       osx_mpinompipython3.8.____cpythontempestnotempest:
         CONFIG: osx_mpinompipython3.8.____cpythontempestnotempest
-        UPLOAD_PACKAGES: True
+        UPLOAD_PACKAGES: 'True'
       osx_mpinompipython3.8.____cpythontempesttempest:
         CONFIG: osx_mpinompipython3.8.____cpythontempesttempest
-        UPLOAD_PACKAGES: True
+        UPLOAD_PACKAGES: 'True'
       osx_mpiopenmpipython3.6.____cpythontempestnotempest:
         CONFIG: osx_mpiopenmpipython3.6.____cpythontempestnotempest
-        UPLOAD_PACKAGES: True
+        UPLOAD_PACKAGES: 'True'
       osx_mpiopenmpipython3.6.____cpythontempesttempest:
         CONFIG: osx_mpiopenmpipython3.6.____cpythontempesttempest
-        UPLOAD_PACKAGES: True
+        UPLOAD_PACKAGES: 'True'
       osx_mpiopenmpipython3.7.____cpythontempestnotempest:
         CONFIG: osx_mpiopenmpipython3.7.____cpythontempestnotempest
-        UPLOAD_PACKAGES: True
+        UPLOAD_PACKAGES: 'True'
       osx_mpiopenmpipython3.7.____cpythontempesttempest:
         CONFIG: osx_mpiopenmpipython3.7.____cpythontempesttempest
-        UPLOAD_PACKAGES: True
+        UPLOAD_PACKAGES: 'True'
       osx_mpiopenmpipython3.8.____cpythontempestnotempest:
         CONFIG: osx_mpiopenmpipython3.8.____cpythontempestnotempest
-        UPLOAD_PACKAGES: True
+        UPLOAD_PACKAGES: 'True'
       osx_mpiopenmpipython3.8.____cpythontempesttempest:
         CONFIG: osx_mpiopenmpipython3.8.____cpythontempesttempest
-        UPLOAD_PACKAGES: True
+        UPLOAD_PACKAGES: 'True'
+    maxParallel: 8
+  timeoutInMinutes: 360
 
   steps:
   # TODO: Fast finish on azure pipelines?
@@ -71,7 +71,10 @@ jobs:
       export CI=azure
       export OSX_FORCE_SDK_DOWNLOAD="1"
       export GIT_BRANCH=$BUILD_SOURCEBRANCHNAME
+      export FEEDSTOCK_NAME=$(basename ${BUILD_REPOSITORY_NAME})
       ./.scripts/run_osx_build.sh
     displayName: Run OSX build
     env:
       BINSTAR_TOKEN: $(BINSTAR_TOKEN)
+      FEEDSTOCK_TOKEN: $(FEEDSTOCK_TOKEN)
+      STAGING_BINSTAR_TOKEN: $(STAGING_BINSTAR_TOKEN)
