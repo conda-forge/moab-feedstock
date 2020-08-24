@@ -99,7 +99,7 @@ test:
 
 about:
   home: http://press3.mcs.anl.gov/sigma/moab-library/
-  license: LGPL v2.1
+  license: LGPL-3.0-or-later
   license_file: LICENSE
   summary: The Mesh-Oriented datABase
   description: |
