@@ -32,6 +32,14 @@ jobs:
         CONFIG: linux_64_mpimpichnumpy1.16python3.8.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_64_mpimpichnumpy1.18python3.6.____73_pypytempestnotempest:
+        CONFIG: linux_64_mpimpichnumpy1.18python3.6.____73_pypytempestnotempest
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_64_mpimpichnumpy1.18python3.6.____73_pypytempesttempest:
+        CONFIG: linux_64_mpimpichnumpy1.18python3.6.____73_pypytempesttempest
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
       linux_64_mpimpichnumpy1.19python3.9.____cpythontempestnotempest:
         CONFIG: linux_64_mpimpichnumpy1.19python3.9.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
@@ -64,6 +72,14 @@ jobs:
         CONFIG: linux_64_mpinompinumpy1.16python3.8.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_64_mpinompinumpy1.18python3.6.____73_pypytempestnotempest:
+        CONFIG: linux_64_mpinompinumpy1.18python3.6.____73_pypytempestnotempest
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_64_mpinompinumpy1.18python3.6.____73_pypytempesttempest:
+        CONFIG: linux_64_mpinompinumpy1.18python3.6.____73_pypytempesttempest
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
       linux_64_mpinompinumpy1.19python3.9.____cpythontempestnotempest:
         CONFIG: linux_64_mpinompinumpy1.19python3.9.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
@@ -94,6 +110,14 @@ jobs:
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
       linux_64_mpiopenmpinumpy1.16python3.8.____cpythontempesttempest:
         CONFIG: linux_64_mpiopenmpinumpy1.16python3.8.____cpythontempesttempest
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_64_mpiopenmpinumpy1.18python3.6.____73_pypytempestnotempest:
+        CONFIG: linux_64_mpiopenmpinumpy1.18python3.6.____73_pypytempestnotempest
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: condaforge/linux-anvil-comp7
+      linux_64_mpiopenmpinumpy1.18python3.6.____73_pypytempesttempest:
+        CONFIG: linux_64_mpiopenmpinumpy1.18python3.6.____73_pypytempesttempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
       linux_64_mpiopenmpinumpy1.19python3.9.____cpythontempestnotempest:
