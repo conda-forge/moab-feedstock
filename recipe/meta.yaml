@@ -21,6 +21,9 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: http://ftp.mcs.anl.gov/pub/fathom/{{ name }}-{{ version }}.tar.gz
   sha256: 60d31762be3f0e5c89416c764e844ec88dac294169b59a5ead3c316b50f85c29
+  patches:
+    - 0001-tempestremap-serial.patch
+
 build:
   number: {{ build }}
 

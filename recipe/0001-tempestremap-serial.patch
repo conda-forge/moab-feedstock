@@ -1,0 +1,112 @@
+diff --git a/src/Remapping/TempestRemapper.cpp b/src/Remapping/TempestRemapper.cpp
+index 90a4ece30..eb6d647cf 100644
+--- a/src/Remapping/TempestRemapper.cpp
++++ b/src/Remapping/TempestRemapper.cpp
+@@ -806,19 +806,23 @@ moab::ErrorCode moab::TempestRemapper::WriteTempestIntersectionMesh( std::string
+ ///////////////////////////////////////////////////////////////////////////////////
+ 
+ #ifndef MOAB_HAVE_MPI
+-static ErrorCode assign_vertex_element_IDs( moab::Interface* mbImpl, Tag idtag, EntityHandle this_set,
+-                                            const int dimension = 2, const int start_id = 1 )
++ErrorCode TempestRemapper::assign_vertex_element_IDs( Tag idtag, EntityHandle this_set,
++                                            const int dimension, const int start_id )
+ {
++    assert(idtag);
++
+     ErrorCode rval;
+     Range entities;
+-    rval = mbImpl->get_entities_by_dimension( this_set, dimension, entities );MB_CHK_SET_ERR( rval, "Failed to get entities" );
++    rval = m_interface->get_entities_by_dimension( this_set, dimension, entities );MB_CHK_SET_ERR( rval, "Failed to get entities" );
++
++    if (entities.size() == 0) return moab::MB_SUCCESS;
+ 
+     int idoffset = start_id;
+     std::vector< int > gid( entities.size() );
+     for( unsigned i = 0; i < entities.size(); ++i )
+         gid[i] = idoffset++;
+ 
+-    rval = mbImpl->tag_set_data( idtag, entities, &gid[0] );MB_CHK_ERR( rval );
++    rval = m_interface->tag_set_data( idtag, entities, &gid[0] );MB_CHK_ERR( rval );
+ 
+     return moab::MB_SUCCESS;
+ }
+@@ -1191,7 +1195,7 @@ ErrorCode TempestRemapper::ComputeOverlapMesh( bool kdtree_search, bool use_temp
+ #ifdef MOAB_HAVE_MPI
+                 rval = m_pcomm->assign_global_ids( m_source_set, 2, 1, false, true, false );MB_CHK_ERR( rval );
+ #else
+-                rval = assign_vertex_element_IDs( m_interface, gidtag, m_source_set, 2, 1 );MB_CHK_ERR( rval );
++                rval = this->assign_vertex_element_IDs( gidtag, m_source_set, 2, 1 );MB_CHK_ERR( rval );
+ #endif
+             }
+         }
+@@ -1209,7 +1213,7 @@ ErrorCode TempestRemapper::ComputeOverlapMesh( bool kdtree_search, bool use_temp
+ #ifdef MOAB_HAVE_MPI
+                 rval = m_pcomm->assign_global_ids( m_target_set, 2, 1, false, true, false );MB_CHK_ERR( rval );
+ #else
+-                rval = assign_vertex_element_IDs( m_interface, gidtag, m_target_set, 2, 1 );MB_CHK_ERR( rval );
++                rval = this->assign_vertex_element_IDs( gidtag, m_target_set, 2, 1 );MB_CHK_ERR( rval );
+ #endif
+             }
+         }
+diff --git a/src/moab/Remapping/TempestOnlineMap.hpp b/src/moab/Remapping/TempestOnlineMap.hpp
+index 1ec462229..0a25383d9 100644
+--- a/src/moab/Remapping/TempestOnlineMap.hpp
++++ b/src/moab/Remapping/TempestOnlineMap.hpp
+@@ -25,8 +25,10 @@
+ 
+ ///////////////////////////////////////////////////////////////////////////////
+ 
++#if !defined(RECTANGULAR_TRUNCATION) && !defined(TRIANGULAR_TRUNCATION)
+ #define RECTANGULAR_TRUNCATION
+ // #define TRIANGULAR_TRUNCATION
++#endif
+ 
+ ///////////////////////////////////////////////////////////////////////////////
+ 
+diff --git a/src/moab/Remapping/TempestRemapper.hpp b/src/moab/Remapping/TempestRemapper.hpp
+index d2c1fc705..3a557419e 100644
+--- a/src/moab/Remapping/TempestRemapper.hpp
++++ b/src/moab/Remapping/TempestRemapper.hpp
+@@ -229,6 +229,14 @@ class TempestRemapper : public Remapper
+     ///	</summary>
+     moab::ErrorCode GetOverlapAugmentedEntities( moab::Range& sharedGhostEntities );
+ 
++#ifndef MOAB_HAVE_MPI
++    /// <summary>
++    ///    Internal method to assign vertex and element global IDs if one does not exist already
++    /// </summary>
++    moab::ErrorCode assign_vertex_element_IDs( Tag idtag, EntityHandle this_set,
++                                            const int dimension = 2, const int start_id = 1 );
++#endif
++
+   public:               // public members
+     bool meshValidate;  // Validate the mesh after loading from file
+ 
+diff --git a/tools/convert.cpp b/tools/convert.cpp
+index 1eb059881..3f6a42fe5 100644
+--- a/tools/convert.cpp
++++ b/tools/convert.cpp
+@@ -761,8 +761,8 @@ int main( int argc, char* argv[] )
+ #ifdef MOAB_HAVE_MPI
+         result = pcomm->assign_global_ids( srcmesh, 2, 1, false );MB_CHK_ERR( result );
+ #else
+-        result = remapper->assign_vertex_element_IDs( gMB, gidTag, srcmesh, 2, 1 );MB_CHK_ERR( result );
+-        result = remapper->assign_vertex_element_IDs( gMB, gidTag, srcmesh, 0, 1 );MB_CHK_ERR( result );
++        result = remapper->assign_vertex_element_IDs( gidTag, srcmesh, 2, 1 );MB_CHK_ERR( result );
++        result = remapper->assign_vertex_element_IDs( gidTag, srcmesh, 0, 1 );MB_CHK_ERR( result );
+ #endif
+     }
+ 
+diff --git a/tools/mbtempest.cpp b/tools/mbtempest.cpp
+index 24fda915f..0d633ce42 100644
+--- a/tools/mbtempest.cpp
++++ b/tools/mbtempest.cpp
+@@ -74,7 +74,7 @@ struct ToolContext
+     ToolContext ( moab::Interface* icore ) :
+             mbcore(icore),
+             proc_id ( 0 ), n_procs ( 1 ),
+-            outputFormatter ( std::cout, 0, 0 )
++            outputFormatter ( std::cout, 0, 0 ),
+ #endif
+           blockSize( 5 ), outFilename( "output.exo" ), intxFilename( "" ), meshType( moab::TempestRemapper::DEFAULT ),
+           computeDual( false ), computeWeights( false ), verifyWeights( false ), ensureMonotonicity( 0 ),
