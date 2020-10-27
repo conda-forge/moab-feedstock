@@ -45,7 +45,7 @@ build:
     - {{ name }} * {{ mpi_prefix }}_*
   {% endif %}
 
-  skip: true  # [win or ((tempest == 'tempest') and (mpi == 'nompi'))] 
+  skip: true  # [win] 
 
 requirements:
   build:
