@@ -21,7 +21,7 @@ libblas:
 liblapack:
 - 3.8 *netlib
 libnetcdf:
-- 4.7.4
+- 4.8.0
 metis:
 - '5.1'
 mpi:
