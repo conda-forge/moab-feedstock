@@ -68,7 +68,7 @@ requirements:
     - libnetcdf  # [tempest == 'tempest']
     - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
     - eigen
-    - tempest-remap 2.0.5  # [tempest == 'tempest']
+    - tempest-remap 2.0.6rc1  # [tempest == 'tempest']
     - metis
     - libblas
     - liblapack
@@ -81,7 +81,7 @@ requirements:
     - {{ mpi }}  # [mpi != 'nompi']
     - openssh  # [mpi == 'openmpi']
     - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
-    - tempest-remap 2.0.5  # [tempest == 'tempest']
+    - tempest-remap 2.0.6rc1  # [tempest == 'tempest']
     - metis
     - libblas
     - liblapack
