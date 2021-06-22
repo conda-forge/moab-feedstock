@@ -21,7 +21,7 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   # url: http://ftp.mcs.anl.gov/pub/fathom/{{ name }}-{{ version }}.tar.gz
   url: https://ftp.mcs.anl.gov/pub/fathom/moab-5.3.0-RC1.tar.gz
-  sha256: 7b147aaf7bea8f9a357121dd2c9252e9d125df69bcb2bc227689d866eff84cc0
+  sha256: ca03e90163d560b7e8b8f40e2001686da06587d5cfb76f5a115a4bcc2501997b
 build:
   number: {{ build }}
 
