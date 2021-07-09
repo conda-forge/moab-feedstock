@@ -49,12 +49,12 @@ build:
   skip: true  # [win or osx or py<39]
 
 requirements:
-  build:
-    - automake
-    - libtool
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-    - openssh  # [mpi == 'openmpi']
+  #build:
+  #  - automake
+  #  - libtool
+  #  - {{ compiler('c') }}
+  #  - {{ compiler('cxx') }}
+  #  - openssh  # [mpi == 'openmpi']
   host:
     #- python
     #- cython
