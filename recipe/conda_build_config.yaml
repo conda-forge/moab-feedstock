@@ -5,14 +5,10 @@ channel_targets:
   - conda-forge moab_dev
 
 mpi:
-  - nompi
   - mpich
-  - openmpi
 
 tempest:
-  - notempest
   - tempest
 
 pin_run_as_build:
   mpich: x.x
-  openmpi: x.x
