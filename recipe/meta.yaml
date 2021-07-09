@@ -57,34 +57,36 @@ requirements:
     - openssh  # [mpi == 'openmpi']
   host:
     - python
-    # need to list hdf5, libnetcdf and netcdf-cxx-legacy twice to get version
+    - cython
+    - eigen
+    # need to list hdf5 and libnetcdf twice to get version
     # pinning from conda_build_config and build pinning from {{ mpi_prefix }}
     - hdf5
     - hdf5 * {{ mpi_prefix }}_*
-    - numpy
-    - setuptools
-    - cython
-    - {{ mpi }}  # [mpi != 'nompi']
-    - libnetcdf  # [tempest == 'tempest']
-    - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
-    - eigen
-    - tempest-remap 2.1.0  # [tempest == 'tempest']
-    - metis
     - libblas
     - liblapack
+    - libnetcdf  # [tempest == 'tempest']
+    - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
+    - metis
+    - {{ mpi }}  # [mpi != 'nompi']
+    - numpy
+    - setuptools
+    - tempest-remap 2.1.0  # [tempest == 'tempest']
+    - zoltan * {{ mpi_prefix }}_*   # [mpi != 'nompi']
 
   run:
     - python
     - hdf5 * {{ mpi_prefix }}_*
-    - numpy
-    - setuptools
-    - {{ mpi }}  # [mpi != 'nompi']
-    - openssh  # [mpi == 'openmpi']
-    - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
-    - tempest-remap 2.1.0  # [tempest == 'tempest']
-    - metis
     - libblas
     - liblapack
+    - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
+    - metis
+    - {{ mpi }}  # [mpi != 'nompi']
+    - numpy
+    - openssh  # [mpi == 'openmpi']
+    - setuptools
+    - tempest-remap 2.1.0  # [tempest == 'tempest']
+    - zoltan * {{ mpi_prefix }}_*   # [mpi != 'nompi']
 
 test:
   source_files:
