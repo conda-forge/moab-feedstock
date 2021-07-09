@@ -61,12 +61,12 @@ requirements:
     #- eigen
     # need to list hdf5 and libnetcdf twice to get version
     # pinning from conda_build_config and build pinning from {{ mpi_prefix }}
-    - hdf5
-    - hdf5 * {{ mpi_prefix }}_*
-    - libblas
-    - liblapack
-    - libnetcdf  # [tempest == 'tempest']
-    - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
+    #- hdf5
+    #- hdf5 * {{ mpi_prefix }}_*
+    #- libblas
+    #- liblapack
+    #- libnetcdf  # [tempest == 'tempest']
+    #- libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
     #- metis
     - {{ mpi }}  # [mpi != 'nompi']
     #- numpy
