@@ -68,7 +68,7 @@ requirements:
     #- libnetcdf  # [tempest == 'tempest']
     #- libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
     #- metis
-    - {{ mpi }}  # [mpi != 'nompi']
+    #- {{ mpi }}  # [mpi != 'nompi']
     #- numpy
     #- setuptools
     - tempest-remap 2.1.0  # [tempest == 'tempest']
