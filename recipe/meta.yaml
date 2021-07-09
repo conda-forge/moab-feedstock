@@ -57,8 +57,8 @@ requirements:
     - openssh  # [mpi == 'openmpi']
   host:
     - python
-    - cython
-    - eigen
+    #- cython
+    #- eigen
     # need to list hdf5 and libnetcdf twice to get version
     # pinning from conda_build_config and build pinning from {{ mpi_prefix }}
     - hdf5
@@ -67,12 +67,12 @@ requirements:
     - liblapack
     - libnetcdf  # [tempest == 'tempest']
     - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
-    - metis
+    #- metis
     - {{ mpi }}  # [mpi != 'nompi']
-    - numpy
-    - setuptools
-    - tempest-remap >=2.1,<2.2  # [tempest == 'tempest']
-    - zoltan * {{ mpi_prefix }}_*   # [mpi != 'nompi']
+    #- numpy
+    #- setuptools
+    - tempest-remap 2.1.0  # [tempest == 'tempest']
+    #- zoltan * {{ mpi_prefix }}_*   # [mpi != 'nompi']
 
   run:
     - python
@@ -85,7 +85,7 @@ requirements:
     - numpy
     - openssh  # [mpi == 'openmpi']
     - setuptools
-    - tempest-remap >=2.1,<2.2  # [tempest == 'tempest']
+    - tempest-remap 2.1.0  # [tempest == 'tempest']
     - zoltan * {{ mpi_prefix }}_*   # [mpi != 'nompi']
 
 test:
