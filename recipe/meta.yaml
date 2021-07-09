@@ -56,7 +56,7 @@ requirements:
   #  - {{ compiler('cxx') }}
   #  - openssh  # [mpi == 'openmpi']
   host:
-    #- python
+    - python
     #- cython
     #- eigen
     # need to list hdf5 and libnetcdf twice to get version
@@ -68,7 +68,7 @@ requirements:
     #- libnetcdf  # [tempest == 'tempest']
     #- libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
     #- metis
-    #- {{ mpi }}  # [mpi != 'nompi']
+    - {{ mpi }}  # [mpi != 'nompi']
     #- numpy
     #- setuptools
     - tempest-remap 2.1.0  # [tempest == 'tempest']
