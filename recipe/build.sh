@@ -9,7 +9,7 @@ if [[ -n "$mpi" && "$mpi" != "nompi" ]]; then
 fi
 
 if [[ -n "$tempest" && "$tempest" != "notempest" ]]; then
-  export CONFIGURE_ARGS="--with-tempestremap=${PREFIX} --with-netcdf=${PREFIX} --with-netcdf-cxx=${PREFIX} ${CONFIGURE_ARGS}"
+  export CONFIGURE_ARGS="--with-tempestremap=${PREFIX} --with-netcdf=${PREFIX} ${CONFIGURE_ARGS}"
 fi
 
 autoreconf -fi
