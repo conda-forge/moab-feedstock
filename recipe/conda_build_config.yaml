@@ -1,11 +1,11 @@
 mpi:
   - nompi
-  - mpich
-  - openmpi
+#  - mpich
+#  - openmpi
 
 tempest:
   - notempest
-  - tempest
+#  - tempest
 
 pin_run_as_build:
   mpich: x.x
