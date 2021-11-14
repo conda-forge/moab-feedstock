@@ -20,12 +20,10 @@ libblas:
 - 3.8 *netlib
 liblapack:
 - 3.8 *netlib
-libnetcdf:
-- 4.8.1
 metis:
 - '5.1'
 mpi:
-- mpich
+- nompi
 numpy:
 - '1.18'
 pin_run_as_build:
