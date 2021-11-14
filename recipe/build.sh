@@ -2,11 +2,10 @@
 set -e
 set -x
 
-export CONFIGURE_ARGS="--with-eigen3=${PREFIX}/include/eigen3 ${CONFIGURE_ARGS}"
-export CONFIGURE_ARGS="-DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX}"
-
 if [[ -n "$mpi" && "$mpi" != "nompi" ]]; then
-  export CONFIGURE_ARGS="-DCMAKE_C_COMPILER=mpicc -DCMAKE_CXX_COMPILER=mpic++ -DENABLE_MPI=ON -DENABLE_ZOLTAN=ON"
+  export CONFIGURE_ARGS="-DCMAKE_C_COMPILER=mpicc -DCMAKE_CXX_COMPILER=mpic++ -DENABLE_MPI=ON -DENABLE_ZOLTAN=ON ${CONFIGURE_ARGS}"
+else
+  export CONFIGURE_ARGS="-DCMAKE_C_COMPILER=${CC} -DCMAKE_CXX_COMPILER=${CXX} ${CONFIGURE_ARGS}"
 fi
 
 if [[ -n "$tempest" && "$tempest" != "notempest" ]]; then
