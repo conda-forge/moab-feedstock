@@ -22,6 +22,7 @@ cmake .. -DCMAKE_INSTALL_PREFIX=${PREFIX} \
          -DENABLE_PYMOAB=ON \
          -DENABLE_BLASLAPACK=OFF \
          -DENABLE_FORTRAN=OFF \
+         -DCMAKE_INSTALL_LIBDIR=lib \
          ${CONFIGURE_ARGS}
 
 make -j "${CPU_COUNT}"
