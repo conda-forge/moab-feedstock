@@ -14,6 +14,7 @@ if [[ -n "$tempest" && "$tempest" != "notempest" ]]; then
 fi
 
 mkdir bld
+cd bld
 cmake .. -DCMAKE_INSTALL_PREFIX=${PREFIX} \
          -DENABLE_HDF5=ON \
          -DHDF5_ROOT=${PREFIX} \
