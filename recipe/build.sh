@@ -9,7 +9,7 @@ else
 fi
 
 if [[ -n "$tempest" && "$tempest" != "notempest" ]]; then
-  export CONFIGURE_ARGS="-DENABLE_TEMPESTREMAP=ON -DENABLE_NETCDF=ON ${CONFIGURE_ARGS}"
+  export CONFIGURE_ARGS="-DENABLE_TEMPESTREMAP=ON -DENABLE_NETCDF=ON -DNETCDF_ROOT=${PREFIX} ${CONFIGURE_ARGS}"
 fi
 
 mkdir bld
