@@ -37,45 +37,87 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_numpy1.18python3.7.____cpython</td>
+              <td>linux_64_numpy1.18python3.7.____cpythontempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=master&jobName=linux&configuration=linux_64_numpy1.18python3.7.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=master&jobName=linux&configuration=linux_64_numpy1.18python3.7.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_numpy1.18python3.8.____cpython</td>
+              <td>linux_64_numpy1.18python3.7.____cpythontempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=master&jobName=linux&configuration=linux_64_numpy1.18python3.8.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=master&jobName=linux&configuration=linux_64_numpy1.18python3.7.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_numpy1.19python3.9.____cpython</td>
+              <td>linux_64_numpy1.18python3.8.____cpythontempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=master&jobName=linux&configuration=linux_64_numpy1.19python3.9.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=master&jobName=linux&configuration=linux_64_numpy1.18python3.8.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_numpy1.18python3.7.____cpython</td>
+              <td>linux_64_numpy1.18python3.8.____cpythontempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=master&jobName=osx&configuration=osx_64_numpy1.18python3.7.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=master&jobName=linux&configuration=linux_64_numpy1.18python3.8.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_numpy1.18python3.8.____cpython</td>
+              <td>linux_64_numpy1.19python3.9.____cpythontempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=master&jobName=osx&configuration=osx_64_numpy1.18python3.8.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=master&jobName=linux&configuration=linux_64_numpy1.19python3.9.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_numpy1.19python3.9.____cpython</td>
+              <td>linux_64_numpy1.19python3.9.____cpythontempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=master&jobName=osx&configuration=osx_64_numpy1.19python3.9.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=master&jobName=linux&configuration=linux_64_numpy1.19python3.9.____cpythontempesttempest" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_numpy1.18python3.7.____cpythontempestnotempest</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=master&jobName=osx&configuration=osx_64_numpy1.18python3.7.____cpythontempestnotempest" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_numpy1.18python3.7.____cpythontempesttempest</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=master&jobName=osx&configuration=osx_64_numpy1.18python3.7.____cpythontempesttempest" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_numpy1.18python3.8.____cpythontempestnotempest</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=master&jobName=osx&configuration=osx_64_numpy1.18python3.8.____cpythontempestnotempest" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_numpy1.18python3.8.____cpythontempesttempest</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=master&jobName=osx&configuration=osx_64_numpy1.18python3.8.____cpythontempesttempest" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_numpy1.19python3.9.____cpythontempestnotempest</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=master&jobName=osx&configuration=osx_64_numpy1.19python3.9.____cpythontempestnotempest" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_numpy1.19python3.9.____cpythontempesttempest</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=master&jobName=osx&configuration=osx_64_numpy1.19python3.9.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr>

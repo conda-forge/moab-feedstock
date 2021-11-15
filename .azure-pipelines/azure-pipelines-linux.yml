@@ -8,16 +8,28 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_numpy1.18python3.7.____cpython:
-        CONFIG: linux_64_numpy1.18python3.7.____cpython
+      linux_64_numpy1.18python3.7.____cpythontempestnotempest:
+        CONFIG: linux_64_numpy1.18python3.7.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-      linux_64_numpy1.18python3.8.____cpython:
-        CONFIG: linux_64_numpy1.18python3.8.____cpython
+      linux_64_numpy1.18python3.7.____cpythontempesttempest:
+        CONFIG: linux_64_numpy1.18python3.7.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-      linux_64_numpy1.19python3.9.____cpython:
-        CONFIG: linux_64_numpy1.19python3.9.____cpython
+      linux_64_numpy1.18python3.8.____cpythontempestnotempest:
+        CONFIG: linux_64_numpy1.18python3.8.____cpythontempestnotempest
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+      linux_64_numpy1.18python3.8.____cpythontempesttempest:
+        CONFIG: linux_64_numpy1.18python3.8.____cpythontempesttempest
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+      linux_64_numpy1.19python3.9.____cpythontempestnotempest:
+        CONFIG: linux_64_numpy1.19python3.9.____cpythontempestnotempest
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+      linux_64_numpy1.19python3.9.____cpythontempesttempest:
+        CONFIG: linux_64_numpy1.19python3.9.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
   timeoutInMinutes: 360
