@@ -1,6 +1,6 @@
 mpi:
   - nompi
-#  - mpich
+  - mpich
 #  - openmpi
 
 tempest:
