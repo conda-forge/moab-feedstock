@@ -20,8 +20,6 @@ libblas:
 - 3.8 *netlib
 liblapack:
 - 3.8 *netlib
-libnetcdf:
-- 4.8.1
 metis:
 - '5.1'
 mpi:
@@ -39,7 +37,7 @@ python:
 target_platform:
 - linux-64
 tempest:
-- tempest
+- notempest
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
