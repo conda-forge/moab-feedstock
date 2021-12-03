@@ -51,6 +51,7 @@ requirements:
   build:
     - automake
     - libtool
+    - make
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - openssh  # [mpi == 'openmpi']
