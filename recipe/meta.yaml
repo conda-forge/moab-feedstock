@@ -1,6 +1,6 @@
 {% set name = "moab" %}
 {% set version = "5.3.1" %}
-{% set build = 3 %}
+{% set build = 4 %}
 
 # ensure mpi is defined (needed for conda-smithy recipe-lint)
 {% set mpi = mpi or 'nompi' %}
@@ -42,7 +42,7 @@ build:
 
   {% if mpi != 'nompi' %}
   run_exports:
-    - {{ name }} * {{ mpi_prefix }}_*
+    - {{ name }} * {{ mpi_prefix }}_{{ tempest }} *
   {% endif %}
 
   skip: true  # [win]
