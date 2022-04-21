@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '11'
+- '12'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -11,7 +11,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '11'
+- '12'
 hdf5:
 - 1.12.1
 libblas:
@@ -26,8 +26,12 @@ metis:
 - '5.1'
 mpi:
 - openmpi
+mpich:
+- '4'
 numpy:
-- '1.18'
+- '1.19'
+openmpi:
+- '4'
 pin_run_as_build:
   metis:
     max_pin: x.x
@@ -35,11 +39,11 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.7.* *_cpython
+- 3.8.* *_cpython
 target_platform:
 - osx-64
 tempest:
-- tempest
+- notempest
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
