@@ -8,23 +8,17 @@ jobs:
     vmImage: macOS-10.15
   strategy:
     matrix:
-      osx_64_mpimpichnumpy1.17python3.6.____cpythontempestnotempest:
-        CONFIG: osx_64_mpimpichnumpy1.17python3.6.____cpythontempestnotempest
+      osx_64_mpimpichnumpy1.19python3.7.____cpythontempestnotempest:
+        CONFIG: osx_64_mpimpichnumpy1.19python3.7.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpimpichnumpy1.17python3.6.____cpythontempesttempest:
-        CONFIG: osx_64_mpimpichnumpy1.17python3.6.____cpythontempesttempest
+      osx_64_mpimpichnumpy1.19python3.7.____cpythontempesttempest:
+        CONFIG: osx_64_mpimpichnumpy1.19python3.7.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpimpichnumpy1.17python3.7.____cpythontempestnotempest:
-        CONFIG: osx_64_mpimpichnumpy1.17python3.7.____cpythontempestnotempest
+      osx_64_mpimpichnumpy1.19python3.8.____cpythontempestnotempest:
+        CONFIG: osx_64_mpimpichnumpy1.19python3.8.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpimpichnumpy1.17python3.7.____cpythontempesttempest:
-        CONFIG: osx_64_mpimpichnumpy1.17python3.7.____cpythontempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_64_mpimpichnumpy1.17python3.8.____cpythontempestnotempest:
-        CONFIG: osx_64_mpimpichnumpy1.17python3.8.____cpythontempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_64_mpimpichnumpy1.17python3.8.____cpythontempesttempest:
-        CONFIG: osx_64_mpimpichnumpy1.17python3.8.____cpythontempesttempest
+      osx_64_mpimpichnumpy1.19python3.8.____cpythontempesttempest:
+        CONFIG: osx_64_mpimpichnumpy1.19python3.8.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
       osx_64_mpimpichnumpy1.19python3.9.____cpythontempestnotempest:
         CONFIG: osx_64_mpimpichnumpy1.19python3.9.____cpythontempestnotempest
@@ -32,23 +26,23 @@ jobs:
       osx_64_mpimpichnumpy1.19python3.9.____cpythontempesttempest:
         CONFIG: osx_64_mpimpichnumpy1.19python3.9.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpinompinumpy1.17python3.6.____cpythontempestnotempest:
-        CONFIG: osx_64_mpinompinumpy1.17python3.6.____cpythontempestnotempest
+      osx_64_mpimpichnumpy1.21python3.10.____cpythontempestnotempest:
+        CONFIG: osx_64_mpimpichnumpy1.21python3.10.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpinompinumpy1.17python3.6.____cpythontempesttempest:
-        CONFIG: osx_64_mpinompinumpy1.17python3.6.____cpythontempesttempest
+      osx_64_mpimpichnumpy1.21python3.10.____cpythontempesttempest:
+        CONFIG: osx_64_mpimpichnumpy1.21python3.10.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpinompinumpy1.17python3.7.____cpythontempestnotempest:
-        CONFIG: osx_64_mpinompinumpy1.17python3.7.____cpythontempestnotempest
+      osx_64_mpinompinumpy1.19python3.7.____cpythontempestnotempest:
+        CONFIG: osx_64_mpinompinumpy1.19python3.7.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpinompinumpy1.17python3.7.____cpythontempesttempest:
-        CONFIG: osx_64_mpinompinumpy1.17python3.7.____cpythontempesttempest
+      osx_64_mpinompinumpy1.19python3.7.____cpythontempesttempest:
+        CONFIG: osx_64_mpinompinumpy1.19python3.7.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpinompinumpy1.17python3.8.____cpythontempestnotempest:
-        CONFIG: osx_64_mpinompinumpy1.17python3.8.____cpythontempestnotempest
+      osx_64_mpinompinumpy1.19python3.8.____cpythontempestnotempest:
+        CONFIG: osx_64_mpinompinumpy1.19python3.8.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpinompinumpy1.17python3.8.____cpythontempesttempest:
-        CONFIG: osx_64_mpinompinumpy1.17python3.8.____cpythontempesttempest
+      osx_64_mpinompinumpy1.19python3.8.____cpythontempesttempest:
+        CONFIG: osx_64_mpinompinumpy1.19python3.8.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
       osx_64_mpinompinumpy1.19python3.9.____cpythontempestnotempest:
         CONFIG: osx_64_mpinompinumpy1.19python3.9.____cpythontempestnotempest
@@ -56,29 +50,35 @@ jobs:
       osx_64_mpinompinumpy1.19python3.9.____cpythontempesttempest:
         CONFIG: osx_64_mpinompinumpy1.19python3.9.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpiopenmpinumpy1.17python3.6.____cpythontempestnotempest:
-        CONFIG: osx_64_mpiopenmpinumpy1.17python3.6.____cpythontempestnotempest
+      osx_64_mpinompinumpy1.21python3.10.____cpythontempestnotempest:
+        CONFIG: osx_64_mpinompinumpy1.21python3.10.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpiopenmpinumpy1.17python3.6.____cpythontempesttempest:
-        CONFIG: osx_64_mpiopenmpinumpy1.17python3.6.____cpythontempesttempest
+      osx_64_mpinompinumpy1.21python3.10.____cpythontempesttempest:
+        CONFIG: osx_64_mpinompinumpy1.21python3.10.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpiopenmpinumpy1.17python3.7.____cpythontempestnotempest:
-        CONFIG: osx_64_mpiopenmpinumpy1.17python3.7.____cpythontempestnotempest
+      osx_64_mpiopenmpinumpy1.19python3.7.____cpythontempestnotempest:
+        CONFIG: osx_64_mpiopenmpinumpy1.19python3.7.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpiopenmpinumpy1.17python3.7.____cpythontempesttempest:
-        CONFIG: osx_64_mpiopenmpinumpy1.17python3.7.____cpythontempesttempest
+      osx_64_mpiopenmpinumpy1.19python3.7.____cpythontempesttempest:
+        CONFIG: osx_64_mpiopenmpinumpy1.19python3.7.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpiopenmpinumpy1.17python3.8.____cpythontempestnotempest:
-        CONFIG: osx_64_mpiopenmpinumpy1.17python3.8.____cpythontempestnotempest
+      osx_64_mpiopenmpinumpy1.19python3.8.____cpythontempestnotempest:
+        CONFIG: osx_64_mpiopenmpinumpy1.19python3.8.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpiopenmpinumpy1.17python3.8.____cpythontempesttempest:
-        CONFIG: osx_64_mpiopenmpinumpy1.17python3.8.____cpythontempesttempest
+      osx_64_mpiopenmpinumpy1.19python3.8.____cpythontempesttempest:
+        CONFIG: osx_64_mpiopenmpinumpy1.19python3.8.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
       osx_64_mpiopenmpinumpy1.19python3.9.____cpythontempestnotempest:
         CONFIG: osx_64_mpiopenmpinumpy1.19python3.9.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
       osx_64_mpiopenmpinumpy1.19python3.9.____cpythontempesttempest:
         CONFIG: osx_64_mpiopenmpinumpy1.19python3.9.____cpythontempesttempest
+        UPLOAD_PACKAGES: 'True'
+      osx_64_mpiopenmpinumpy1.21python3.10.____cpythontempestnotempest:
+        CONFIG: osx_64_mpiopenmpinumpy1.21python3.10.____cpythontempestnotempest
+        UPLOAD_PACKAGES: 'True'
+      osx_64_mpiopenmpinumpy1.21python3.10.____cpythontempesttempest:
+        CONFIG: osx_64_mpiopenmpinumpy1.21python3.10.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
 
@@ -89,6 +89,11 @@ jobs:
       export OSX_FORCE_SDK_DOWNLOAD="1"
       export GIT_BRANCH=$BUILD_SOURCEBRANCHNAME
       export FEEDSTOCK_NAME=$(basename ${BUILD_REPOSITORY_NAME})
+      if [[ "${BUILD_REASON:-}" == "PullRequest" ]]; then
+        export IS_PR_BUILD="True"
+      else
+        export IS_PR_BUILD="False"
+      fi
       ./.scripts/run_osx_build.sh
     displayName: Run OSX build
     env:

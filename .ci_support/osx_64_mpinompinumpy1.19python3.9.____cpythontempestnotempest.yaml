@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '11'
+- '13'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -11,23 +11,27 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '11'
+- '13'
 hdf5:
-- 1.10.6
+- 1.12.1
 libblas:
-- 3.8 *netlib
+- 3.9 *netlib
 liblapack:
-- 3.8 *netlib
+- 3.9 *netlib
 libnetcdf:
-- 4.8.0
+- 4.8.1
 macos_machine:
 - x86_64-apple-darwin13.4.0
 metis:
 - '5.1'
 mpi:
 - nompi
+mpich:
+- '4'
 numpy:
 - '1.19'
+openmpi:
+- '4'
 pin_run_as_build:
   metis:
     max_pin: x.x
