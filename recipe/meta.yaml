@@ -71,7 +71,7 @@ requirements:
     - {{ mpi }}  # [mpi != 'nompi']
     - numpy
     - setuptools
-    - tempest-remap 2.1.1  # [tempest == 'tempest']
+    - tempest-remap 2.1.3  # [tempest == 'tempest']
     - zoltan * {{ mpi_prefix }}_*   # [mpi != 'nompi']
 
   run:
@@ -85,7 +85,7 @@ requirements:
     - numpy
     - openssh  # [mpi == 'openmpi']
     - setuptools
-    - tempest-remap 2.1.1  # [tempest == 'tempest']
+    - tempest-remap 2.1.3  # [tempest == 'tempest']
     - zoltan * {{ mpi_prefix }}_*   # [mpi != 'nompi']
 
 test:
