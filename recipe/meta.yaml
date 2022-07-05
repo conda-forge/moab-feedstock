@@ -57,6 +57,7 @@ requirements:
     - openssh  # [mpi == 'openmpi']
   host:
     - python
+    - pip >= 22.0
     - cython
     - eigen
     # need to list hdf5 and libnetcdf twice to get version
