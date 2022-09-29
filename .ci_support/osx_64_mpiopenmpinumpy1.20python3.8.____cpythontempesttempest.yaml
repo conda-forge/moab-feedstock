@@ -33,8 +33,6 @@ numpy:
 openmpi:
 - '4'
 pin_run_as_build:
-  metis:
-    max_pin: x.x
   python:
     min_pin: x.x
     max_pin: x.x
