@@ -1,6 +1,6 @@
 {% set name = "moab" %}
 {% set version = "5.4.0" %}
-{% set build = 2 %}
+{% set build = 3 %}
 
 # ensure mpi is defined (needed for conda-smithy recipe-lint)
 {% set mpi = mpi or 'nompi' %}
@@ -72,7 +72,7 @@ requirements:
     - {{ mpi }}  # [mpi != 'nompi']
     - numpy
     - setuptools
-    - tempest-remap 2.1.4  # [tempest == 'tempest']
+    - tempest-remap 2.1.5  # [tempest == 'tempest']
     - zoltan * {{ mpi_prefix }}_*   # [mpi != 'nompi']
 
   run:
@@ -86,7 +86,7 @@ requirements:
     - numpy
     - openssh  # [mpi == 'openmpi']
     - setuptools
-    - tempest-remap 2.1.4  # [tempest == 'tempest']
+    - tempest-remap 2.1.5  # [tempest == 'tempest']
     - zoltan * {{ mpi_prefix }}_*   # [mpi != 'nompi']
 
 test:
