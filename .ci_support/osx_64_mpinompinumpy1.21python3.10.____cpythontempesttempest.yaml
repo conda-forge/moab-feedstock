@@ -13,7 +13,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '13'
 hdf5:
-- 1.12.1
+- 1.12.2
 libblas:
 - 3.9 *netlib
 liblapack:
@@ -33,8 +33,6 @@ numpy:
 openmpi:
 - '4'
 pin_run_as_build:
-  metis:
-    max_pin: x.x
   python:
     min_pin: x.x
     max_pin: x.x
