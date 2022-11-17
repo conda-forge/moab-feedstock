@@ -25,16 +25,14 @@ libnetcdf:
 metis:
 - '5.1'
 mpi:
-- nompi
+- openmpi
 mpich:
 - '4'
 numpy:
-- '1.19'
+- '1.20'
 openmpi:
 - '4'
 pin_run_as_build:
-  metis:
-    max_pin: x.x
   python:
     min_pin: x.x
     max_pin: x.x
@@ -43,7 +41,7 @@ python:
 target_platform:
 - linux-64
 tempest:
-- tempest
+- notempest
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
