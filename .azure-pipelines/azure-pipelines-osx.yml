@@ -8,11 +8,23 @@ jobs:
     vmImage: macOS-11
   strategy:
     matrix:
+      osx_64_mpimpichnumpy1.20python3.8.____73_pypytempestnotempest:
+        CONFIG: osx_64_mpimpichnumpy1.20python3.8.____73_pypytempestnotempest
+        UPLOAD_PACKAGES: 'True'
+      osx_64_mpimpichnumpy1.20python3.8.____73_pypytempesttempest:
+        CONFIG: osx_64_mpimpichnumpy1.20python3.8.____73_pypytempesttempest
+        UPLOAD_PACKAGES: 'True'
       osx_64_mpimpichnumpy1.20python3.8.____cpythontempestnotempest:
         CONFIG: osx_64_mpimpichnumpy1.20python3.8.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
       osx_64_mpimpichnumpy1.20python3.8.____cpythontempesttempest:
         CONFIG: osx_64_mpimpichnumpy1.20python3.8.____cpythontempesttempest
+        UPLOAD_PACKAGES: 'True'
+      osx_64_mpimpichnumpy1.20python3.9.____73_pypytempestnotempest:
+        CONFIG: osx_64_mpimpichnumpy1.20python3.9.____73_pypytempestnotempest
+        UPLOAD_PACKAGES: 'True'
+      osx_64_mpimpichnumpy1.20python3.9.____73_pypytempesttempest:
+        CONFIG: osx_64_mpimpichnumpy1.20python3.9.____73_pypytempesttempest
         UPLOAD_PACKAGES: 'True'
       osx_64_mpimpichnumpy1.20python3.9.____cpythontempestnotempest:
         CONFIG: osx_64_mpimpichnumpy1.20python3.9.____cpythontempestnotempest
@@ -32,11 +44,23 @@ jobs:
       osx_64_mpimpichnumpy1.23python3.11.____cpythontempesttempest:
         CONFIG: osx_64_mpimpichnumpy1.23python3.11.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
+      osx_64_mpinompinumpy1.20python3.8.____73_pypytempestnotempest:
+        CONFIG: osx_64_mpinompinumpy1.20python3.8.____73_pypytempestnotempest
+        UPLOAD_PACKAGES: 'True'
+      osx_64_mpinompinumpy1.20python3.8.____73_pypytempesttempest:
+        CONFIG: osx_64_mpinompinumpy1.20python3.8.____73_pypytempesttempest
+        UPLOAD_PACKAGES: 'True'
       osx_64_mpinompinumpy1.20python3.8.____cpythontempestnotempest:
         CONFIG: osx_64_mpinompinumpy1.20python3.8.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
       osx_64_mpinompinumpy1.20python3.8.____cpythontempesttempest:
         CONFIG: osx_64_mpinompinumpy1.20python3.8.____cpythontempesttempest
+        UPLOAD_PACKAGES: 'True'
+      osx_64_mpinompinumpy1.20python3.9.____73_pypytempestnotempest:
+        CONFIG: osx_64_mpinompinumpy1.20python3.9.____73_pypytempestnotempest
+        UPLOAD_PACKAGES: 'True'
+      osx_64_mpinompinumpy1.20python3.9.____73_pypytempesttempest:
+        CONFIG: osx_64_mpinompinumpy1.20python3.9.____73_pypytempesttempest
         UPLOAD_PACKAGES: 'True'
       osx_64_mpinompinumpy1.20python3.9.____cpythontempestnotempest:
         CONFIG: osx_64_mpinompinumpy1.20python3.9.____cpythontempestnotempest
@@ -56,11 +80,23 @@ jobs:
       osx_64_mpinompinumpy1.23python3.11.____cpythontempesttempest:
         CONFIG: osx_64_mpinompinumpy1.23python3.11.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
+      osx_64_mpiopenmpinumpy1.20python3.8.____73_pypytempestnotempest:
+        CONFIG: osx_64_mpiopenmpinumpy1.20python3.8.____73_pypytempestnotempest
+        UPLOAD_PACKAGES: 'True'
+      osx_64_mpiopenmpinumpy1.20python3.8.____73_pypytempesttempest:
+        CONFIG: osx_64_mpiopenmpinumpy1.20python3.8.____73_pypytempesttempest
+        UPLOAD_PACKAGES: 'True'
       osx_64_mpiopenmpinumpy1.20python3.8.____cpythontempestnotempest:
         CONFIG: osx_64_mpiopenmpinumpy1.20python3.8.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
       osx_64_mpiopenmpinumpy1.20python3.8.____cpythontempesttempest:
         CONFIG: osx_64_mpiopenmpinumpy1.20python3.8.____cpythontempesttempest
+        UPLOAD_PACKAGES: 'True'
+      osx_64_mpiopenmpinumpy1.20python3.9.____73_pypytempestnotempest:
+        CONFIG: osx_64_mpiopenmpinumpy1.20python3.9.____73_pypytempestnotempest
+        UPLOAD_PACKAGES: 'True'
+      osx_64_mpiopenmpinumpy1.20python3.9.____73_pypytempesttempest:
+        CONFIG: osx_64_mpiopenmpinumpy1.20python3.9.____73_pypytempesttempest
         UPLOAD_PACKAGES: 'True'
       osx_64_mpiopenmpinumpy1.20python3.9.____cpythontempestnotempest:
         CONFIG: osx_64_mpiopenmpinumpy1.20python3.9.____cpythontempestnotempest
@@ -80,6 +116,7 @@ jobs:
       osx_64_mpiopenmpinumpy1.23python3.11.____cpythontempesttempest:
         CONFIG: osx_64_mpiopenmpinumpy1.23python3.11.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
+    maxParallel: 25
   timeoutInMinutes: 360
 
   steps:
