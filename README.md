@@ -1,11 +1,11 @@
-About moab
-==========
+About moab-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/moab-feedstock/blob/main/LICENSE.txt)
 
 Home: http://press3.mcs.anl.gov/sigma/moab-library/
 
 Package license: LGPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/moab-feedstock/blob/main/LICENSE.txt)
 
 Summary: The Mesh-Oriented datABase
 
