@@ -26,6 +26,6 @@ autoreconf -fi
 make -j "${CPU_COUNT}"
 
 make check \
-  || { cat itaps/imesh/test-suite.log; exit 1; }
+  || { cat test/test-suite.log; exit 1; }
 
 make install
