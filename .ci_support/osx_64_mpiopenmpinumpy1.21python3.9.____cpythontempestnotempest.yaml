@@ -25,11 +25,11 @@ macos_machine:
 metis:
 - '5.1'
 mpi:
-- mpich
+- openmpi
 mpich:
 - '4'
 numpy:
-- '1.20'
+- '1.21'
 openmpi:
 - '4'
 pin_run_as_build:
