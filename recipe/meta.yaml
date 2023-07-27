@@ -71,7 +71,7 @@ requirements:
     - metis
     - {{ mpi }}  # [mpi != 'nompi']
     - numpy
-    - setuptools
+    - setuptools <68.0.0
     - tempest-remap >=2.2.0,<2.3.0  # [tempest == 'tempest']
     - zoltan * {{ mpi_prefix }}_*   # [mpi != 'nompi']
 
