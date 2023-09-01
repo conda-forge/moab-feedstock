@@ -7,6 +7,9 @@ tempest:
   - notempest
   - tempest
 
+metis:
+  - 5.1.0
+
 # tests are hanging with clang 14
 c_compiler_version:        # [osx and x86_64]
   - 13                     # [osx and x86_64]
