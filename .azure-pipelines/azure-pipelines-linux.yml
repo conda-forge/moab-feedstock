@@ -40,6 +40,14 @@ jobs:
         CONFIG: linux_64_mpimpichnumpy1.23python3.11.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_64_mpimpichnumpy1.26python3.12.____cpythontempestnotempest:
+        CONFIG: linux_64_mpimpichnumpy1.26python3.12.____cpythontempestnotempest
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_64_mpimpichnumpy1.26python3.12.____cpythontempesttempest:
+        CONFIG: linux_64_mpimpichnumpy1.26python3.12.____cpythontempesttempest
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_mpinompinumpy1.22python3.10.____cpythontempestnotempest:
         CONFIG: linux_64_mpinompinumpy1.22python3.10.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
@@ -70,6 +78,14 @@ jobs:
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_mpinompinumpy1.23python3.11.____cpythontempesttempest:
         CONFIG: linux_64_mpinompinumpy1.23python3.11.____cpythontempesttempest
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_64_mpinompinumpy1.26python3.12.____cpythontempestnotempest:
+        CONFIG: linux_64_mpinompinumpy1.26python3.12.____cpythontempestnotempest
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_64_mpinompinumpy1.26python3.12.____cpythontempesttempest:
+        CONFIG: linux_64_mpinompinumpy1.26python3.12.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_mpiopenmpinumpy1.22python3.10.____cpythontempestnotempest:
@@ -104,6 +120,15 @@ jobs:
         CONFIG: linux_64_mpiopenmpinumpy1.23python3.11.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_64_mpiopenmpinumpy1.26python3.12.____cpythontempestnotempest:
+        CONFIG: linux_64_mpiopenmpinumpy1.26python3.12.____cpythontempestnotempest
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_64_mpiopenmpinumpy1.26python3.12.____cpythontempesttempest:
+        CONFIG: linux_64_mpiopenmpinumpy1.26python3.12.____cpythontempesttempest
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+    maxParallel: 25
   timeoutInMinutes: 360
 
   steps:
