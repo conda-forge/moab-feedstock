@@ -58,7 +58,7 @@ requirements:
   host:
     - python
     - pip >=22.0
-    - cython >=0.26.0,<3.0.0
+    - cython >=0.26.0
     - eigen
     # need to list hdf5 and libnetcdf twice to get version
     # pinning from conda_build_config and build pinning from {{ mpi_prefix }}
