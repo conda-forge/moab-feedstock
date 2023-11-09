@@ -23,7 +23,7 @@ liblapack:
 libnetcdf:
 - 4.9.2
 metis:
-- '5.1'
+- 5.1.1
 mpi:
 - nompi
 mpich:
