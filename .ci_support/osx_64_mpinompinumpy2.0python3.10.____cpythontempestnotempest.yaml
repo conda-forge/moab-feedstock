@@ -29,11 +29,11 @@ macos_machine:
 metis:
 - 5.1.0
 mpi:
-- openmpi
+- nompi
 mpich:
 - '4'
 numpy:
-- '1.22'
+- '2.0'
 openmpi:
 - '4'
 pin_run_as_build:
@@ -41,11 +41,11 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.8.* *_cpython
+- 3.10.* *_cpython
 target_platform:
 - osx-64
 tempest:
-- tempest
+- notempest
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
