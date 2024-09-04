@@ -1,7 +1,7 @@
 About moab-feedstock
 ====================
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rebuild-python313-0-1_hf4270c-feedstock/blob/main/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/moab-feedstock/blob/main/LICENSE.txt)
 
 Home: https://sigma.mcs.anl.gov/moab-library
 
@@ -30,8 +30,8 @@ Current build status
     <td>
       <details>
         <summary>
-          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main">
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main">
           </a>
         </summary>
         <table>
@@ -39,421 +39,421 @@ Current build status
           <tbody><tr>
               <td>linux_64_mpimpichnumpy2.0python3.10.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpimpichnumpy2.0python3.10.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpimpichnumpy2.0python3.10.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpimpichnumpy2.0python3.10.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpimpichnumpy2.0python3.10.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpimpichnumpy2.0python3.10.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpimpichnumpy2.0python3.11.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpimpichnumpy2.0python3.11.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpimpichnumpy2.0python3.11.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpimpichnumpy2.0python3.11.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpimpichnumpy2.0python3.11.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpimpichnumpy2.0python3.11.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpimpichnumpy2.0python3.12.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpimpichnumpy2.0python3.12.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpimpichnumpy2.0python3.12.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpimpichnumpy2.0python3.12.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpimpichnumpy2.0python3.12.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpimpichnumpy2.0python3.12.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpimpichnumpy2.0python3.9.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpimpichnumpy2.0python3.9.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpimpichnumpy2.0python3.9.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpimpichnumpy2.0python3.9.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpimpichnumpy2.0python3.9.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpimpichnumpy2.0python3.9.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpimpichnumpy2python3.13.____cp313tempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpimpichnumpy2python3.13.____cp313tempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpimpichnumpy2python3.13.____cp313tempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpimpichnumpy2python3.13.____cp313tempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpimpichnumpy2python3.13.____cp313tempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpimpichnumpy2python3.13.____cp313tempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpinompinumpy2.0python3.10.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpinompinumpy2.0python3.10.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpinompinumpy2.0python3.10.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpinompinumpy2.0python3.10.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpinompinumpy2.0python3.10.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpinompinumpy2.0python3.10.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpinompinumpy2.0python3.11.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpinompinumpy2.0python3.11.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpinompinumpy2.0python3.11.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpinompinumpy2.0python3.11.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpinompinumpy2.0python3.11.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpinompinumpy2.0python3.11.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpinompinumpy2.0python3.12.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpinompinumpy2.0python3.12.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpinompinumpy2.0python3.12.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpinompinumpy2.0python3.12.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpinompinumpy2.0python3.12.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpinompinumpy2.0python3.12.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpinompinumpy2.0python3.9.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpinompinumpy2.0python3.9.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpinompinumpy2.0python3.9.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpinompinumpy2.0python3.9.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpinompinumpy2.0python3.9.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpinompinumpy2.0python3.9.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpinompinumpy2python3.13.____cp313tempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpinompinumpy2python3.13.____cp313tempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpinompinumpy2python3.13.____cp313tempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpinompinumpy2python3.13.____cp313tempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpinompinumpy2python3.13.____cp313tempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpinompinumpy2python3.13.____cp313tempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpiopenmpinumpy2.0python3.10.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpiopenmpinumpy2.0python3.10.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpiopenmpinumpy2.0python3.10.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpiopenmpinumpy2.0python3.10.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpiopenmpinumpy2.0python3.10.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpiopenmpinumpy2.0python3.10.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpiopenmpinumpy2.0python3.11.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpiopenmpinumpy2.0python3.11.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpiopenmpinumpy2.0python3.11.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpiopenmpinumpy2.0python3.11.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpiopenmpinumpy2.0python3.11.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpiopenmpinumpy2.0python3.11.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpiopenmpinumpy2.0python3.12.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpiopenmpinumpy2.0python3.12.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpiopenmpinumpy2.0python3.12.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpiopenmpinumpy2.0python3.12.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpiopenmpinumpy2.0python3.12.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpiopenmpinumpy2.0python3.12.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpiopenmpinumpy2.0python3.9.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpiopenmpinumpy2.0python3.9.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpiopenmpinumpy2.0python3.9.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpiopenmpinumpy2.0python3.9.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpiopenmpinumpy2.0python3.9.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpiopenmpinumpy2.0python3.9.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpiopenmpinumpy2python3.13.____cp313tempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpiopenmpinumpy2python3.13.____cp313tempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpiopenmpinumpy2python3.13.____cp313tempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_mpiopenmpinumpy2python3.13.____cp313tempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpiopenmpinumpy2python3.13.____cp313tempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mpiopenmpinumpy2python3.13.____cp313tempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpimpichnumpy2.0python3.10.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimpichnumpy2.0python3.10.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimpichnumpy2.0python3.10.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpimpichnumpy2.0python3.10.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimpichnumpy2.0python3.10.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimpichnumpy2.0python3.10.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpimpichnumpy2.0python3.11.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimpichnumpy2.0python3.11.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimpichnumpy2.0python3.11.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpimpichnumpy2.0python3.11.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimpichnumpy2.0python3.11.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimpichnumpy2.0python3.11.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpimpichnumpy2.0python3.12.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimpichnumpy2.0python3.12.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimpichnumpy2.0python3.12.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpimpichnumpy2.0python3.12.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimpichnumpy2.0python3.12.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimpichnumpy2.0python3.12.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpimpichnumpy2.0python3.9.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimpichnumpy2.0python3.9.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimpichnumpy2.0python3.9.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpimpichnumpy2.0python3.9.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimpichnumpy2.0python3.9.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimpichnumpy2.0python3.9.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpimpichnumpy2python3.13.____cp313tempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimpichnumpy2python3.13.____cp313tempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimpichnumpy2python3.13.____cp313tempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpimpichnumpy2python3.13.____cp313tempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimpichnumpy2python3.13.____cp313tempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpimpichnumpy2python3.13.____cp313tempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpinompinumpy2.0python3.10.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpinompinumpy2.0python3.10.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpinompinumpy2.0python3.10.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpinompinumpy2.0python3.10.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpinompinumpy2.0python3.10.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpinompinumpy2.0python3.10.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpinompinumpy2.0python3.11.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpinompinumpy2.0python3.11.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpinompinumpy2.0python3.11.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpinompinumpy2.0python3.11.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpinompinumpy2.0python3.11.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpinompinumpy2.0python3.11.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpinompinumpy2.0python3.12.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpinompinumpy2.0python3.12.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpinompinumpy2.0python3.12.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpinompinumpy2.0python3.12.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpinompinumpy2.0python3.12.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpinompinumpy2.0python3.12.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpinompinumpy2.0python3.9.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpinompinumpy2.0python3.9.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpinompinumpy2.0python3.9.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpinompinumpy2.0python3.9.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpinompinumpy2.0python3.9.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpinompinumpy2.0python3.9.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpinompinumpy2python3.13.____cp313tempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpinompinumpy2python3.13.____cp313tempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpinompinumpy2python3.13.____cp313tempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpinompinumpy2python3.13.____cp313tempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpinompinumpy2python3.13.____cp313tempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpinompinumpy2python3.13.____cp313tempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpiopenmpinumpy2.0python3.10.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpiopenmpinumpy2.0python3.10.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpiopenmpinumpy2.0python3.10.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpiopenmpinumpy2.0python3.10.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpiopenmpinumpy2.0python3.10.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpiopenmpinumpy2.0python3.10.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpiopenmpinumpy2.0python3.11.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpiopenmpinumpy2.0python3.11.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpiopenmpinumpy2.0python3.11.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpiopenmpinumpy2.0python3.11.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpiopenmpinumpy2.0python3.11.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpiopenmpinumpy2.0python3.11.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpiopenmpinumpy2.0python3.12.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpiopenmpinumpy2.0python3.12.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpiopenmpinumpy2.0python3.12.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpiopenmpinumpy2.0python3.12.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpiopenmpinumpy2.0python3.12.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpiopenmpinumpy2.0python3.12.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpiopenmpinumpy2.0python3.9.____cpythontempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpiopenmpinumpy2.0python3.9.____cpythontempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpiopenmpinumpy2.0python3.9.____cpythontempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpiopenmpinumpy2.0python3.9.____cpythontempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpiopenmpinumpy2.0python3.9.____cpythontempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpiopenmpinumpy2.0python3.9.____cpythontempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpiopenmpinumpy2python3.13.____cp313tempestnotempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpiopenmpinumpy2python3.13.____cp313tempestnotempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpiopenmpinumpy2python3.13.____cp313tempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_mpiopenmpinumpy2python3.13.____cp313tempesttempest</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/rebuild-python313-0-1_hf4270c-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpiopenmpinumpy2python3.13.____cp313tempesttempest" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mpiopenmpinumpy2python3.13.____cp313tempesttempest" alt="variant">
                 </a>
               </td>
             </tr>
