@@ -76,6 +76,8 @@ requirements:
     - setuptools
     - tempest-remap >=2.2.0,<2.3.0  # [tempest == 'tempest']
     - zoltan * {{ mpi_prefix }}_*   # [mpi != 'nompi']
+    # headers are missing when using clang 13
+    - libcxx-devel  # [osx]
 
   run:
     - python
