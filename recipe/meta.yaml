@@ -45,7 +45,9 @@ build:
     - {{ name }} * {{ mpi_prefix }}_{{ tempest }}_*
   {% endif %}
 
-  skip: true  # [win]
+  # disable osx and tempest for now because the build is hanging with
+  # clang >=14 and the libcxx headers are missing for clang 13
+  skip: true  # [win or (osx and tempest == 'tempest')]
 
 requirements:
   build:
@@ -76,8 +78,6 @@ requirements:
     - setuptools
     - tempest-remap >=2.2.0,<2.3.0  # [tempest == 'tempest']
     - zoltan * {{ mpi_prefix }}_*   # [mpi != 'nompi']
-    # headers are missing when using clang 13
-    - libcxx-devel  # [osx]
 
   run:
     - python
