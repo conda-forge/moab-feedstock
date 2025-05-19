@@ -1,6 +1,6 @@
 {% set name = "moab" %}
 {% set version = "5.5.1" %}
-{% set build = 6 %}
+{% set build = 7 %}
 
 # ensure mpi is defined (needed for conda-smithy recipe-lint)
 {% set mpi = mpi or 'nompi' %}
@@ -84,9 +84,6 @@ requirements:
     - hdf5 * {{ mpi_prefix }}_*
     - libblas
     - liblapack
-    # temporary dependency until https://github.com/conda-forge/lapack-feedstock/issues/83
-    # gets resolved
-    - mkl  # [linux and x86_64]
     - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
     - metis
     - {{ mpi }}  # [mpi != 'nompi']
