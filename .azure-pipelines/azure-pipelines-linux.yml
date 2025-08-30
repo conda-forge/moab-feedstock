@@ -8,124 +8,124 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_mpimpichnumpy2.0python3.10.____cpythontempestnotempest:
-        CONFIG: linux_64_mpimpichnumpy2.0python3.10.____cpythontempestnotempest
+      linux_64_mpimpichpython3.10.____cpythontempestnotempest:
+        CONFIG: linux_64_mpimpichpython3.10.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpimpichnumpy2.0python3.10.____cpythontempesttempest:
-        CONFIG: linux_64_mpimpichnumpy2.0python3.10.____cpythontempesttempest
+      linux_64_mpimpichpython3.10.____cpythontempesttempest:
+        CONFIG: linux_64_mpimpichpython3.10.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpimpichnumpy2.0python3.11.____cpythontempestnotempest:
-        CONFIG: linux_64_mpimpichnumpy2.0python3.11.____cpythontempestnotempest
+      linux_64_mpimpichpython3.11.____cpythontempestnotempest:
+        CONFIG: linux_64_mpimpichpython3.11.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpimpichnumpy2.0python3.11.____cpythontempesttempest:
-        CONFIG: linux_64_mpimpichnumpy2.0python3.11.____cpythontempesttempest
+      linux_64_mpimpichpython3.11.____cpythontempesttempest:
+        CONFIG: linux_64_mpimpichpython3.11.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpimpichnumpy2.0python3.12.____cpythontempestnotempest:
-        CONFIG: linux_64_mpimpichnumpy2.0python3.12.____cpythontempestnotempest
+      linux_64_mpimpichpython3.12.____cpythontempestnotempest:
+        CONFIG: linux_64_mpimpichpython3.12.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpimpichnumpy2.0python3.12.____cpythontempesttempest:
-        CONFIG: linux_64_mpimpichnumpy2.0python3.12.____cpythontempesttempest
+      linux_64_mpimpichpython3.12.____cpythontempesttempest:
+        CONFIG: linux_64_mpimpichpython3.12.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpimpichnumpy2.0python3.9.____cpythontempestnotempest:
-        CONFIG: linux_64_mpimpichnumpy2.0python3.9.____cpythontempestnotempest
+      linux_64_mpimpichpython3.13.____cp313tempestnotempest:
+        CONFIG: linux_64_mpimpichpython3.13.____cp313tempestnotempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpimpichnumpy2.0python3.9.____cpythontempesttempest:
-        CONFIG: linux_64_mpimpichnumpy2.0python3.9.____cpythontempesttempest
+      linux_64_mpimpichpython3.13.____cp313tempesttempest:
+        CONFIG: linux_64_mpimpichpython3.13.____cp313tempesttempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpimpichnumpy2python3.13.____cp313tempestnotempest:
-        CONFIG: linux_64_mpimpichnumpy2python3.13.____cp313tempestnotempest
+      linux_64_mpimpichpython3.14.____cp314tempestnotempest:
+        CONFIG: linux_64_mpimpichpython3.14.____cp314tempestnotempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpimpichnumpy2python3.13.____cp313tempesttempest:
-        CONFIG: linux_64_mpimpichnumpy2python3.13.____cp313tempesttempest
+      linux_64_mpimpichpython3.14.____cp314tempesttempest:
+        CONFIG: linux_64_mpimpichpython3.14.____cp314tempesttempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpinompinumpy2.0python3.10.____cpythontempestnotempest:
-        CONFIG: linux_64_mpinompinumpy2.0python3.10.____cpythontempestnotempest
+      linux_64_mpinompipython3.10.____cpythontempestnotempest:
+        CONFIG: linux_64_mpinompipython3.10.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpinompinumpy2.0python3.10.____cpythontempesttempest:
-        CONFIG: linux_64_mpinompinumpy2.0python3.10.____cpythontempesttempest
+      linux_64_mpinompipython3.10.____cpythontempesttempest:
+        CONFIG: linux_64_mpinompipython3.10.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpinompinumpy2.0python3.11.____cpythontempestnotempest:
-        CONFIG: linux_64_mpinompinumpy2.0python3.11.____cpythontempestnotempest
+      linux_64_mpinompipython3.11.____cpythontempestnotempest:
+        CONFIG: linux_64_mpinompipython3.11.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpinompinumpy2.0python3.11.____cpythontempesttempest:
-        CONFIG: linux_64_mpinompinumpy2.0python3.11.____cpythontempesttempest
+      linux_64_mpinompipython3.11.____cpythontempesttempest:
+        CONFIG: linux_64_mpinompipython3.11.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpinompinumpy2.0python3.12.____cpythontempestnotempest:
-        CONFIG: linux_64_mpinompinumpy2.0python3.12.____cpythontempestnotempest
+      linux_64_mpinompipython3.12.____cpythontempestnotempest:
+        CONFIG: linux_64_mpinompipython3.12.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpinompinumpy2.0python3.12.____cpythontempesttempest:
-        CONFIG: linux_64_mpinompinumpy2.0python3.12.____cpythontempesttempest
+      linux_64_mpinompipython3.12.____cpythontempesttempest:
+        CONFIG: linux_64_mpinompipython3.12.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpinompinumpy2.0python3.9.____cpythontempestnotempest:
-        CONFIG: linux_64_mpinompinumpy2.0python3.9.____cpythontempestnotempest
+      linux_64_mpinompipython3.13.____cp313tempestnotempest:
+        CONFIG: linux_64_mpinompipython3.13.____cp313tempestnotempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpinompinumpy2.0python3.9.____cpythontempesttempest:
-        CONFIG: linux_64_mpinompinumpy2.0python3.9.____cpythontempesttempest
+      linux_64_mpinompipython3.13.____cp313tempesttempest:
+        CONFIG: linux_64_mpinompipython3.13.____cp313tempesttempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpinompinumpy2python3.13.____cp313tempestnotempest:
-        CONFIG: linux_64_mpinompinumpy2python3.13.____cp313tempestnotempest
+      linux_64_mpinompipython3.14.____cp314tempestnotempest:
+        CONFIG: linux_64_mpinompipython3.14.____cp314tempestnotempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpinompinumpy2python3.13.____cp313tempesttempest:
-        CONFIG: linux_64_mpinompinumpy2python3.13.____cp313tempesttempest
+      linux_64_mpinompipython3.14.____cp314tempesttempest:
+        CONFIG: linux_64_mpinompipython3.14.____cp314tempesttempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpiopenmpinumpy2.0python3.10.____cpythontempestnotempest:
-        CONFIG: linux_64_mpiopenmpinumpy2.0python3.10.____cpythontempestnotempest
+      linux_64_mpiopenmpipython3.10.____cpythontempestnotempest:
+        CONFIG: linux_64_mpiopenmpipython3.10.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpiopenmpinumpy2.0python3.10.____cpythontempesttempest:
-        CONFIG: linux_64_mpiopenmpinumpy2.0python3.10.____cpythontempesttempest
+      linux_64_mpiopenmpipython3.10.____cpythontempesttempest:
+        CONFIG: linux_64_mpiopenmpipython3.10.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpiopenmpinumpy2.0python3.11.____cpythontempestnotempest:
-        CONFIG: linux_64_mpiopenmpinumpy2.0python3.11.____cpythontempestnotempest
+      linux_64_mpiopenmpipython3.11.____cpythontempestnotempest:
+        CONFIG: linux_64_mpiopenmpipython3.11.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpiopenmpinumpy2.0python3.11.____cpythontempesttempest:
-        CONFIG: linux_64_mpiopenmpinumpy2.0python3.11.____cpythontempesttempest
+      linux_64_mpiopenmpipython3.11.____cpythontempesttempest:
+        CONFIG: linux_64_mpiopenmpipython3.11.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpiopenmpinumpy2.0python3.12.____cpythontempestnotempest:
-        CONFIG: linux_64_mpiopenmpinumpy2.0python3.12.____cpythontempestnotempest
+      linux_64_mpiopenmpipython3.12.____cpythontempestnotempest:
+        CONFIG: linux_64_mpiopenmpipython3.12.____cpythontempestnotempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpiopenmpinumpy2.0python3.12.____cpythontempesttempest:
-        CONFIG: linux_64_mpiopenmpinumpy2.0python3.12.____cpythontempesttempest
+      linux_64_mpiopenmpipython3.12.____cpythontempesttempest:
+        CONFIG: linux_64_mpiopenmpipython3.12.____cpythontempesttempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpiopenmpinumpy2.0python3.9.____cpythontempestnotempest:
-        CONFIG: linux_64_mpiopenmpinumpy2.0python3.9.____cpythontempestnotempest
+      linux_64_mpiopenmpipython3.13.____cp313tempestnotempest:
+        CONFIG: linux_64_mpiopenmpipython3.13.____cp313tempestnotempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpiopenmpinumpy2.0python3.9.____cpythontempesttempest:
-        CONFIG: linux_64_mpiopenmpinumpy2.0python3.9.____cpythontempesttempest
+      linux_64_mpiopenmpipython3.13.____cp313tempesttempest:
+        CONFIG: linux_64_mpiopenmpipython3.13.____cp313tempesttempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpiopenmpinumpy2python3.13.____cp313tempestnotempest:
-        CONFIG: linux_64_mpiopenmpinumpy2python3.13.____cp313tempestnotempest
+      linux_64_mpiopenmpipython3.14.____cp314tempestnotempest:
+        CONFIG: linux_64_mpiopenmpipython3.14.____cp314tempestnotempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_mpiopenmpinumpy2python3.13.____cp313tempesttempest:
-        CONFIG: linux_64_mpiopenmpinumpy2python3.13.____cp313tempesttempest
+      linux_64_mpiopenmpipython3.14.____cp314tempesttempest:
+        CONFIG: linux_64_mpiopenmpipython3.14.____cp314tempesttempest
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
     maxParallel: 25
