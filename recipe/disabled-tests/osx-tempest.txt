@@ -5,3 +5,4 @@
 
 # First known long-running/stalling test after 'imoab_coupler_twohop'
 imoab_phatm_ocn_coupler
+test_mapweights_bcast
