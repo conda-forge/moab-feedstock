@@ -95,7 +95,9 @@ if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}
     # Run only the selected serial tests
     if [[ ${#SERIAL_ENABLED[@]} -gt 0 ]]; then
       echo "[conda-forge] Running serial tests: ${SERIAL_ENABLED[*]}"
-      make -C test check TESTS="${SERIAL_ENABLED[*]}" \
+      # Prevent recursive check into subdirectories (like test/io) to avoid
+      # Automake trying to create logs for tests not defined there.
+      make -C test SUBDIRS=. check TESTS="${SERIAL_ENABLED[*]}" \
         || { [[ -f test/test-suite.log ]] && cat test/test-suite.log; exit 1; }
     else
       echo "[conda-forge] No selected serial tests were built; skipping test/"
@@ -104,7 +106,7 @@ if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}
     # Run only the selected parallel tests when MPI is enabled
     if [[ ${#PARALLEL_ENABLED[@]} -gt 0 ]]; then
       echo "[conda-forge] Running parallel tests: ${PARALLEL_ENABLED[*]}"
-      make -C test/parallel check TESTS="${PARALLEL_ENABLED[*]}" \
+      make -C test/parallel SUBDIRS=. check TESTS="${PARALLEL_ENABLED[*]}" \
         || { [[ -f test/parallel/test-suite.log ]] && cat test/parallel/test-suite.log; exit 1; }
     else
       if [[ -n "$mpi" && "$mpi" != "nompi" ]]; then
