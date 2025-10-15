@@ -68,7 +68,7 @@ if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}
       imoab_coupler_bilin
       imoab_coupler_fortran
       imoab_coupler_twohop
-      imoab_read_compute_map
+      imoab_read_map
     )
 
     # Filter to only those tests that are actually defined for this configuration
