@@ -1,8 +1,0 @@
-# Disabled tests for macOS builds when TempestRemap is enabled
-# Lines starting with '#' are comments.
-# Add one test name per line. Names must match the test program names
-# from Automake TESTS (e.g., as seen in test/*/Makefile.am).
-
-# First known long-running/stalling test after 'imoab_coupler_twohop'
-imoab_phatm_ocn_coupler
-test_mapweights_bcast

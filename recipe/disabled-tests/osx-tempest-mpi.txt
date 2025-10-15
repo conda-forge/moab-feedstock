@@ -1,2 +1,0 @@
-# Additional disabled tests for macOS + TempestRemap + MPI builds
-# Start empty; add tests as needed.

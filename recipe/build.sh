@@ -44,56 +44,69 @@ autoreconf -fi
 make -j "${CPU_COUNT}"
 
 if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
-  # Conditionally skip long-running tests on macOS with TempestRemap to avoid CI timeouts.
-  # We replace the test executable with a tiny wrapper that returns 77 (SKIP in Automake).
-  maybe_skip_tests() {
-    # args: listfile
-    local listfile="$1"
-    [[ -f "${listfile}" ]] || return 0
-    while IFS= read -r tname; do
-      # ignore blanks and comments
-      [[ -z "${tname}" || "${tname}" =~ ^# ]] && continue
-      # search for test executable in build tree (common dirs)
-      for d in test test/*; do
-        if [[ -x "$d/${tname}" ]]; then
-          echo "Skipping test ${tname} via wrapper (automake SKIP)"
-          local exe="$d/${tname}"
-          local exe_real="${exe}.real"
-          # keep original around (in case of local debugging)
-          mv "${exe}" "${exe_real}"
-          # create a POSIX sh wrapper that exits with 77 to mark SKIP
-          cat > "${exe}" <<'EOS'
-#!/usr/bin/env sh
-echo "[conda-forge] Skipping this test per recipe configuration."
-exit 77
-EOS
-          chmod +x "${exe}"
-          break
+  # If TempestRemap is enabled, run only a curated subset of tests to avoid timeouts.
+  if [[ -n "$tempest" && "$tempest" != "notempest" ]]; then
+    echo "[conda-forge] TempestRemap enabled: running a selected subset of tests."
+
+    # Tests to run for both MPI and no-MPI builds (found under test/)
+    COMMON_SERIAL_TESTS=(
+      imoab_remapping
+      imoab_test
+      test_remapping
+    )
+
+    # Additional tests for MPI builds (found under test/parallel/)
+    COMMON_PARALLEL_TESTS=(
+      imoab_coupler
+      imoab_coupler_bilin
+      imoab_coupler_fortran
+      imoab_coupler_twohop
+      imoab_read_compute_map
+    )
+
+    # Filter to only those tests that were actually built
+    SERIAL_ENABLED=()
+    for t in "${COMMON_SERIAL_TESTS[@]}"; do
+      if [[ -x "test/${t}" ]]; then
+        SERIAL_ENABLED+=("${t}")
+      fi
+    done
+
+    PARALLEL_ENABLED=()
+    if [[ -n "$mpi" && "$mpi" != "nompi" ]]; then
+      for t in "${COMMON_PARALLEL_TESTS[@]}"; do
+        if [[ -x "test/parallel/${t}" ]]; then
+          PARALLEL_ENABLED+=("${t}")
         fi
       done
-    done < "${listfile}"
-  }
-
-  # Determine platform and features to pick a skip list.
-  # On conda-forge, OS X is identified as Darwin in uname.
-  UNAME_S=$(uname -s || true)
-  if [[ "${UNAME_S}" == "Darwin" ]] && [[ -n "$tempest" && "$tempest" != "notempest" ]]; then
-    # Always apply the base macOS+TempestRemap skip list
-    maybe_skip_tests "${RECIPE_DIR}/disabled-tests/osx-tempest.txt"
-    # Demonstrate different skip sets depending on MPI presence
-    if [[ -n "$mpi" && "$mpi" != "nompi" ]]; then
-      echo "[conda-forge] MPI enabled: applying osx-tempest-mpi skip list"
-      maybe_skip_tests "${RECIPE_DIR}/disabled-tests/osx-tempest-mpi.txt"
-    else
-      echo "[conda-forge] MPI disabled: applying osx-tempest-nompi skip list"
-      maybe_skip_tests "${RECIPE_DIR}/disabled-tests/osx-tempest-nompi.txt"
     fi
+
+    # Run only the selected serial tests
+    if [[ ${#SERIAL_ENABLED[@]} -gt 0 ]]; then
+      echo "[conda-forge] Running serial tests: ${SERIAL_ENABLED[*]}"
+      make -C test check TESTS="${SERIAL_ENABLED[*]}" \
+        || { [[ -f test/test-suite.log ]] && cat test/test-suite.log; exit 1; }
+    else
+      echo "[conda-forge] No selected serial tests were built; skipping test/"
+    fi
+
+    # Run only the selected parallel tests when MPI is enabled
+    if [[ ${#PARALLEL_ENABLED[@]} -gt 0 ]]; then
+      echo "[conda-forge] Running parallel tests: ${PARALLEL_ENABLED[*]}"
+      make -C test/parallel check TESTS="${PARALLEL_ENABLED[*]}" \
+        || { [[ -f test/parallel/test-suite.log ]] && cat test/parallel/test-suite.log; exit 1; }
+    else
+      if [[ -n "$mpi" && "$mpi" != "nompi" ]]; then
+        echo "[conda-forge] No selected parallel tests were built; skipping test/parallel/"
+      else
+        echo "[conda-forge] MPI disabled: skipping parallel test subset."
+      fi
+    fi
+  else
+    # TempestRemap not enabled: run the full suite
+    make check \
+      || { cat test/test-suite.log; exit 1; }
   fi
-
-  # After any skip wrappers have been applied above, run the full automake test suite.
-
-  make check \
-    || { cat test/test-suite.log; exit 1; }
 fi
 
 make install
