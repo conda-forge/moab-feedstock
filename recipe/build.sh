@@ -27,7 +27,7 @@ if [[ -n "$mpi" && "$mpi" != "nompi" ]]; then
 fi
 
 if [[ -n "$tempest" && "$tempest" != "notempest" ]]; then
-  export CONFIGURE_ARGS="--with-tempestremap=${PREFIX} --with-netcdf=${PREFIX} ${CONFIGURE_ARGS}"
+  export CONFIGURE_ARGS="--with-tempestremap=${PREFIX} --with-netcdf=${PREFIX} --enable-mbtempest ${CONFIGURE_ARGS}"
 fi
 
 autoreconf -fi
@@ -48,6 +48,13 @@ if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}
   if [[ -n "$tempest" && "$tempest" != "notempest" ]]; then
     echo "[conda-forge] TempestRemap enabled: running a selected subset of tests."
 
+    # Helper: check if a test target is defined in the given directory's Makefile
+    is_test_defined() {
+      local dir="$1"; shift
+      local name="$1"; shift
+      [[ -f "${dir}/Makefile" ]] && grep -q "${name}_SOURCES" "${dir}/Makefile"
+    }
+
     # Tests to run for both MPI and no-MPI builds (found under test/)
     COMMON_SERIAL_TESTS=(
       imoab_remapping
@@ -64,10 +71,10 @@ if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}
       imoab_read_compute_map
     )
 
-    # Filter to only those tests that were actually built
+    # Filter to only those tests that are actually defined for this configuration
     SERIAL_ENABLED=()
     for t in "${COMMON_SERIAL_TESTS[@]}"; do
-      if [[ -x "test/${t}" ]]; then
+      if is_test_defined "test" "${t}"; then
         SERIAL_ENABLED+=("${t}")
       fi
     done
@@ -75,7 +82,11 @@ if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}
     PARALLEL_ENABLED=()
     if [[ -n "$mpi" && "$mpi" != "nompi" ]]; then
       for t in "${COMMON_PARALLEL_TESTS[@]}"; do
-        if [[ -x "test/parallel/${t}" ]]; then
+        # Skip Fortran-only test when Fortran is disabled in this recipe
+        if [[ "${t}" == "imoab_coupler_fortran" ]]; then
+          continue
+        fi
+        if is_test_defined "test/parallel" "${t}"; then
           PARALLEL_ENABLED+=("${t}")
         fi
       done
