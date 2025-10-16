@@ -1,6 +1,6 @@
 {% set name = "moab" %}
 {% set version = "5.5.1" %}
-{% set build = 10 %}
+{% set build = 11 %}
 
 # ensure mpi is defined (needed for conda-smithy recipe-lint)
 {% set mpi = mpi or 'nompi' %}
@@ -45,9 +45,7 @@ build:
     - {{ name }} * {{ mpi_prefix }}_{{ tempest }}_*
   {% endif %}
 
-  # disable osx and tempest for now because the build is hanging with
-  # clang >=14 and the libcxx headers are missing for clang 13
-  skip: true  # [win or (osx and tempest == 'tempest')]
+  skip: true  # [win]
 
 requirements:
   build:

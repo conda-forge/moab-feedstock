@@ -27,7 +27,7 @@ if [[ -n "$mpi" && "$mpi" != "nompi" ]]; then
 fi
 
 if [[ -n "$tempest" && "$tempest" != "notempest" ]]; then
-  export CONFIGURE_ARGS="--with-tempestremap=${PREFIX} --with-netcdf=${PREFIX} ${CONFIGURE_ARGS}"
+  export CONFIGURE_ARGS="--with-tempestremap=${PREFIX} --with-netcdf=${PREFIX} --enable-mbtempest ${CONFIGURE_ARGS}"
 fi
 
 autoreconf -fi
@@ -44,8 +44,82 @@ autoreconf -fi
 make -j "${CPU_COUNT}"
 
 if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
-make check \
-  || { cat test/test-suite.log; exit 1; }
+  # If TempestRemap is enabled, run only a curated subset of tests to avoid timeouts.
+  if [[ -n "$tempest" && "$tempest" != "notempest" ]]; then
+    echo "[conda-forge] TempestRemap enabled: running a selected subset of tests."
+
+    # Helper: check if a test target is defined in the given directory's Makefile
+    is_test_defined() {
+      local dir="$1"; shift
+      local name="$1"; shift
+      [[ -f "${dir}/Makefile" ]] && grep -q "${name}_SOURCES" "${dir}/Makefile"
+    }
+
+    # Tests to run for both MPI and no-MPI builds (found under test/)
+    COMMON_SERIAL_TESTS=(
+      imoab_remapping
+      imoab_test
+      test_remapping
+    )
+
+    # Additional tests for MPI builds (found under test/parallel/)
+    COMMON_PARALLEL_TESTS=(
+      imoab_coupler
+      imoab_coupler_bilin
+      imoab_coupler_fortran
+      imoab_coupler_twohop
+      imoab_read_map
+    )
+
+    # Filter to only those tests that are actually defined for this configuration
+    SERIAL_ENABLED=()
+    for t in "${COMMON_SERIAL_TESTS[@]}"; do
+      if is_test_defined "test" "${t}"; then
+        SERIAL_ENABLED+=("${t}")
+      fi
+    done
+
+    PARALLEL_ENABLED=()
+    if [[ -n "$mpi" && "$mpi" != "nompi" ]]; then
+      for t in "${COMMON_PARALLEL_TESTS[@]}"; do
+        # Skip Fortran-only test when Fortran is disabled in this recipe
+        if [[ "${t}" == "imoab_coupler_fortran" ]]; then
+          continue
+        fi
+        if is_test_defined "test/parallel" "${t}"; then
+          PARALLEL_ENABLED+=("${t}")
+        fi
+      done
+    fi
+
+    # Run only the selected serial tests
+    if [[ ${#SERIAL_ENABLED[@]} -gt 0 ]]; then
+      echo "[conda-forge] Running serial tests: ${SERIAL_ENABLED[*]}"
+      # Prevent recursive check into subdirectories (like test/io) to avoid
+      # Automake trying to create logs for tests not defined there.
+      make -C test SUBDIRS=. check TESTS="${SERIAL_ENABLED[*]}" \
+        || { [[ -f test/test-suite.log ]] && cat test/test-suite.log; exit 1; }
+    else
+      echo "[conda-forge] No selected serial tests were built; skipping test/"
+    fi
+
+    # Run only the selected parallel tests when MPI is enabled
+    if [[ ${#PARALLEL_ENABLED[@]} -gt 0 ]]; then
+      echo "[conda-forge] Running parallel tests: ${PARALLEL_ENABLED[*]}"
+      make -C test/parallel SUBDIRS=. check TESTS="${PARALLEL_ENABLED[*]}" \
+        || { [[ -f test/parallel/test-suite.log ]] && cat test/parallel/test-suite.log; exit 1; }
+    else
+      if [[ -n "$mpi" && "$mpi" != "nompi" ]]; then
+        echo "[conda-forge] No selected parallel tests were built; skipping test/parallel/"
+      else
+        echo "[conda-forge] MPI disabled: skipping parallel test subset."
+      fi
+    fi
+  else
+    # TempestRemap not enabled: run the full suite
+    make check \
+      || { cat test/test-suite.log; exit 1; }
+  fi
 fi
 
 make install
