@@ -10,6 +10,9 @@ fi
 
 if [[ -n "$tempest" && "$tempest" != "notempest" ]]; then
   export CONFIGURE_ARGS="--with-tempestremap=${PREFIX} --with-netcdf=${PREFIX} ${CONFIGURE_ARGS}"
+else
+  # no blas/lapack support without tempestremap so we don't need fortran support
+  export CONFIGURE_ARGS="--disable-fortran ${CONFIGURE_ARGS}"
 fi
 
 autoreconf -fi
@@ -20,7 +23,6 @@ autoreconf -fi
   --enable-shared \
   --enable-tools \
   --enable-pymoab \
-  --disable-fortran \
   || { cat config.log; exit 1; }
 
 make -j "${CPU_COUNT}"
