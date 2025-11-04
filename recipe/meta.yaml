@@ -1,5 +1,5 @@
 {% set name = "moab" %}
-{% set version = "5.6.0rc1" %}
+{% set version = "5.6.0rc2" %}
 {% set build = 0 %}
 
 # ensure mpi is defined (needed for conda-smithy recipe-lint)
@@ -20,7 +20,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://web.cels.anl.gov/projects/sigma/downloads/moab/moab-{{ version }}.tar.gz
-  sha256: 1a92485b1efc87a6c27db981e042477b2e80abbe80d3eb977bad4062282ed743
+  sha256: 3e63d255fbad25518e9734ebb8c1f09abc08e68d898ff1c14a060429d3941569
 build:
   number: {{ build }}
 
