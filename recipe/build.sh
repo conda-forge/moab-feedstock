@@ -19,7 +19,6 @@ autoreconf -fi
   --with-metis="${PREFIX}" \
   --enable-shared \
   --enable-tools \
-  --enable-pymoab \
   || { cat config.log; exit 1; }
 
 make -j "${CPU_COUNT}"
