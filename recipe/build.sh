@@ -117,7 +117,7 @@ if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}
   else
     # TempestRemap not enabled: run the full suite
     make check \
-      || { cat test/test-suite.log; exit 1; }
+      || { cat test/test-suite.log tools/mbcoupler/test-suite.log; exit 1; }
   fi
 fi
 
