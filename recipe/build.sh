@@ -14,6 +14,7 @@ if [[ -n "$mpi" && "$mpi" != "nompi" ]]; then
     # prefers these variables won't try to execute ${PREFIX}/bin/mpicc.
     export MPICC="${CC}"
     export MPICXX="${CXX}"
+    export MPIF90="${F90}"
     # Help discovery of MPI headers/libs without executing target wrappers.
     export MPI_CFLAGS="-I${PREFIX}/include ${MPI_CFLAGS}"
     export MPI_LIBS="-L${PREFIX}/lib -lmpi ${MPI_LIBS}"
@@ -22,7 +23,7 @@ if [[ -n "$mpi" && "$mpi" != "nompi" ]]; then
     # Make sure pkg-config can find mpi.pc (if provided by the MPI package).
     export PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig:${PKG_CONFIG_PATH}"
   else
-    export CONFIGURE_ARGS="CC=mpicc CXX=mpic++ --with-mpi=${PREFIX} --with-zoltan=${PREFIX} ${CONFIGURE_ARGS}"
+    export CONFIGURE_ARGS="CC=mpicc CXX=mpic++ FC=mpif90 F77=mpif77 --with-mpi=${PREFIX} --with-zoltan=${PREFIX} ${CONFIGURE_ARGS}"
   fi
 fi
 
