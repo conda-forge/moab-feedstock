@@ -38,7 +38,6 @@ autoreconf -fi
   --enable-shared \
   --enable-tools \
   --enable-pymoab \
-  --disable-fortran \
   || { cat config.log; exit 1; }
 
 make -j "${CPU_COUNT}"

@@ -69,8 +69,8 @@ requirements:
     # pinning from conda_build_config and build pinning from {{ mpi_prefix }}
     - hdf5
     - hdf5 * {{ mpi_prefix }}_*
-    - libblas
-    - liblapack
+    - libblas  # [tempest == 'tempest']
+    - liblapack  # [tempest == 'tempest']
     - libnetcdf  # [tempest == 'tempest']
     - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
     - metis
@@ -84,8 +84,8 @@ requirements:
   run:
     - python
     - hdf5 * {{ mpi_prefix }}_*
-    - libblas
-    - liblapack
+    - libblas  # [tempest == 'tempest']
+    - liblapack  # [tempest == 'tempest']
     - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
     - metis
     - {{ mpi }}  # [mpi != 'nompi']
