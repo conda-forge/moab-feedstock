@@ -59,7 +59,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
-    - {{ compiler('fortran') }}  # [tempest == 'tempest']
+    - {{ compiler('fortran') }}
     - openssh  # [mpi == 'openmpi']
   host:
     - python
@@ -70,8 +70,8 @@ requirements:
     # pinning from conda_build_config and build pinning from {{ mpi_prefix }}
     - hdf5
     - hdf5 * {{ mpi_prefix }}_*
-    - libblas  # [tempest == 'tempest']
-    - liblapack  # [tempest == 'tempest']
+    - libblas
+    - liblapack
     - libnetcdf  # [tempest == 'tempest']
     - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
     - metis
@@ -85,8 +85,8 @@ requirements:
   run:
     - python
     - hdf5 * {{ mpi_prefix }}_*
-    - libblas  # [tempest == 'tempest']
-    - liblapack  # [tempest == 'tempest']
+    - libblas
+    - liblapack
     - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
     - metis
     - {{ mpi }}  # [mpi != 'nompi']
