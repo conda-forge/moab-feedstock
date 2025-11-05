@@ -23,13 +23,13 @@ fortran_compiler:
 fortran_compiler_version:
 - '14'
 hdf5:
-- 1.14.3
+- 1.14.6
 libblas:
 - 3.9.* *netlib
 liblapack:
 - 3.9.* *netlib
 libnetcdf:
-- 4.9.2
+- 4.9.3
 libpnetcdf:
 - 1.14.1
 macos_machine:
@@ -41,7 +41,7 @@ mpi:
 mpich:
 - '4'
 openmpi:
-- '4'
+- '5'
 target_platform:
 - osx-64
 tempest:
