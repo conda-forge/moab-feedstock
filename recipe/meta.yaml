@@ -67,6 +67,8 @@ requirements:
     - liblapack
     - libnetcdf  # [tempest == 'tempest']
     - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
+    - libpnetcdf  # [tempest == 'tempest']
+    - libpnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
     - metis
     - {{ mpi }}  # [mpi != 'nompi']
     - packaging
@@ -78,6 +80,7 @@ requirements:
     - libblas
     - liblapack
     - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
+    - libpnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
     - metis
     - {{ mpi }}  # [mpi != 'nompi']
     - openssh  # [mpi == 'openmpi']
