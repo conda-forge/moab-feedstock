@@ -5,19 +5,19 @@ MACOSX_SDK_VERSION:
 c_compiler:
 - clang
 c_compiler_version:
-- '13'
+- '19'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
 - '10.13'
 channel_sources:
-- conda-forge,defaults
+- conda-forge
 channel_targets:
 - conda-forge moab_dev
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '13'
+- '19'
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
