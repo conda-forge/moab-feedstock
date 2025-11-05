@@ -1,6 +1,3 @@
-channel_sources:
-  - conda-forge,defaults
-
 channel_targets:
   - conda-forge moab_dev
 
@@ -12,9 +9,3 @@ mpi:
 tempest:
   - notempest
   - tempest
-
-# tests are hanging with clang 14
-c_compiler_version:        # [osx and x86_64]
-  - 13                     # [osx and x86_64]
-cxx_compiler_version:      # [osx and x86_64]
-  - 13                     # [osx and x86_64]
