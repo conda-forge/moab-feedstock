@@ -59,7 +59,7 @@ requirements:
     - openssh  # [mpi == 'openmpi']
   host:
     - eigen
-    # need to list hdf5 and libnetcdf twice to get version
+    # need to list hdf5, libnetcdf and libpnetcdf twice to get version
     # pinning from conda_build_config and build pinning from {{ mpi_prefix }}
     - hdf5
     - hdf5 * {{ mpi_prefix }}_*
@@ -67,8 +67,8 @@ requirements:
     - liblapack
     - libnetcdf  # [tempest == 'tempest']
     - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
-    - libpnetcdf  # [tempest == 'tempest']
-    - libpnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
+    - libpnetcdf  # [tempest == 'tempest' and mpi != 'nompi']
+    - libpnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest' and mpi != 'nompi']
     - metis
     - {{ mpi }}  # [mpi != 'nompi']
     - packaging
@@ -80,7 +80,7 @@ requirements:
     - libblas
     - liblapack
     - libnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
-    - libpnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest']
+    - libpnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest' and mpi != 'nompi']
     - metis
     - {{ mpi }}  # [mpi != 'nompi']
     - openssh  # [mpi == 'openmpi']
