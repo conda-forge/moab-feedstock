@@ -14,6 +14,7 @@ if [[ -n "$mpi" && "$mpi" != "nompi" ]]; then
     # prefers these variables won't try to execute ${PREFIX}/bin/mpicc.
     export MPICC="${CC}"
     export MPICXX="${CXX}"
+    export MPIF90="${F90}"
     # Help discovery of MPI headers/libs without executing target wrappers.
     export MPI_CFLAGS="-I${PREFIX}/include ${MPI_CFLAGS}"
     export MPI_LIBS="-L${PREFIX}/lib -lmpi ${MPI_LIBS}"
@@ -22,7 +23,7 @@ if [[ -n "$mpi" && "$mpi" != "nompi" ]]; then
     # Make sure pkg-config can find mpi.pc (if provided by the MPI package).
     export PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig:${PKG_CONFIG_PATH}"
   else
-    export CONFIGURE_ARGS="CC=mpicc CXX=mpic++ --with-mpi=${PREFIX} --with-zoltan=${PREFIX} ${CONFIGURE_ARGS}"
+    export CONFIGURE_ARGS="CC=mpicc CXX=mpic++ FC=mpif90 F77=mpif77 --with-mpi=${PREFIX} --with-zoltan=${PREFIX} ${CONFIGURE_ARGS}"
   fi
 fi
 
@@ -37,8 +38,6 @@ autoreconf -fi
   --with-metis="${PREFIX}" \
   --enable-shared \
   --enable-tools \
-  --enable-pymoab \
-  --disable-fortran \
   || { cat config.log; exit 1; }
 
 make -j "${CPU_COUNT}"
@@ -118,7 +117,7 @@ if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}
   else
     # TempestRemap not enabled: run the full suite
     make check \
-      || { cat test/test-suite.log; exit 1; }
+      || { cat test/test-suite.log tools/mbcoupler/test-suite.log; exit 1; }
   fi
 fi
 

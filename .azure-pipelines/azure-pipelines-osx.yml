@@ -8,187 +8,42 @@ jobs:
     vmImage: macOS-15
   strategy:
     matrix:
-      osx_64_mpimpichpython3.10.____cpythontempestnotempest:
-        CONFIG: osx_64_mpimpichpython3.10.____cpythontempestnotempest
+      osx_64_mpimpichtempestnotempest:
+        CONFIG: osx_64_mpimpichtempestnotempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpimpichpython3.10.____cpythontempesttempest:
-        CONFIG: osx_64_mpimpichpython3.10.____cpythontempesttempest
+      osx_64_mpimpichtempesttempest:
+        CONFIG: osx_64_mpimpichtempesttempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpimpichpython3.11.____cpythontempestnotempest:
-        CONFIG: osx_64_mpimpichpython3.11.____cpythontempestnotempest
+      osx_64_mpinompitempestnotempest:
+        CONFIG: osx_64_mpinompitempestnotempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpimpichpython3.11.____cpythontempesttempest:
-        CONFIG: osx_64_mpimpichpython3.11.____cpythontempesttempest
+      osx_64_mpinompitempesttempest:
+        CONFIG: osx_64_mpinompitempesttempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpimpichpython3.12.____cpythontempestnotempest:
-        CONFIG: osx_64_mpimpichpython3.12.____cpythontempestnotempest
+      osx_64_mpiopenmpitempestnotempest:
+        CONFIG: osx_64_mpiopenmpitempestnotempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpimpichpython3.12.____cpythontempesttempest:
-        CONFIG: osx_64_mpimpichpython3.12.____cpythontempesttempest
+      osx_64_mpiopenmpitempesttempest:
+        CONFIG: osx_64_mpiopenmpitempesttempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpimpichpython3.13.____cp313tempestnotempest:
-        CONFIG: osx_64_mpimpichpython3.13.____cp313tempestnotempest
+      osx_arm64_mpimpichtempestnotempest:
+        CONFIG: osx_arm64_mpimpichtempestnotempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpimpichpython3.13.____cp313tempesttempest:
-        CONFIG: osx_64_mpimpichpython3.13.____cp313tempesttempest
+      osx_arm64_mpimpichtempesttempest:
+        CONFIG: osx_arm64_mpimpichtempesttempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpimpichpython3.14.____cp314tempestnotempest:
-        CONFIG: osx_64_mpimpichpython3.14.____cp314tempestnotempest
+      osx_arm64_mpinompitempestnotempest:
+        CONFIG: osx_arm64_mpinompitempestnotempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpimpichpython3.14.____cp314tempesttempest:
-        CONFIG: osx_64_mpimpichpython3.14.____cp314tempesttempest
+      osx_arm64_mpinompitempesttempest:
+        CONFIG: osx_arm64_mpinompitempesttempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpinompipython3.10.____cpythontempestnotempest:
-        CONFIG: osx_64_mpinompipython3.10.____cpythontempestnotempest
+      osx_arm64_mpiopenmpitempestnotempest:
+        CONFIG: osx_arm64_mpiopenmpitempestnotempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpinompipython3.10.____cpythontempesttempest:
-        CONFIG: osx_64_mpinompipython3.10.____cpythontempesttempest
+      osx_arm64_mpiopenmpitempesttempest:
+        CONFIG: osx_arm64_mpiopenmpitempesttempest
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpinompipython3.11.____cpythontempestnotempest:
-        CONFIG: osx_64_mpinompipython3.11.____cpythontempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_64_mpinompipython3.11.____cpythontempesttempest:
-        CONFIG: osx_64_mpinompipython3.11.____cpythontempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_64_mpinompipython3.12.____cpythontempestnotempest:
-        CONFIG: osx_64_mpinompipython3.12.____cpythontempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_64_mpinompipython3.12.____cpythontempesttempest:
-        CONFIG: osx_64_mpinompipython3.12.____cpythontempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_64_mpinompipython3.13.____cp313tempestnotempest:
-        CONFIG: osx_64_mpinompipython3.13.____cp313tempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_64_mpinompipython3.13.____cp313tempesttempest:
-        CONFIG: osx_64_mpinompipython3.13.____cp313tempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_64_mpinompipython3.14.____cp314tempestnotempest:
-        CONFIG: osx_64_mpinompipython3.14.____cp314tempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_64_mpinompipython3.14.____cp314tempesttempest:
-        CONFIG: osx_64_mpinompipython3.14.____cp314tempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_64_mpiopenmpipython3.10.____cpythontempestnotempest:
-        CONFIG: osx_64_mpiopenmpipython3.10.____cpythontempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_64_mpiopenmpipython3.10.____cpythontempesttempest:
-        CONFIG: osx_64_mpiopenmpipython3.10.____cpythontempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_64_mpiopenmpipython3.11.____cpythontempestnotempest:
-        CONFIG: osx_64_mpiopenmpipython3.11.____cpythontempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_64_mpiopenmpipython3.11.____cpythontempesttempest:
-        CONFIG: osx_64_mpiopenmpipython3.11.____cpythontempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_64_mpiopenmpipython3.12.____cpythontempestnotempest:
-        CONFIG: osx_64_mpiopenmpipython3.12.____cpythontempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_64_mpiopenmpipython3.12.____cpythontempesttempest:
-        CONFIG: osx_64_mpiopenmpipython3.12.____cpythontempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_64_mpiopenmpipython3.13.____cp313tempestnotempest:
-        CONFIG: osx_64_mpiopenmpipython3.13.____cp313tempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_64_mpiopenmpipython3.13.____cp313tempesttempest:
-        CONFIG: osx_64_mpiopenmpipython3.13.____cp313tempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_64_mpiopenmpipython3.14.____cp314tempestnotempest:
-        CONFIG: osx_64_mpiopenmpipython3.14.____cp314tempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_64_mpiopenmpipython3.14.____cp314tempesttempest:
-        CONFIG: osx_64_mpiopenmpipython3.14.____cp314tempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpimpichpython3.10.____cpythontempestnotempest:
-        CONFIG: osx_arm64_mpimpichpython3.10.____cpythontempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpimpichpython3.10.____cpythontempesttempest:
-        CONFIG: osx_arm64_mpimpichpython3.10.____cpythontempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpimpichpython3.11.____cpythontempestnotempest:
-        CONFIG: osx_arm64_mpimpichpython3.11.____cpythontempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpimpichpython3.11.____cpythontempesttempest:
-        CONFIG: osx_arm64_mpimpichpython3.11.____cpythontempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpimpichpython3.12.____cpythontempestnotempest:
-        CONFIG: osx_arm64_mpimpichpython3.12.____cpythontempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpimpichpython3.12.____cpythontempesttempest:
-        CONFIG: osx_arm64_mpimpichpython3.12.____cpythontempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpimpichpython3.13.____cp313tempestnotempest:
-        CONFIG: osx_arm64_mpimpichpython3.13.____cp313tempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpimpichpython3.13.____cp313tempesttempest:
-        CONFIG: osx_arm64_mpimpichpython3.13.____cp313tempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpimpichpython3.14.____cp314tempestnotempest:
-        CONFIG: osx_arm64_mpimpichpython3.14.____cp314tempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpimpichpython3.14.____cp314tempesttempest:
-        CONFIG: osx_arm64_mpimpichpython3.14.____cp314tempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpinompipython3.10.____cpythontempestnotempest:
-        CONFIG: osx_arm64_mpinompipython3.10.____cpythontempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpinompipython3.10.____cpythontempesttempest:
-        CONFIG: osx_arm64_mpinompipython3.10.____cpythontempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpinompipython3.11.____cpythontempestnotempest:
-        CONFIG: osx_arm64_mpinompipython3.11.____cpythontempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpinompipython3.11.____cpythontempesttempest:
-        CONFIG: osx_arm64_mpinompipython3.11.____cpythontempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpinompipython3.12.____cpythontempestnotempest:
-        CONFIG: osx_arm64_mpinompipython3.12.____cpythontempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpinompipython3.12.____cpythontempesttempest:
-        CONFIG: osx_arm64_mpinompipython3.12.____cpythontempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpinompipython3.13.____cp313tempestnotempest:
-        CONFIG: osx_arm64_mpinompipython3.13.____cp313tempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpinompipython3.13.____cp313tempesttempest:
-        CONFIG: osx_arm64_mpinompipython3.13.____cp313tempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpinompipython3.14.____cp314tempestnotempest:
-        CONFIG: osx_arm64_mpinompipython3.14.____cp314tempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpinompipython3.14.____cp314tempesttempest:
-        CONFIG: osx_arm64_mpinompipython3.14.____cp314tempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpiopenmpipython3.10.____cpythontempestnotempest:
-        CONFIG: osx_arm64_mpiopenmpipython3.10.____cpythontempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpiopenmpipython3.10.____cpythontempesttempest:
-        CONFIG: osx_arm64_mpiopenmpipython3.10.____cpythontempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpiopenmpipython3.11.____cpythontempestnotempest:
-        CONFIG: osx_arm64_mpiopenmpipython3.11.____cpythontempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpiopenmpipython3.11.____cpythontempesttempest:
-        CONFIG: osx_arm64_mpiopenmpipython3.11.____cpythontempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpiopenmpipython3.12.____cpythontempestnotempest:
-        CONFIG: osx_arm64_mpiopenmpipython3.12.____cpythontempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpiopenmpipython3.12.____cpythontempesttempest:
-        CONFIG: osx_arm64_mpiopenmpipython3.12.____cpythontempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpiopenmpipython3.13.____cp313tempestnotempest:
-        CONFIG: osx_arm64_mpiopenmpipython3.13.____cp313tempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpiopenmpipython3.13.____cp313tempesttempest:
-        CONFIG: osx_arm64_mpiopenmpipython3.13.____cp313tempesttempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpiopenmpipython3.14.____cp314tempestnotempest:
-        CONFIG: osx_arm64_mpiopenmpipython3.14.____cp314tempestnotempest
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_mpiopenmpipython3.14.____cp314tempesttempest:
-        CONFIG: osx_arm64_mpiopenmpipython3.14.____cp314tempesttempest
-        UPLOAD_PACKAGES: 'True'
-    maxParallel: 33
   timeoutInMinutes: 360
   variables: {}
 
