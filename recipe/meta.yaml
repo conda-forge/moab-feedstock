@@ -71,7 +71,6 @@ requirements:
     - libpnetcdf * {{ mpi_prefix }}_*  # [tempest == 'tempest' and mpi != 'nompi']
     - metis
     - {{ mpi }}  # [mpi != 'nompi']
-    - packaging
     - tempest-remap >=2.2.0,<2.3.0  # [tempest == 'tempest']
     - zoltan * {{ mpi_prefix }}_*   # [mpi != 'nompi']
 
@@ -84,7 +83,6 @@ requirements:
     - metis
     - {{ mpi }}  # [mpi != 'nompi']
     - openssh  # [mpi == 'openmpi']
-    - setuptools
     - tempest-remap >=2.2.0,<2.3.0  # [tempest == 'tempest']
     - zoltan * {{ mpi_prefix }}_*   # [mpi != 'nompi']
 
