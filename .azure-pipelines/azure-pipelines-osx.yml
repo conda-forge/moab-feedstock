@@ -5,45 +5,57 @@
 jobs:
 - job: osx
   pool:
-    vmImage: macOS-15
+    vmImage: $(VMIMAGE)
   strategy:
     matrix:
       osx_64_mpimpichtempestnotempest:
         CONFIG: osx_64_mpimpichtempestnotempest
         UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
       osx_64_mpimpichtempesttempest:
         CONFIG: osx_64_mpimpichtempesttempest
         UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
       osx_64_mpinompitempestnotempest:
         CONFIG: osx_64_mpinompitempestnotempest
         UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
       osx_64_mpinompitempesttempest:
         CONFIG: osx_64_mpinompitempesttempest
         UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
       osx_64_mpiopenmpitempestnotempest:
         CONFIG: osx_64_mpiopenmpitempestnotempest
         UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
       osx_64_mpiopenmpitempesttempest:
         CONFIG: osx_64_mpiopenmpitempesttempest
         UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
       osx_arm64_mpimpichtempestnotempest:
         CONFIG: osx_arm64_mpimpichtempestnotempest
         UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
       osx_arm64_mpimpichtempesttempest:
         CONFIG: osx_arm64_mpimpichtempesttempest
         UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
       osx_arm64_mpinompitempestnotempest:
         CONFIG: osx_arm64_mpinompitempestnotempest
         UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
       osx_arm64_mpinompitempesttempest:
         CONFIG: osx_arm64_mpinompitempesttempest
         UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
       osx_arm64_mpiopenmpitempestnotempest:
         CONFIG: osx_arm64_mpiopenmpitempestnotempest
         UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
       osx_arm64_mpiopenmpitempesttempest:
         CONFIG: osx_arm64_mpiopenmpitempesttempest
         UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
   timeoutInMinutes: 360
   variables: {}
 
