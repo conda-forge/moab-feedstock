@@ -17,6 +17,7 @@ package:
   name: {{ name|lower }}
   version: {{ version }}
 
+
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://web.cels.anl.gov/projects/sigma/downloads/moab/moab-{{ version }}.tar.gz
@@ -58,7 +59,8 @@ requirements:
     - {{ compiler('fortran') }}
     - openssh  # [mpi == 'openmpi']
   host:
-    - eigen
+    # eigen v5.x requires at least c++14 support
+    - eigen 3.*
     # need to list hdf5, libnetcdf and libpnetcdf twice to get version
     # pinning from conda_build_config and build pinning from {{ mpi_prefix }}
     - hdf5
