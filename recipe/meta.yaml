@@ -1,6 +1,6 @@
 {% set name = "moab" %}
 {% set version = "5.6.0" %}
-{% set build = 1 %}
+{% set build = 2 %}
 
 # ensure mpi is defined (needed for conda-smithy recipe-lint)
 {% set mpi = mpi or 'nompi' %}
@@ -16,7 +16,6 @@
 package:
   name: {{ name|lower }}
   version: {{ version }}
-
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz

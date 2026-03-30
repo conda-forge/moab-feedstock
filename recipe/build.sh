@@ -2,7 +2,7 @@
 set -e
 set -x
 
-export CONFIGURE_ARGS="--with-eigen3=${PREFIX}/include/eigen3 ${CONFIGURE_ARGS}"
+export CONFIGURE_ARGS="--with-eigen3=${PREFIX}/include/eigen3 --disable-static --enable-shared ${CONFIGURE_ARGS}"
 
 if [[ -n "$mpi" && "$mpi" != "nompi" ]]; then
   if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" == "1" ]]; then
