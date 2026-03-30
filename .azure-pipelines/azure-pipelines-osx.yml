@@ -8,52 +8,100 @@ jobs:
     vmImage: $(VMIMAGE)
   strategy:
     matrix:
-      osx_64_mpimpichtempestnotempest:
-        CONFIG: osx_64_mpimpichtempestnotempest
+      osx_64_hdf51.14.6mpimpichtempestnotempest:
+        CONFIG: osx_64_hdf51.14.6mpimpichtempestnotempest
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
-      osx_64_mpimpichtempesttempest:
-        CONFIG: osx_64_mpimpichtempesttempest
+      osx_64_hdf51.14.6mpimpichtempesttempest:
+        CONFIG: osx_64_hdf51.14.6mpimpichtempesttempest
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
-      osx_64_mpinompitempestnotempest:
-        CONFIG: osx_64_mpinompitempestnotempest
+      osx_64_hdf51.14.6mpinompitempestnotempest:
+        CONFIG: osx_64_hdf51.14.6mpinompitempestnotempest
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
-      osx_64_mpinompitempesttempest:
-        CONFIG: osx_64_mpinompitempesttempest
+      osx_64_hdf51.14.6mpinompitempesttempest:
+        CONFIG: osx_64_hdf51.14.6mpinompitempesttempest
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
-      osx_64_mpiopenmpitempestnotempest:
-        CONFIG: osx_64_mpiopenmpitempestnotempest
+      osx_64_hdf51.14.6mpiopenmpitempestnotempest:
+        CONFIG: osx_64_hdf51.14.6mpiopenmpitempestnotempest
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
-      osx_64_mpiopenmpitempesttempest:
-        CONFIG: osx_64_mpiopenmpitempesttempest
+      osx_64_hdf51.14.6mpiopenmpitempesttempest:
+        CONFIG: osx_64_hdf51.14.6mpiopenmpitempesttempest
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
-      osx_arm64_mpimpichtempestnotempest:
-        CONFIG: osx_arm64_mpimpichtempestnotempest
+      osx_64_hdf52mpimpichtempestnotempest:
+        CONFIG: osx_64_hdf52mpimpichtempestnotempest
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
-      osx_arm64_mpimpichtempesttempest:
-        CONFIG: osx_arm64_mpimpichtempesttempest
+      osx_64_hdf52mpimpichtempesttempest:
+        CONFIG: osx_64_hdf52mpimpichtempesttempest
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
-      osx_arm64_mpinompitempestnotempest:
-        CONFIG: osx_arm64_mpinompitempestnotempest
+      osx_64_hdf52mpinompitempestnotempest:
+        CONFIG: osx_64_hdf52mpinompitempestnotempest
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
-      osx_arm64_mpinompitempesttempest:
-        CONFIG: osx_arm64_mpinompitempesttempest
+      osx_64_hdf52mpinompitempesttempest:
+        CONFIG: osx_64_hdf52mpinompitempesttempest
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
-      osx_arm64_mpiopenmpitempestnotempest:
-        CONFIG: osx_arm64_mpiopenmpitempestnotempest
+      osx_64_hdf52mpiopenmpitempestnotempest:
+        CONFIG: osx_64_hdf52mpiopenmpitempestnotempest
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
-      osx_arm64_mpiopenmpitempesttempest:
-        CONFIG: osx_arm64_mpiopenmpitempesttempest
+      osx_64_hdf52mpiopenmpitempesttempest:
+        CONFIG: osx_64_hdf52mpiopenmpitempesttempest
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
+      osx_arm64_hdf51.14.6mpimpichtempestnotempest:
+        CONFIG: osx_arm64_hdf51.14.6mpimpichtempestnotempest
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
+      osx_arm64_hdf51.14.6mpimpichtempesttempest:
+        CONFIG: osx_arm64_hdf51.14.6mpimpichtempesttempest
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
+      osx_arm64_hdf51.14.6mpinompitempestnotempest:
+        CONFIG: osx_arm64_hdf51.14.6mpinompitempestnotempest
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
+      osx_arm64_hdf51.14.6mpinompitempesttempest:
+        CONFIG: osx_arm64_hdf51.14.6mpinompitempesttempest
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
+      osx_arm64_hdf51.14.6mpiopenmpitempestnotempest:
+        CONFIG: osx_arm64_hdf51.14.6mpiopenmpitempestnotempest
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
+      osx_arm64_hdf51.14.6mpiopenmpitempesttempest:
+        CONFIG: osx_arm64_hdf51.14.6mpiopenmpitempesttempest
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
+      osx_arm64_hdf52mpimpichtempestnotempest:
+        CONFIG: osx_arm64_hdf52mpimpichtempestnotempest
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
+      osx_arm64_hdf52mpimpichtempesttempest:
+        CONFIG: osx_arm64_hdf52mpimpichtempesttempest
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
+      osx_arm64_hdf52mpinompitempestnotempest:
+        CONFIG: osx_arm64_hdf52mpinompitempestnotempest
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
+      osx_arm64_hdf52mpinompitempesttempest:
+        CONFIG: osx_arm64_hdf52mpinompitempesttempest
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
+      osx_arm64_hdf52mpiopenmpitempestnotempest:
+        CONFIG: osx_arm64_hdf52mpiopenmpitempestnotempest
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
+      osx_arm64_hdf52mpiopenmpitempesttempest:
+        CONFIG: osx_arm64_hdf52mpiopenmpitempesttempest
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15
   timeoutInMinutes: 360
