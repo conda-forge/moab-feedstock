@@ -59,51 +59,51 @@ jobs:
       osx_arm64_hdf51.14.6mpimpichtempestnotempest:
         CONFIG: osx_arm64_hdf51.14.6mpimpichtempestnotempest
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
       osx_arm64_hdf51.14.6mpimpichtempesttempest:
         CONFIG: osx_arm64_hdf51.14.6mpimpichtempesttempest
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
       osx_arm64_hdf51.14.6mpinompitempestnotempest:
         CONFIG: osx_arm64_hdf51.14.6mpinompitempestnotempest
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
       osx_arm64_hdf51.14.6mpinompitempesttempest:
         CONFIG: osx_arm64_hdf51.14.6mpinompitempesttempest
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
       osx_arm64_hdf51.14.6mpiopenmpitempestnotempest:
         CONFIG: osx_arm64_hdf51.14.6mpiopenmpitempestnotempest
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
       osx_arm64_hdf51.14.6mpiopenmpitempesttempest:
         CONFIG: osx_arm64_hdf51.14.6mpiopenmpitempesttempest
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
       osx_arm64_hdf52mpimpichtempestnotempest:
         CONFIG: osx_arm64_hdf52mpimpichtempestnotempest
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
       osx_arm64_hdf52mpimpichtempesttempest:
         CONFIG: osx_arm64_hdf52mpimpichtempesttempest
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
       osx_arm64_hdf52mpinompitempestnotempest:
         CONFIG: osx_arm64_hdf52mpinompitempestnotempest
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
       osx_arm64_hdf52mpinompitempesttempest:
         CONFIG: osx_arm64_hdf52mpinompitempesttempest
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
       osx_arm64_hdf52mpiopenmpitempestnotempest:
         CONFIG: osx_arm64_hdf52mpiopenmpitempestnotempest
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
       osx_arm64_hdf52mpiopenmpitempesttempest:
         CONFIG: osx_arm64_hdf52mpiopenmpitempesttempest
         UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15
+        VMIMAGE: macOS-15-arm64
   timeoutInMinutes: 360
   variables: {}
 
