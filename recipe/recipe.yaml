@@ -1,0 +1,117 @@
+schema_version: 1
+
+context:
+  version: "5.6.0"
+  build_number: 6
+
+package:
+  name: moab
+  version: ${{ version }}
+
+source:
+  url: https://web.cels.anl.gov/projects/sigma/downloads/moab/moab-${{ version }}.tar.gz
+  sha256: 8d24a38619eb9fd326c7bdf9fdb01466149a0ab7dc3ef1caffda728858bf5a85
+
+build:
+  # add build string so packages can depend on
+  # mpi or nompi and tempest or notempest variants explicitly:
+  # `moab * mpi_mpich_tempest_*` for mpich and tempest
+  # `moab * mpi_*_tempest_*` for any mpi and tempest
+  # `moab * nompi_tempest_*` for no mpi and tempest
+  # `moab * mpi_mpich_notempest_*` for mpich and no tempest
+  # `moab * mpi_*_notempest_*` for any mpi and no tempest
+  # `moab * nompi_notempest_*` for no mpi and no tempest
+  number: ${{ build_number | int + 100 if mpi == "nompi" and tempest == "notempest" else build_number }}
+  string: ${{ mpi_prefix }}_${{ tempest }}_h${{ hash }}_${{ build_number | int + 100 if mpi == "nompi" and tempest == "notempest" else build_number }}
+  variant:
+    # prefer 'nompi' and 'notempest' over other variants
+    down_prioritize_variant: ${{ 0 if mpi == "nompi" and tempest == "notempest" else 1 }}
+  skip: win
+
+requirements:
+  build:
+    - ${{ stdlib("c") }}
+    - ${{ compiler("cxx") }}
+    - ${{ compiler("fortran") }}
+    - automake
+    - libtool
+    - make
+    - if: mpi == "openmpi"
+      then: openssh
+  host:
+    # eigen v5.x requires at least c++14 support
+    - eigen 3.*
+    # Repeat of requirements with no constraint and with build variant are to
+    # pick up global pinning (from no constraint)
+    - hdf5
+    - hdf5 [build=${{ mpi_prefix }}_*]
+    - libblas
+    - liblapack
+    - if: tempest == "tempest"
+      then:
+        - libnetcdf
+        - libnetcdf [build=${{ mpi_prefix }}_*]
+        - tempest-remap >=2.2.0,<2.3.0
+    - if: tempest == "tempest" and mpi != "nompi"
+      then:
+        - libpnetcdf
+        - libpnetcdf [build=${{ mpi_prefix }}_*]
+    - metis
+    - if: mpi != "nompi"
+      then:
+        - mpi [build=${{ mpi }}]
+        - zoltan [build=${{ mpi_prefix }}_*]
+  run:
+    - hdf5 * [build=${{ mpi_prefix }}_*]
+    - libblas
+    - liblapack
+    - if: tempest == "tempest"
+      then:
+        - libnetcdf * [build=${{ mpi_prefix }}_*]
+        - tempest-remap >=2.2.0,<2.3.0
+    - if: tempest == "tempest" and mpi != "nompi"
+      then: libpnetcdf * [build=${{ mpi_prefix }}_*]
+    - metis
+    - if: mpi != "nompi"
+      then:
+        - mpi * [build=${{ mpi }}]
+        - zoltan * [build=${{ mpi_prefix }}_*]
+    - if: mpi == "openmpi"
+      then: openssh
+  run_exports:
+    - if: mpi != "nompi"
+      then:
+        - moab * ${{ mpi_prefix }}_${{ tempest }}_*
+
+tests:
+  - package_contents:
+      bin:
+        - if: tempest == "tempest"
+          then: mbtempest
+      lib:
+        - MOAB
+
+  - script:
+      - if: tempest == "tempest"
+        then: mbtempest --help
+
+about:
+  license: LGPL-3.0-or-later
+  license_file: LICENSE
+  summary: The Mesh-Oriented datABase
+  description: |
+    The Mesh-Oriented datABase (MOAB) is a component for representing and
+    evaluating mesh data. MOAB can store structured and unstructured mesh,
+    consisting of elements in the finite element zoo plus polygons and
+    polyhedra.
+  homepage: https://sigma.mcs.anl.gov/moab-library
+  repository: https://bitbucket.org/fathomteam/moab/
+  documentation: https://web.cels.anl.gov/projects/sigma/docs/moab
+
+extra:
+  recipe-maintainers:
+    - xylar
+    - vijaysm
+    - scopatz
+    - iulian787
+    - gonuke

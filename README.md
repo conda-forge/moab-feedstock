@@ -9,7 +9,7 @@ Package license: LGPL-3.0-or-later
 
 Summary: The Mesh-Oriented datABase
 
-Development: https://bitbucket.org/fathomteam/moab.git
+Development: https://bitbucket.org/fathomteam/moab/
 
 Documentation: https://web.cels.anl.gov/projects/sigma/docs/moab
 
@@ -17,7 +17,6 @@ The Mesh-Oriented datABase (MOAB) is a component for representing and
 evaluating mesh data. MOAB can store structured and unstructured mesh,
 consisting of elements in the finite element zoo plus polygons and
 polyhedra.
-
 
 Current build status
 ====================
@@ -37,339 +36,339 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_hdf51.14.6mpimpichtempestnotempest</td>
+              <td>linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.6mpimpichtempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_hdf51.14.6mpimpichtempesttempest</td>
+              <td>linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.6mpimpichtempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_hdf51.14.6mpinompitempestnotempest</td>
+              <td>linux_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.6mpinompitempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_hdf51.14.6mpinompitempesttempest</td>
+              <td>linux_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.6mpinompitempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_hdf51.14.6mpiopenmpitempestnotempest</td>
+              <td>linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.6mpiopenmpitempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_hdf51.14.6mpiopenmpitempesttempest</td>
+              <td>linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.6mpiopenmpitempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_hdf52mpimpichtempestnotempest</td>
+              <td>linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf52mpimpichtempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_hdf52mpimpichtempesttempest</td>
+              <td>linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf52mpimpichtempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_hdf52mpinompitempestnotempest</td>
+              <td>linux_64_hdf52mpinompimpi_prefixnompitempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf52mpinompitempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf52mpinompimpi_prefixnompitempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_hdf52mpinompitempesttempest</td>
+              <td>linux_64_hdf52mpinompimpi_prefixnompitempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf52mpinompitempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf52mpinompimpi_prefixnompitempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_hdf52mpiopenmpitempestnotempest</td>
+              <td>linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf52mpiopenmpitempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_hdf52mpiopenmpitempesttempest</td>
+              <td>linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf52mpiopenmpitempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_hdf51.14.6mpimpichtempestnotempest</td>
+              <td>linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf51.14.6mpimpichtempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_hdf51.14.6mpimpichtempesttempest</td>
+              <td>linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf51.14.6mpimpichtempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_hdf51.14.6mpinompitempestnotempest</td>
+              <td>linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf51.14.6mpinompitempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_hdf51.14.6mpinompitempesttempest</td>
+              <td>linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf51.14.6mpinompitempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_hdf51.14.6mpiopenmpitempestnotempest</td>
+              <td>linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf51.14.6mpiopenmpitempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_hdf51.14.6mpiopenmpitempesttempest</td>
+              <td>linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf51.14.6mpiopenmpitempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_hdf52mpimpichtempestnotempest</td>
+              <td>linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf52mpimpichtempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_hdf52mpimpichtempesttempest</td>
+              <td>linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf52mpimpichtempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_hdf52mpinompitempestnotempest</td>
+              <td>linux_aarch64_hdf52mpinompimpi_prefixnompitempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf52mpinompitempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf52mpinompimpi_prefixnompitempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_hdf52mpinompitempesttempest</td>
+              <td>linux_aarch64_hdf52mpinompimpi_prefixnompitempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf52mpinompitempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf52mpinompimpi_prefixnompitempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_hdf52mpiopenmpitempestnotempest</td>
+              <td>linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf52mpiopenmpitempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_hdf52mpiopenmpitempesttempest</td>
+              <td>linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf52mpiopenmpitempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_hdf51.14.6mpimpichtempestnotempest</td>
+              <td>osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf51.14.6mpimpichtempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_hdf51.14.6mpimpichtempesttempest</td>
+              <td>osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf51.14.6mpimpichtempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_hdf51.14.6mpinompitempestnotempest</td>
+              <td>osx_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf51.14.6mpinompitempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_hdf51.14.6mpinompitempesttempest</td>
+              <td>osx_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf51.14.6mpinompitempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_hdf51.14.6mpiopenmpitempestnotempest</td>
+              <td>osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf51.14.6mpiopenmpitempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_hdf51.14.6mpiopenmpitempesttempest</td>
+              <td>osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf51.14.6mpiopenmpitempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_hdf52mpimpichtempestnotempest</td>
+              <td>osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf52mpimpichtempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_hdf52mpimpichtempesttempest</td>
+              <td>osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf52mpimpichtempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_hdf52mpinompitempestnotempest</td>
+              <td>osx_64_hdf52mpinompimpi_prefixnompitempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf52mpinompitempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf52mpinompimpi_prefixnompitempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_hdf52mpinompitempesttempest</td>
+              <td>osx_64_hdf52mpinompimpi_prefixnompitempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf52mpinompitempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf52mpinompimpi_prefixnompitempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_hdf52mpiopenmpitempestnotempest</td>
+              <td>osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf52mpiopenmpitempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_hdf52mpiopenmpitempesttempest</td>
+              <td>osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf52mpiopenmpitempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_hdf51.14.6mpimpichtempestnotempest</td>
+              <td>osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf51.14.6mpimpichtempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_hdf51.14.6mpimpichtempesttempest</td>
+              <td>osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf51.14.6mpimpichtempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_hdf51.14.6mpinompitempestnotempest</td>
+              <td>osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf51.14.6mpinompitempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_hdf51.14.6mpinompitempesttempest</td>
+              <td>osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf51.14.6mpinompitempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_hdf51.14.6mpiopenmpitempestnotempest</td>
+              <td>osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf51.14.6mpiopenmpitempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_hdf51.14.6mpiopenmpitempesttempest</td>
+              <td>osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf51.14.6mpiopenmpitempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_hdf52mpimpichtempestnotempest</td>
+              <td>osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf52mpimpichtempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_hdf52mpimpichtempesttempest</td>
+              <td>osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf52mpimpichtempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_hdf52mpinompitempestnotempest</td>
+              <td>osx_arm64_hdf52mpinompimpi_prefixnompitempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf52mpinompitempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf52mpinompimpi_prefixnompitempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_hdf52mpinompitempesttempest</td>
+              <td>osx_arm64_hdf52mpinompimpi_prefixnompitempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf52mpinompitempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf52mpinompimpi_prefixnompitempesttempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_hdf52mpiopenmpitempestnotempest</td>
+              <td>osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf52mpiopenmpitempestnotempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_hdf52mpiopenmpitempesttempest</td>
+              <td>osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3111&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf52mpiopenmpitempesttempest" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/moab-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest" alt="variant">
                 </a>
               </td>
             </tr>
