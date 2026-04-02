@@ -22,122 +22,122 @@ jobs:
       max-parallel: 50
       matrix:
         include:
-          - CONFIG: linux_64_hdf51.14.6mpimpichtempestnotempest
+          - CONFIG: linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-          - CONFIG: linux_64_hdf51.14.6mpimpichtempesttempest
+          - CONFIG: linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-          - CONFIG: linux_64_hdf51.14.6mpinompitempestnotempest
+          - CONFIG: linux_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-          - CONFIG: linux_64_hdf51.14.6mpinompitempesttempest
+          - CONFIG: linux_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-          - CONFIG: linux_64_hdf51.14.6mpiopenmpitempestnotempest
+          - CONFIG: linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-          - CONFIG: linux_64_hdf51.14.6mpiopenmpitempesttempest
+          - CONFIG: linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-          - CONFIG: linux_64_hdf52mpimpichtempestnotempest
+          - CONFIG: linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-          - CONFIG: linux_64_hdf52mpimpichtempesttempest
+          - CONFIG: linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-          - CONFIG: linux_64_hdf52mpinompitempestnotempest
+          - CONFIG: linux_64_hdf52mpinompimpi_prefixnompitempestnotempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-          - CONFIG: linux_64_hdf52mpinompitempesttempest
+          - CONFIG: linux_64_hdf52mpinompimpi_prefixnompitempesttempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-          - CONFIG: linux_64_hdf52mpiopenmpitempestnotempest
+          - CONFIG: linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-          - CONFIG: linux_64_hdf52mpiopenmpitempesttempest
+          - CONFIG: linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-          - CONFIG: linux_aarch64_hdf51.14.6mpimpichtempestnotempest
+          - CONFIG: linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma9
-          - CONFIG: linux_aarch64_hdf51.14.6mpimpichtempesttempest
+          - CONFIG: linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma9
-          - CONFIG: linux_aarch64_hdf51.14.6mpinompitempestnotempest
+          - CONFIG: linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma9
-          - CONFIG: linux_aarch64_hdf51.14.6mpinompitempesttempest
+          - CONFIG: linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempesttempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma9
-          - CONFIG: linux_aarch64_hdf51.14.6mpiopenmpitempestnotempest
+          - CONFIG: linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma9
-          - CONFIG: linux_aarch64_hdf51.14.6mpiopenmpitempesttempest
+          - CONFIG: linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma9
-          - CONFIG: linux_aarch64_hdf52mpimpichtempestnotempest
+          - CONFIG: linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma9
-          - CONFIG: linux_aarch64_hdf52mpimpichtempesttempest
+          - CONFIG: linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma9
-          - CONFIG: linux_aarch64_hdf52mpinompitempestnotempest
+          - CONFIG: linux_aarch64_hdf52mpinompimpi_prefixnompitempestnotempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma9
-          - CONFIG: linux_aarch64_hdf52mpinompitempesttempest
+          - CONFIG: linux_aarch64_hdf52mpinompimpi_prefixnompitempesttempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma9
-          - CONFIG: linux_aarch64_hdf52mpiopenmpitempestnotempest
+          - CONFIG: linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma9
-          - CONFIG: linux_aarch64_hdf52mpiopenmpitempesttempest
+          - CONFIG: linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-24.04-arm']

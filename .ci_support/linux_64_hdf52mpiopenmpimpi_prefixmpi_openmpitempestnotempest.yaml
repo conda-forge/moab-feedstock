@@ -1,0 +1,47 @@
+c_stdlib:
+- sysroot
+c_stdlib_version:
+- '2.17'
+channel_sources:
+- conda-forge
+channel_targets:
+- conda-forge main
+cxx_compiler:
+- gxx
+cxx_compiler_version:
+- '14'
+docker_image:
+- quay.io/condaforge/linux-anvil-x86_64:alma9
+fortran_compiler:
+- gfortran
+fortran_compiler_version:
+- '14'
+hdf5:
+- '2'
+libblas:
+- 3.9.* *netlib
+liblapack:
+- 3.9.* *netlib
+libnetcdf:
+- 4.10.0
+libpnetcdf:
+- 1.14.1
+metis:
+- 5.1.0
+mpi:
+- openmpi
+mpi_prefix:
+- mpi_openmpi
+mpich:
+- '5'
+openmpi:
+- '5'
+target_platform:
+- linux-64
+tempest:
+- notempest
+zip_keys:
+- - cxx_compiler_version
+  - fortran_compiler_version
+- - mpi
+  - mpi_prefix
