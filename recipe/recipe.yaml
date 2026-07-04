@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   version: "5.6.0"
-  build_number: 7
+  build_number: 8
 
 package:
   name: moab
@@ -52,10 +52,10 @@ requirements:
         - libnetcdf
         - libnetcdf [build=${{ mpi_prefix }}_*]
         - tempest-remap >=2.2.0,<2.3.0
-    - if: tempest == "tempest" and mpi != "nompi"
-      then:
-        - libpnetcdf
-        - libpnetcdf [build=${{ mpi_prefix }}_*]
+        - if: mpi != "nompi"
+          then:
+            - libpnetcdf
+            - libpnetcdf [build=${{ mpi_prefix }}_*]
     - metis
     - if: mpi != "nompi"
       then:
@@ -69,8 +69,8 @@ requirements:
       then:
         - libnetcdf * [build=${{ mpi_prefix }}_*]
         - tempest-remap >=2.2.0,<2.3.0
-    - if: tempest == "tempest" and mpi != "nompi"
-      then: libpnetcdf * [build=${{ mpi_prefix }}_*]
+        - if: mpi != "nompi"
+          then: libpnetcdf * [build=${{ mpi_prefix }}_*]
     - metis
     - if: mpi != "nompi"
       then:
