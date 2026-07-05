@@ -27,7 +27,7 @@ liblapack:
 libnetcdf:
 - 4.10.0
 libpnetcdf:
-- 1.14.1
+- 1.15.0
 macos_machine:
 - x86_64-apple-darwin13.4.0
 metis:

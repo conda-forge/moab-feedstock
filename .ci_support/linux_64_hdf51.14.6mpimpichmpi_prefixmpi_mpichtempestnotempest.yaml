@@ -25,7 +25,7 @@ liblapack:
 libnetcdf:
 - 4.10.0
 libpnetcdf:
-- 1.14.1
+- 1.15.0
 metis:
 - 5.1.0
 mpi:
