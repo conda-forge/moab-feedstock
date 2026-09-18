@@ -22,7 +22,7 @@ build:
   # `moab * mpi_*_notempest_*` for any mpi and no tempest
   # `moab * nompi_notempest_*` for no mpi and no tempest
   number: ${{ build_number | int + 100 if mpi == "nompi" and tempest == "notempest" else build_number }}
-  string: ${{ mpi_prefix }}_${{ tempest }}_h${{ hash }}_${{ build_number | int + 100 if mpi == "nompi" and tempest == "notempest" else build_number }}
+  string: ${{ mpi_prefix }}_${{ tempest }}_h${{ hash }}_${{ build_number }}
   variant:
     # prefer 'nompi' and 'notempest' over other variants
     down_prioritize_variant: ${{ 0 if mpi == "nompi" and tempest == "notempest" else 1 }}
