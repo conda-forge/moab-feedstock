@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   version: "5.6.0"
-  build_number: 9
+  build_number: 10
 
 package:
   name: moab
@@ -79,6 +79,7 @@ requirements:
     - if: mpi == "openmpi"
       then: openssh
   run_exports:
+    - ${{ pin_subpackage("moab", upper_bound="x.x") }}
     - if: mpi != "nompi"
       then:
         - moab * ${{ mpi_prefix }}_${{ tempest }}_*
