@@ -40,7 +40,10 @@ requirements:
       then: openssh
   host:
     # eigen v5.x requires at least c++14 support
-    - eigen 3.*
+    # eigen-abi-devel (not eigen) because MOAB exposes Eigen types in public
+    # headers (Matrix3.hpp).
+    # https://github.com/conda-forge/eigen-feedstock/blob/main/recipe/README.md
+    - eigen-abi-devel 3.*
     # Repeat of requirements with no constraint and with build variant are to
     # pick up global pinning (from no constraint)
     - hdf5
