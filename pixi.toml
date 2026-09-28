@@ -5,330 +5,472 @@
 
 [workspace]
 name = "moab-feedstock"
-version = "2026.6.14"  # conda-smithy version used to generate this file
+version = "2026.9.23"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/moab-feedstock"
 authors = ["@conda-forge/moab"]
 channels = ["conda-forge"]
 platforms = ["linux-64", "linux-aarch64", "osx-64", "osx-arm64", "win-64"]
 requires-pixi = ">=0.59.0"
 
-[dependencies]
+[tasks.build-locally]
+cmd = "pixi exec --force-reinstall --list='^python$' python ./build-locally.py"
+description = "Build packages locally using the same setup scripts used in conda-forge's CI"
+[tasks.smithy]
+cmd = "pixi exec --force-reinstall --list='^conda-smithy$' conda-smithy"
+description = "Run conda-smithy. Pass necessary arguments."
+[tasks.rerender]
+cmd = "pixi exec --force-reinstall --list='^conda-smithy$' conda-smithy rerender"
+description = "Rerender the feedstock."
+
+[tasks.lint]
+cmd = "pixi exec --list='^conda-smithy$' conda-smithy lint --conda-forge recipe"
+description = "Lint the feedstock recipe"
+
+[feature.build.dependencies]
 conda-build = ">=26.3"
 conda-forge-ci-setup = "4.*"
 rattler-build = "*"
 
-[tasks.inspect-all]
+[feature.build.tasks.inspect-all]
 cmd = "inspect_artifacts --all-packages"
 description = "List contents of all packages found in rattler-build build directory."
-[tasks.build]
+[feature.build.tasks.build]
 cmd = "rattler-build build --recipe recipe"
 description = "Build moab-feedstock directly (without setup scripts), no particular variant specified"
-[tasks."build-linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml"
+[feature.build.tasks."build-linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml --target-platform linux-64"
 description = "Build moab-feedstock with variant linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest directly (without setup scripts)"
-[tasks."inspect-linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+[feature.build.tasks."debug-linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml --target-platform linux-64"
+description = "Debug moab-feedstock with variant linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"
-[tasks."build-linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest.yaml"
+[feature.build.tasks."build-linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest.yaml --target-platform linux-64"
 description = "Build moab-feedstock with variant linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest directly (without setup scripts)"
-[tasks."inspect-linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"]
+[feature.build.tasks."debug-linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest.yaml --target-platform linux-64"
+description = "Debug moab-feedstock with variant linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"
-[tasks."build-linux_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest.yaml"
+[feature.build.tasks."build-linux_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest.yaml --target-platform linux-64"
 description = "Build moab-feedstock with variant linux_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest directly (without setup scripts)"
-[tasks."inspect-linux_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"]
+[feature.build.tasks."debug-linux_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest.yaml --target-platform linux-64"
+description = "Debug moab-feedstock with variant linux_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"
-[tasks."build-linux_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest.yaml"
+[feature.build.tasks."build-linux_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest.yaml --target-platform linux-64"
 description = "Build moab-feedstock with variant linux_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest directly (without setup scripts)"
-[tasks."inspect-linux_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"]
+[feature.build.tasks."debug-linux_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest.yaml --target-platform linux-64"
+description = "Debug moab-feedstock with variant linux_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"
-[tasks."build-linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml"
+[feature.build.tasks."build-linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml --target-platform linux-64"
 description = "Build moab-feedstock with variant linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest directly (without setup scripts)"
-[tasks."inspect-linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+[feature.build.tasks."debug-linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml --target-platform linux-64"
+description = "Debug moab-feedstock with variant linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"
-[tasks."build-linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml"
+[feature.build.tasks."build-linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml --target-platform linux-64"
 description = "Build moab-feedstock with variant linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest directly (without setup scripts)"
-[tasks."inspect-linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+[feature.build.tasks."debug-linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml --target-platform linux-64"
+description = "Debug moab-feedstock with variant linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"
-[tasks."build-linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml"
+[feature.build.tasks."build-linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml --target-platform linux-64"
 description = "Build moab-feedstock with variant linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest directly (without setup scripts)"
-[tasks."inspect-linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+[feature.build.tasks."debug-linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml --target-platform linux-64"
+description = "Debug moab-feedstock with variant linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"
-[tasks."build-linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest.yaml"
+[feature.build.tasks."build-linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest.yaml --target-platform linux-64"
 description = "Build moab-feedstock with variant linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest directly (without setup scripts)"
-[tasks."inspect-linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"]
+[feature.build.tasks."debug-linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest.yaml --target-platform linux-64"
+description = "Debug moab-feedstock with variant linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"
-[tasks."build-linux_64_hdf52mpinompimpi_prefixnompitempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf52mpinompimpi_prefixnompitempestnotempest.yaml"
+[feature.build.tasks."build-linux_64_hdf52mpinompimpi_prefixnompitempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf52mpinompimpi_prefixnompitempestnotempest.yaml --target-platform linux-64"
 description = "Build moab-feedstock with variant linux_64_hdf52mpinompimpi_prefixnompitempestnotempest directly (without setup scripts)"
-[tasks."inspect-linux_64_hdf52mpinompimpi_prefixnompitempestnotempest"]
+[feature.build.tasks."debug-linux_64_hdf52mpinompimpi_prefixnompitempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_hdf52mpinompimpi_prefixnompitempestnotempest.yaml --target-platform linux-64"
+description = "Debug moab-feedstock with variant linux_64_hdf52mpinompimpi_prefixnompitempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_hdf52mpinompimpi_prefixnompitempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_hdf52mpinompimpi_prefixnompitempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_64_hdf52mpinompimpi_prefixnompitempestnotempest"
-[tasks."build-linux_64_hdf52mpinompimpi_prefixnompitempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf52mpinompimpi_prefixnompitempesttempest.yaml"
+[feature.build.tasks."build-linux_64_hdf52mpinompimpi_prefixnompitempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf52mpinompimpi_prefixnompitempesttempest.yaml --target-platform linux-64"
 description = "Build moab-feedstock with variant linux_64_hdf52mpinompimpi_prefixnompitempesttempest directly (without setup scripts)"
-[tasks."inspect-linux_64_hdf52mpinompimpi_prefixnompitempesttempest"]
+[feature.build.tasks."debug-linux_64_hdf52mpinompimpi_prefixnompitempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_hdf52mpinompimpi_prefixnompitempesttempest.yaml --target-platform linux-64"
+description = "Debug moab-feedstock with variant linux_64_hdf52mpinompimpi_prefixnompitempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_hdf52mpinompimpi_prefixnompitempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_hdf52mpinompimpi_prefixnompitempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_64_hdf52mpinompimpi_prefixnompitempesttempest"
-[tasks."build-linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml"
+[feature.build.tasks."build-linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml --target-platform linux-64"
 description = "Build moab-feedstock with variant linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest directly (without setup scripts)"
-[tasks."inspect-linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+[feature.build.tasks."debug-linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml --target-platform linux-64"
+description = "Debug moab-feedstock with variant linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"
-[tasks."build-linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml"
+[feature.build.tasks."build-linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml --target-platform linux-64"
 description = "Build moab-feedstock with variant linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest directly (without setup scripts)"
-[tasks."inspect-linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+[feature.build.tasks."debug-linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml --target-platform linux-64"
+description = "Debug moab-feedstock with variant linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"
-[tasks."build-linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml"
+[feature.build.tasks."build-linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml --target-platform linux-aarch64"
 description = "Build moab-feedstock with variant linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest directly (without setup scripts)"
-[tasks."inspect-linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+[feature.build.tasks."debug-linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml --target-platform linux-aarch64"
+description = "Debug moab-feedstock with variant linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"
-[tasks."build-linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest.yaml"
+[feature.build.tasks."build-linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest.yaml --target-platform linux-aarch64"
 description = "Build moab-feedstock with variant linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest directly (without setup scripts)"
-[tasks."inspect-linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"]
+[feature.build.tasks."debug-linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest.yaml --target-platform linux-aarch64"
+description = "Debug moab-feedstock with variant linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_aarch64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"
-[tasks."build-linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest.yaml"
+[feature.build.tasks."build-linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest.yaml --target-platform linux-aarch64"
 description = "Build moab-feedstock with variant linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest directly (without setup scripts)"
-[tasks."inspect-linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"]
+[feature.build.tasks."debug-linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest.yaml --target-platform linux-aarch64"
+description = "Debug moab-feedstock with variant linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"
-[tasks."build-linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempesttempest.yaml"
+[feature.build.tasks."build-linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempesttempest.yaml --target-platform linux-aarch64"
 description = "Build moab-feedstock with variant linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempesttempest directly (without setup scripts)"
-[tasks."inspect-linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"]
+[feature.build.tasks."debug-linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempesttempest.yaml --target-platform linux-aarch64"
+description = "Debug moab-feedstock with variant linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_aarch64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"
-[tasks."build-linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml"
+[feature.build.tasks."build-linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml --target-platform linux-aarch64"
 description = "Build moab-feedstock with variant linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest directly (without setup scripts)"
-[tasks."inspect-linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+[feature.build.tasks."debug-linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml --target-platform linux-aarch64"
+description = "Debug moab-feedstock with variant linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"
-[tasks."build-linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml"
+[feature.build.tasks."build-linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml --target-platform linux-aarch64"
 description = "Build moab-feedstock with variant linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest directly (without setup scripts)"
-[tasks."inspect-linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+[feature.build.tasks."debug-linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml --target-platform linux-aarch64"
+description = "Debug moab-feedstock with variant linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_aarch64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"
-[tasks."build-linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml"
+[feature.build.tasks."build-linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml --target-platform linux-aarch64"
 description = "Build moab-feedstock with variant linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest directly (without setup scripts)"
-[tasks."inspect-linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+[feature.build.tasks."debug-linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml --target-platform linux-aarch64"
+description = "Debug moab-feedstock with variant linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"
-[tasks."build-linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest.yaml"
+[feature.build.tasks."build-linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest.yaml --target-platform linux-aarch64"
 description = "Build moab-feedstock with variant linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest directly (without setup scripts)"
-[tasks."inspect-linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"]
+[feature.build.tasks."debug-linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest.yaml --target-platform linux-aarch64"
+description = "Debug moab-feedstock with variant linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_aarch64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"
-[tasks."build-linux_aarch64_hdf52mpinompimpi_prefixnompitempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf52mpinompimpi_prefixnompitempestnotempest.yaml"
+[feature.build.tasks."build-linux_aarch64_hdf52mpinompimpi_prefixnompitempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf52mpinompimpi_prefixnompitempestnotempest.yaml --target-platform linux-aarch64"
 description = "Build moab-feedstock with variant linux_aarch64_hdf52mpinompimpi_prefixnompitempestnotempest directly (without setup scripts)"
-[tasks."inspect-linux_aarch64_hdf52mpinompimpi_prefixnompitempestnotempest"]
+[feature.build.tasks."debug-linux_aarch64_hdf52mpinompimpi_prefixnompitempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_hdf52mpinompimpi_prefixnompitempestnotempest.yaml --target-platform linux-aarch64"
+description = "Debug moab-feedstock with variant linux_aarch64_hdf52mpinompimpi_prefixnompitempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_hdf52mpinompimpi_prefixnompitempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_hdf52mpinompimpi_prefixnompitempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_aarch64_hdf52mpinompimpi_prefixnompitempestnotempest"
-[tasks."build-linux_aarch64_hdf52mpinompimpi_prefixnompitempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf52mpinompimpi_prefixnompitempesttempest.yaml"
+[feature.build.tasks."build-linux_aarch64_hdf52mpinompimpi_prefixnompitempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf52mpinompimpi_prefixnompitempesttempest.yaml --target-platform linux-aarch64"
 description = "Build moab-feedstock with variant linux_aarch64_hdf52mpinompimpi_prefixnompitempesttempest directly (without setup scripts)"
-[tasks."inspect-linux_aarch64_hdf52mpinompimpi_prefixnompitempesttempest"]
+[feature.build.tasks."debug-linux_aarch64_hdf52mpinompimpi_prefixnompitempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_hdf52mpinompimpi_prefixnompitempesttempest.yaml --target-platform linux-aarch64"
+description = "Debug moab-feedstock with variant linux_aarch64_hdf52mpinompimpi_prefixnompitempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_hdf52mpinompimpi_prefixnompitempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_hdf52mpinompimpi_prefixnompitempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_aarch64_hdf52mpinompimpi_prefixnompitempesttempest"
-[tasks."build-linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml"
+[feature.build.tasks."build-linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml --target-platform linux-aarch64"
 description = "Build moab-feedstock with variant linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest directly (without setup scripts)"
-[tasks."inspect-linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+[feature.build.tasks."debug-linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml --target-platform linux-aarch64"
+description = "Debug moab-feedstock with variant linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"
-[tasks."build-linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml"
+[feature.build.tasks."build-linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml --target-platform linux-aarch64"
 description = "Build moab-feedstock with variant linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest directly (without setup scripts)"
-[tasks."inspect-linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+[feature.build.tasks."debug-linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml --target-platform linux-aarch64"
+description = "Debug moab-feedstock with variant linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant linux_aarch64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"
-[tasks."build-osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml"
+[feature.build.tasks."build-osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml --target-platform osx-64"
 description = "Build moab-feedstock with variant osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest directly (without setup scripts)"
-[tasks."inspect-osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+[feature.build.tasks."debug-osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml --target-platform osx-64"
+description = "Debug moab-feedstock with variant osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"
-[tasks."build-osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest.yaml"
+[feature.build.tasks."build-osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest.yaml --target-platform osx-64"
 description = "Build moab-feedstock with variant osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest directly (without setup scripts)"
-[tasks."inspect-osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"]
+[feature.build.tasks."debug-osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest.yaml --target-platform osx-64"
+description = "Debug moab-feedstock with variant osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"
-[tasks."build-osx_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest.yaml"
+[feature.build.tasks."build-osx_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest.yaml --target-platform osx-64"
 description = "Build moab-feedstock with variant osx_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest directly (without setup scripts)"
-[tasks."inspect-osx_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"]
+[feature.build.tasks."debug-osx_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest.yaml --target-platform osx-64"
+description = "Debug moab-feedstock with variant osx_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"
-[tasks."build-osx_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest.yaml"
+[feature.build.tasks."build-osx_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest.yaml --target-platform osx-64"
 description = "Build moab-feedstock with variant osx_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest directly (without setup scripts)"
-[tasks."inspect-osx_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"]
+[feature.build.tasks."debug-osx_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest.yaml --target-platform osx-64"
+description = "Debug moab-feedstock with variant osx_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"
-[tasks."build-osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml"
+[feature.build.tasks."build-osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml --target-platform osx-64"
 description = "Build moab-feedstock with variant osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest directly (without setup scripts)"
-[tasks."inspect-osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+[feature.build.tasks."debug-osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml --target-platform osx-64"
+description = "Debug moab-feedstock with variant osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"
-[tasks."build-osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml"
+[feature.build.tasks."build-osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml --target-platform osx-64"
 description = "Build moab-feedstock with variant osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest directly (without setup scripts)"
-[tasks."inspect-osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+[feature.build.tasks."debug-osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml --target-platform osx-64"
+description = "Debug moab-feedstock with variant osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"
-[tasks."build-osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml"
+[feature.build.tasks."build-osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml --target-platform osx-64"
 description = "Build moab-feedstock with variant osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest directly (without setup scripts)"
-[tasks."inspect-osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+[feature.build.tasks."debug-osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml --target-platform osx-64"
+description = "Debug moab-feedstock with variant osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"
-[tasks."build-osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest.yaml"
+[feature.build.tasks."build-osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest.yaml --target-platform osx-64"
 description = "Build moab-feedstock with variant osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest directly (without setup scripts)"
-[tasks."inspect-osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"]
+[feature.build.tasks."debug-osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest.yaml --target-platform osx-64"
+description = "Debug moab-feedstock with variant osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"
-[tasks."build-osx_64_hdf52mpinompimpi_prefixnompitempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf52mpinompimpi_prefixnompitempestnotempest.yaml"
+[feature.build.tasks."build-osx_64_hdf52mpinompimpi_prefixnompitempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf52mpinompimpi_prefixnompitempestnotempest.yaml --target-platform osx-64"
 description = "Build moab-feedstock with variant osx_64_hdf52mpinompimpi_prefixnompitempestnotempest directly (without setup scripts)"
-[tasks."inspect-osx_64_hdf52mpinompimpi_prefixnompitempestnotempest"]
+[feature.build.tasks."debug-osx_64_hdf52mpinompimpi_prefixnompitempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_hdf52mpinompimpi_prefixnompitempestnotempest.yaml --target-platform osx-64"
+description = "Debug moab-feedstock with variant osx_64_hdf52mpinompimpi_prefixnompitempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_hdf52mpinompimpi_prefixnompitempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_hdf52mpinompimpi_prefixnompitempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_64_hdf52mpinompimpi_prefixnompitempestnotempest"
-[tasks."build-osx_64_hdf52mpinompimpi_prefixnompitempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf52mpinompimpi_prefixnompitempesttempest.yaml"
+[feature.build.tasks."build-osx_64_hdf52mpinompimpi_prefixnompitempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf52mpinompimpi_prefixnompitempesttempest.yaml --target-platform osx-64"
 description = "Build moab-feedstock with variant osx_64_hdf52mpinompimpi_prefixnompitempesttempest directly (without setup scripts)"
-[tasks."inspect-osx_64_hdf52mpinompimpi_prefixnompitempesttempest"]
+[feature.build.tasks."debug-osx_64_hdf52mpinompimpi_prefixnompitempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_hdf52mpinompimpi_prefixnompitempesttempest.yaml --target-platform osx-64"
+description = "Debug moab-feedstock with variant osx_64_hdf52mpinompimpi_prefixnompitempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_hdf52mpinompimpi_prefixnompitempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_hdf52mpinompimpi_prefixnompitempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_64_hdf52mpinompimpi_prefixnompitempesttempest"
-[tasks."build-osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml"
+[feature.build.tasks."build-osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml --target-platform osx-64"
 description = "Build moab-feedstock with variant osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest directly (without setup scripts)"
-[tasks."inspect-osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+[feature.build.tasks."debug-osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml --target-platform osx-64"
+description = "Debug moab-feedstock with variant osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"
-[tasks."build-osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml"
+[feature.build.tasks."build-osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml --target-platform osx-64"
 description = "Build moab-feedstock with variant osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest directly (without setup scripts)"
-[tasks."inspect-osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+[feature.build.tasks."debug-osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml --target-platform osx-64"
+description = "Debug moab-feedstock with variant osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"
-[tasks."build-osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml"
+[feature.build.tasks."build-osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml --target-platform osx-arm64"
 description = "Build moab-feedstock with variant osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest directly (without setup scripts)"
-[tasks."inspect-osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+[feature.build.tasks."debug-osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml --target-platform osx-arm64"
+description = "Debug moab-feedstock with variant osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempestnotempest"
-[tasks."build-osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest.yaml"
+[feature.build.tasks."build-osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest.yaml --target-platform osx-arm64"
 description = "Build moab-feedstock with variant osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest directly (without setup scripts)"
-[tasks."inspect-osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"]
+[feature.build.tasks."debug-osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest.yaml --target-platform osx-arm64"
+description = "Debug moab-feedstock with variant osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_arm64_hdf51.14.6mpimpichmpi_prefixmpi_mpichtempesttempest"
-[tasks."build-osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest.yaml"
+[feature.build.tasks."build-osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest.yaml --target-platform osx-arm64"
 description = "Build moab-feedstock with variant osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest directly (without setup scripts)"
-[tasks."inspect-osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"]
+[feature.build.tasks."debug-osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest.yaml --target-platform osx-arm64"
+description = "Debug moab-feedstock with variant osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempestnotempest"
-[tasks."build-osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempesttempest.yaml"
+[feature.build.tasks."build-osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempesttempest.yaml --target-platform osx-arm64"
 description = "Build moab-feedstock with variant osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempesttempest directly (without setup scripts)"
-[tasks."inspect-osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"]
+[feature.build.tasks."debug-osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempesttempest.yaml --target-platform osx-arm64"
+description = "Debug moab-feedstock with variant osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_arm64_hdf51.14.6mpinompimpi_prefixnompitempesttempest"
-[tasks."build-osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml"
+[feature.build.tasks."build-osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml --target-platform osx-arm64"
 description = "Build moab-feedstock with variant osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest directly (without setup scripts)"
-[tasks."inspect-osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+[feature.build.tasks."debug-osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml --target-platform osx-arm64"
+description = "Debug moab-feedstock with variant osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempestnotempest"
-[tasks."build-osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml"
+[feature.build.tasks."build-osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml --target-platform osx-arm64"
 description = "Build moab-feedstock with variant osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest directly (without setup scripts)"
-[tasks."inspect-osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+[feature.build.tasks."debug-osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml --target-platform osx-arm64"
+description = "Debug moab-feedstock with variant osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_arm64_hdf51.14.6mpiopenmpimpi_prefixmpi_openmpitempesttempest"
-[tasks."build-osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml"
+[feature.build.tasks."build-osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml --target-platform osx-arm64"
 description = "Build moab-feedstock with variant osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest directly (without setup scripts)"
-[tasks."inspect-osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+[feature.build.tasks."debug-osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml --target-platform osx-arm64"
+description = "Debug moab-feedstock with variant osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempestnotempest"
-[tasks."build-osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest.yaml"
+[feature.build.tasks."build-osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest.yaml --target-platform osx-arm64"
 description = "Build moab-feedstock with variant osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest directly (without setup scripts)"
-[tasks."inspect-osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"]
+[feature.build.tasks."debug-osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest.yaml --target-platform osx-arm64"
+description = "Debug moab-feedstock with variant osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_arm64_hdf52mpimpichmpi_prefixmpi_mpichtempesttempest"
-[tasks."build-osx_arm64_hdf52mpinompimpi_prefixnompitempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf52mpinompimpi_prefixnompitempestnotempest.yaml"
+[feature.build.tasks."build-osx_arm64_hdf52mpinompimpi_prefixnompitempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf52mpinompimpi_prefixnompitempestnotempest.yaml --target-platform osx-arm64"
 description = "Build moab-feedstock with variant osx_arm64_hdf52mpinompimpi_prefixnompitempestnotempest directly (without setup scripts)"
-[tasks."inspect-osx_arm64_hdf52mpinompimpi_prefixnompitempestnotempest"]
+[feature.build.tasks."debug-osx_arm64_hdf52mpinompimpi_prefixnompitempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_hdf52mpinompimpi_prefixnompitempestnotempest.yaml --target-platform osx-arm64"
+description = "Debug moab-feedstock with variant osx_arm64_hdf52mpinompimpi_prefixnompitempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_hdf52mpinompimpi_prefixnompitempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_hdf52mpinompimpi_prefixnompitempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_arm64_hdf52mpinompimpi_prefixnompitempestnotempest"
-[tasks."build-osx_arm64_hdf52mpinompimpi_prefixnompitempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf52mpinompimpi_prefixnompitempesttempest.yaml"
+[feature.build.tasks."build-osx_arm64_hdf52mpinompimpi_prefixnompitempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf52mpinompimpi_prefixnompitempesttempest.yaml --target-platform osx-arm64"
 description = "Build moab-feedstock with variant osx_arm64_hdf52mpinompimpi_prefixnompitempesttempest directly (without setup scripts)"
-[tasks."inspect-osx_arm64_hdf52mpinompimpi_prefixnompitempesttempest"]
+[feature.build.tasks."debug-osx_arm64_hdf52mpinompimpi_prefixnompitempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_hdf52mpinompimpi_prefixnompitempesttempest.yaml --target-platform osx-arm64"
+description = "Debug moab-feedstock with variant osx_arm64_hdf52mpinompimpi_prefixnompitempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_hdf52mpinompimpi_prefixnompitempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_hdf52mpinompimpi_prefixnompitempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_arm64_hdf52mpinompimpi_prefixnompitempesttempest"
-[tasks."build-osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml"
+[feature.build.tasks."build-osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml --target-platform osx-arm64"
 description = "Build moab-feedstock with variant osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest directly (without setup scripts)"
-[tasks."inspect-osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+[feature.build.tasks."debug-osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml --target-platform osx-arm64"
+description = "Debug moab-feedstock with variant osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempestnotempest"
-[tasks."build-osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml"
+[feature.build.tasks."build-osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml --target-platform osx-arm64"
 description = "Build moab-feedstock with variant osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest directly (without setup scripts)"
-[tasks."inspect-osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+[feature.build.tasks."debug-osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml --target-platform osx-arm64"
+description = "Debug moab-feedstock with variant osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest.yaml"
 description = "List contents of moab-feedstock packages built for variant osx_arm64_hdf52mpiopenmpimpi_prefixmpi_openmpitempesttempest"
 
-[feature.smithy.dependencies]
-conda-smithy = "*"
-[feature.smithy.tasks.build-locally]
-cmd = "python ./build-locally.py"
-description = "Build packages locally using the same setup scripts used in conda-forge's CI"
-[feature.smithy.tasks.smithy]
-cmd = "conda-smithy"
-description = "Run conda-smithy. Pass necessary arguments."
-[feature.smithy.tasks.rerender]
-cmd = "conda-smithy rerender"
-description = "Rerender the feedstock."
-[feature.smithy.tasks.lint]
-cmd = "conda-smithy lint --conda-forge recipe"
-description = "Lint the feedstock recipe"
-
 [environments]
-smithy = ["smithy"]
-
-# This is a copy of default, to be enabled by build_steps.sh during Docker builds
-# __PLATFORM_SPECIFIC_ENV__ = []
+build = ["build"]
+# This is a copy of 'build', to be enabled by build_steps.sh during Docker builds
+# __PLATFORM_SPECIFIC_ENV__ = ["build"]
