@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   version: "5.6.0"
-  build_number: 9
+  build_number: 10
 
 package:
   name: moab
@@ -22,7 +22,7 @@ build:
   # `moab * mpi_*_notempest_*` for any mpi and no tempest
   # `moab * nompi_notempest_*` for no mpi and no tempest
   number: ${{ build_number | int + 100 if mpi == "nompi" and tempest == "notempest" else build_number }}
-  string: ${{ mpi_prefix }}_${{ tempest }}_h${{ hash }}_${{ build_number | int + 100 if mpi == "nompi" and tempest == "notempest" else build_number }}
+  string: ${{ mpi_prefix }}_${{ tempest }}_h${{ hash }}_${{ build_number }}
   variant:
     # prefer 'nompi' and 'notempest' over other variants
     down_prioritize_variant: ${{ 0 if mpi == "nompi" and tempest == "notempest" else 1 }}
@@ -40,7 +40,10 @@ requirements:
       then: openssh
   host:
     # eigen v5.x requires at least c++14 support
-    - eigen 3.*
+    # eigen-abi-devel (not eigen) because MOAB exposes Eigen types in public
+    # headers (Matrix3.hpp).
+    # https://github.com/conda-forge/eigen-feedstock/blob/main/recipe/README.md
+    - eigen-abi-devel 3.*
     # Repeat of requirements with no constraint and with build variant are to
     # pick up global pinning (from no constraint)
     - hdf5
@@ -79,6 +82,7 @@ requirements:
     - if: mpi == "openmpi"
       then: openssh
   run_exports:
+    - ${{ pin_subpackage("moab", upper_bound="x.x") }}
     - if: mpi != "nompi"
       then:
         - moab * ${{ mpi_prefix }}_${{ tempest }}_*

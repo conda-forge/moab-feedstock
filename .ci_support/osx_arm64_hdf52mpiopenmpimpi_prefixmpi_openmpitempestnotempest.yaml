@@ -13,11 +13,11 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '19'
+- '21'
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
-- '14'
+- '15'
 hdf5:
 - '2'
 libblas:
